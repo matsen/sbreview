@@ -146,7 +146,7 @@ Program in Computational Biology, Fred Hutchinson Cancer Research Center, Seattl
 }
 
 The human microbiome is the collection of cells that live inside and on humans.
-The Human Microbiome Project (HMP) and the Metagenomics of the Human Intestinal Tract (MetaHIT) consortium have advanced human microboime research recently by doing lots of sequencing, as well as bioinformatics and statistical development.
+The Human Microbiome Project (HMP) and the Metagenomics of the Human Intestinal Tract (MetaHIT) consortia have advanced human microboime research by generating thousands of 16s surveys and terabases of metagenomic data, as well as funding bioinformatics and statistical development.
 In this paper I review the impact of phylogenetics and tree-thinking on the methods used in the analysis of this data, as well as describing current challenges for phylogenetics coming from this type of work.
 
 \forarxiv{
@@ -163,33 +163,25 @@ In this paper I review the impact of phylogenetics and tree-thinking on the meth
 
 \section{Introduction to the human microbiome}
 
-% The HMP planned to comprehensively characterize the taxonomic
-% composition of the microbiome by averaging 5,000 454 FLX 16S rRNA gene
-% sequences from all 300 subjects, 18 body sites, and multiple time
-% points. This design, combined with more than a 1,000-fold increase in
-% sequencing throughput over the course of the HMP, forced the
-% consortium to develop novel tools for processing large 16S rRNA gene
-% datasets, tackling issues specific to 454 sequence data quality, and
-% addressing novel biological questions that were previously
-% inaccessible due to limited sample sizes.
+Starter paragraph about the scope of human microbiome research.
 
-Now we will embark on our journey.
-
-There have been hundreds of papers concerning the human microbiome. It
-is not our desire to survey all of these. Rather, our idea is to
-highlight areas that may be of particular interest for the
-phylogenetics community by potentially having wider applications or by
-being areas for future exploration.
-
+We will begin by introducing the results of recent research.
+There have been hundreds of papers concerning the human microbiome.
+It is not our desire to survey all of these.
+Rather, our idea is to highlight areas that may be of particular interest for the phylogenetics community by potentially having wider applications or by being areas for future exploration.
 Please note that many of the methods and issues described in this paper will be equally useful for microbial ecology in general, but by narrowing our scope we were able to keep our paper within reasonable size limits.
 
-Antibiotics.
+Major finding: dynamic in terms of representation but diverse in terms of function.
+
+Major finding: antibiotics.
 \cite{dethlefsen2008pervasive,dethlefsen2011incomplete,jakobsson2010short,jernberg2007long}
+
+Enterotypes discussion.
 
 
 \section{Tree-thinking in human microbiome research}
 
-\subsection{phylogenetics and taxonomy}
+\subsection{Phylogenetics and taxonomy}
 
 Without a doubt, the greatest impact that phylogenetics has had on microbial ecology research is on changing our view of the taxonomic relationships between microorganisms.
 In the absence of sequencing, microbiologist have to rely on microscopes and staining.
@@ -197,25 +189,38 @@ Lots of little things look alike.
 
 The most stunning example of this is the discovery of the archaea by Woese.
 
-However, there have been
-
-There are projects that use phylogeny to revise taxonomy, short of PhyloCode.
+However, there have been a number projects that use phylogeny to revise taxonomy, short of PhyloCode.
 GreenGenes.
+tax2tree.
+Bergey's taxonomy is supposed to be.
+SILVA.
 The reason people are attached to taxonomy is that there is a lot of information using taxonomic labels.
 
 Much of this work has been done using the 16s ribosomal rRNA gene.
 
-With the advent of high throughput sequencing, there has been a lot of interest concerning which variable region to use.
+Tree-based classification.
+
+Curation of HM databases using phylogenetics?
+
 
 \subsection{Diversity estimates using phylogenetics}
 
+Alpha diversity.
+
 Variants of phylogenetic diversity and their use.
 
+
 \subsection{Community comparison using phylogenetics}
+
+Beta diversity.
 
 UniFrac distance and variants.
 
 Figure: example principal coordinates plot.
+
+
+\subsection{Inference of horizontal gene transfer}
+
 
 
 
@@ -231,13 +236,20 @@ Networks not considered.
 
 Species delineation problem not explicitly considered. Clustering.
 
-
 Chimeric sequences are a real problem, and similar to recombination.
+
+ARB software.
+Phylogenetic placement.
 
 
 \section{Phylogenetic challenges for human microbiome research}
 
-\subsection{The challenge that lies ahead: functional genes and phylogenomics}
+Non-overlapping reads.
+Assemblies.
+
+Functional genes and phylogenomics.
+
+HGT.
 
 There has been a shift from interest in community dynamics to fine-scale interactions between host and immune system.
 
@@ -250,6 +262,8 @@ There has been a shift from interest in community dynamics to fine-scale interac
 
 What we can expect next.
 
+Field is still not yet mature.
+
 \notforarxiv{
 \newpage
 \section{Figure Legends}
@@ -261,4 +275,5 @@ What we can expect next.
 
 \bibliographystyle{plainnat}
 \bibliography{sbreview}
+
 \end{document}
