@@ -107,6 +107,13 @@
 }
 \newcommand{\refFIGmassTransport}{1}
 
+% Noah suggests making a table for
+%alpha diversity
+%beta diversity
+%PCA
+%taxonomic assignment/classification
+%clustering/binning
+
 
 \begin{document}
 
@@ -120,8 +127,7 @@ Version dated: \today
 \medskip
 \begin{center}
 
-% Insert your title:
-\noindent{\Large \bf Phylogenetics and the human microbiome}
+\noindent{\Large \bf Phylogenetics and the human microbiome.}
 \bigskip
 
 \noindent {\normalsize \sc
@@ -136,7 +142,7 @@ Program in Computational Biology, Fred Hutchinson Cancer Research Center, Seattl
 }
 
 \forarxiv{\
-\title{Phylogenetics and the human microbiome}
+\title{Phylogenetics and the human microbiome.}
 \author{Frederick A. Matsen IV}
 \date{\today}
 \begin{abstract}
@@ -146,7 +152,7 @@ Program in Computational Biology, Fred Hutchinson Cancer Research Center, Seattl
 }
 
 The human microbiome is the collection of cells that live inside and on humans.
-The Human Microbiome Project (HMP) and the Metagenomics of the Human Intestinal Tract (MetaHIT) consortia have advanced human microboime research by generating thousands of 16s surveys and terabases of metagenomic data, as well as funding bioinformatics and statistical development.
+The Human Microbiome Project (HMP) and the Metagenomics of the Human Intestinal Tract (MetaHIT) consortia have advanced human microboime research by generating thousands of 16s surveys and terabases of metagenomic data on the human microbiome, as well as funding bioinformatics and statistical development.
 In this paper I review the impact of phylogenetics and tree-thinking on the methods used in the analysis of this data, as well as describing current challenges for phylogenetics coming from this type of work.
 
 \forarxiv{
@@ -157,7 +163,7 @@ In this paper I review the impact of phylogenetics and tree-thinking on the meth
 }
 
 \notforarxiv{
-\noindent (Keywords: human microbiome; microbial ecology; zzz)\\
+\noindent (Keywords: human microbiome; microbial ecology; phylogenetic methods; review)\\
 \vspace{1.5in}
 }
 
@@ -166,20 +172,49 @@ In this paper I review the impact of phylogenetics and tree-thinking on the meth
 Starter paragraph about the scope of human microbiome research.
 
 We will begin by introducing the results of recent research.
-There have been hundreds of papers concerning the human microbiome.
-It is not our desire to survey all of these.
-Rather, our idea is to highlight areas that may be of particular interest for the phylogenetics community by potentially having wider applications or by being areas for future exploration.
-Please note that many of the methods and issues described in this paper will be equally useful for microbial ecology in general, but by narrowing our scope we were able to keep our paper within reasonable size limits.
+% There have been hundreds of papers concerning the human microbiome, and it is not our desire to survey all of these.
+% Rather, our idea is to highlight areas that may be of particular interest for the phylogenetics community by potentially having wider applications or by being areas for future exploration.
+% Please note that many of the methods and issues described in this paper will be equally useful for microbial ecology in general, but by narrowing our scope we were able to keep our paper within reasonable size limits.
 
-Major finding: dynamic in terms of representation but diverse in terms of function.
+The human microbiome has remarkable metabolic potential.
+cite qin paper, and follow up
 
-Major finding: antibiotics.
-\cite{dethlefsen2008pervasive,dethlefsen2011incomplete,jakobsson2010short,jernberg2007long}
+The microbiome is dynamic in terms of representation but apparently constant in terms of function.
+cites
 
-Enterotypes discussion.
+Human microbiome is spatially organized.
+cite segre,
 
+Inter-individual versus intra-individual variation.
+
+16s surveys have shown that antibiotics fundamentally disturb microbial communities, resulting in an effect that lasts years.
+\cite{jernberg2007long,dethlefsen2008pervasive,jakobsson2010short,dethlefsen2011incomplete}
+
+Substantial attention was given to whether microbial ``types'' exist.
+A high-profile paper from Per Bork's group
+http://www.nature.com/news/gut-microbial-enterotypes-become-less-clear-cut-1.10276
+
+Important bacteria that were previously unknown?
+
+obesity
+turnbaugh papers
+http://www.nature.com/nature/journal/v444/n7122/abs/nature05414.html
+http://europepmc.org/abstract/MED/18407065/reload=0;jsessionid=Ea4YLfXjd7Cfpx5Hvafq.2
+amish study
+http://precedings.nature.com/documents/4957/version/1
+
+Data products
+reference genomes
+HMP DACC.
+
+Terminology: survey versus metagenome.
+definition of a single sample.
 
 \section{Tree-thinking in human microbiome research}
+
+Phylogenetics is primarily used in this realm as a framework with which data can be organized.
+It is common for researchers to equate 16s phylogeny with taxonomy.
+Trait evolution methods are not common.
 
 \subsection{Phylogenetics and taxonomy}
 
@@ -189,14 +224,16 @@ Lots of little things look alike.
 
 The most stunning example of this is the discovery of the archaea by Woese.
 
-However, there have been a number projects that use phylogeny to revise taxonomy, short of PhyloCode.
+In general, this sort of approach has led to a number projects that use phylogeny to revise taxonomy.
+These attempts are less ambitious than the development of the PhyloCode, and simply work to revise the hierarchical structure of the taxonomy while (for the most part) leaving taxonomic names fixed.
+Bergey's taxonomy is supposed to be.
 GreenGenes.
 tax2tree.
-Bergey's taxonomy is supposed to be.
 SILVA.
-The reason people are attached to taxonomy is that there is a lot of information using taxonomic labels.
+%The reason people are attached to taxonomy is that there is a lot of information using taxonomic labels.
 
 Much of this work has been done using the 16s ribosomal rRNA gene.
+Exceptions.
 
 Tree-based classification.
 
@@ -205,14 +242,19 @@ Curation of HM databases using phylogenetics?
 
 \subsection{Diversity estimates using phylogenetics}
 
-Alpha diversity.
+Because 16s surveys are inherently complex and noisy data, summary statistics are often used; summaries of the diversity of a single sample are often called \emph{alpha diversity}.
+For the most part, this literature adapts methods from the classical ecological literature.
 
-Variants of phylogenetic diversity and their use.
+Here we will focus on variants of phylogenetic diversity and their use.
+
+GEBA. Most wanted.
+
+Eisen darling paper on extractability.
 
 
 \subsection{Community comparison using phylogenetics}
 
-Beta diversity.
+The level of similarity between samples or groups thereof are often called \emph{beta diversity}; it is the current standard to employ phylogenetic tree structure in this sort of comparison.
 
 UniFrac distance and variants.
 
@@ -241,6 +283,8 @@ Chimeric sequences are a real problem, and similar to recombination.
 ARB software.
 Phylogenetic placement.
 
+Trait evolution not considered.
+
 
 \section{Phylogenetic challenges for human microbiome research}
 
@@ -253,6 +297,7 @@ HGT.
 
 There has been a shift from interest in community dynamics to fine-scale interactions between host and immune system.
 
+Trait evolution methods are conspicuously absent.
 
 \cite{wylie2012sequence}
 \cite{chen2012associating}
