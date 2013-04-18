@@ -43,5 +43,5 @@ In this talk I will review the impact of phylogenetics and tree-thinking on the 
 ## Part 4. Phylogenetic challenges coming from human microbiome research
 
 * Fragmentary data
-* Horizontal gene transfer
+* Horizontal gene transfer and the microbial setting in general
 * What is the role of phylogenetics in detailed analysis of microbe/host interactions?
