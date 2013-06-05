@@ -1,3 +1,6 @@
+% morgan et al extraction
+% PyNAST
+
 %For arXiv, uncomment this block and comment the next block.
 \documentclass{amsart}
 \usepackage{amsmath,amsfonts,amssymb,amsthm}
@@ -8,90 +11,13 @@
 \newcommand{\forarxiv}[1]{#1}
 \newcommand{\notforarxiv}[1]{}
 
-% % For Sys Bio, uncomment this block and comment the previous block.
-% \documentclass[12pt,letterpaper]{article}
-% \usepackage{fixltx2e}
-% \usepackage{textcomp}
-% \usepackage{fullpage}
-% \usepackage{amsfonts}
-% \usepackage{verbatim}
-% \usepackage[english]{babel}
-% \usepackage{pifont}
-% \usepackage{color}
-% \usepackage{setspace}
-% \usepackage{lscape}
-% \usepackage{indentfirst}
-% \usepackage[normalem]{ulem}
-% \usepackage{booktabs}
-% %\usepackage{nag}
-% \usepackage{natbib}
-% %\usepackage{bibtex}
-% \usepackage{float}
-% \usepackage{latexsym}
-% %\usepackage{hyperref}
-% \usepackage{url}
-% %\usepackage{html}
-% \usepackage{hyperref}
-% \usepackage{epsfig}
-% \usepackage{graphicx}
-% \usepackage{amssymb}
-% \usepackage{amsmath}
-% \usepackage{bm}
-% \usepackage{array}
-% %\usepackage{mhchem}
-% \usepackage{ifthen}
-% \usepackage{caption}
-% \usepackage{hyperref}
-% %\usepackage{xcolor}
-% \usepackage{amsthm}
-% \usepackage{amstext}
-% \linespread{1.66}
-% \raggedright
-% \setlength{\parindent}{0.5in}
-% \setcounter{secnumdepth}{0}
-% \pagestyle{empty}
-% \renewcommand{\section}[1]{%
-% \bigskip
-% \begin{center}
-% \begin{Large}
-% \normalfont\scshape #1
-% \medskip
-% \end{Large}
-% \end{center}}
-% \renewcommand{\subsection}[1]{%
-% \bigskip
-% \begin{center}
-% \begin{large}
-% \normalfont\itshape #1
-% \end{large}
-% \end{center}}
-% \renewcommand{\subsubsection}[1]{%
-% \vspace{2ex}
-% \noindent
-% \textit{#1.}---}
-% \renewcommand{\tableofcontents}{}
-% \bibpunct{(}{)}{;}{a}{}{,}  % this is a citation format command for natbib
-% \newcommand{\forarxiv}[1]{}
-% \newcommand{\notforarxiv}[1]{#1}
-
 % show keys for eqs, etc.
 % \usepackage[notref,notcite]{showkeys}
 
 % code
 \newcommand{\program}{\textsf{program}}
 
-% theorems, etc
-\newtheorem{lem}{Lemma}
-\newtheorem{cor}{Corollary}
-\newtheorem{prop}{Proposition}
-\newtheorem{thm}{Theorem}
-\newtheorem{prob}{Problem}
-\newtheorem{defn}{Definition}
-\newtheorem{obs}{Observation}
-\newtheorem{alg}{Algorithm}
-
 \newcommand{\eat}[1]{}
-
 
 
 \newcommand{\FIGmassTransport}{\
@@ -151,9 +77,9 @@ Program in Computational Biology, Fred Hutchinson Cancer Research Center, Seattl
 \subsubsection{Abstract}
 }
 
-The human microbiome is the collection of microbes that live inside and on humans.
+The human microbiome is the collection of microbes that live inside of and on the outside of humans.
 The Human Microbiome Project (HMP) and the Metagenomics of the Human Intestinal Tract (MetaHIT) consortia have advanced human microboime research by generating thousands of 16s surveys and terabases of metagenomic data on the human microbiome, as well as funding bioinformatics and statistical development.
-In this talk I will review the impact of phylogenetics and tree-thinking on the methods used in the analysis of this data, as well as describing current challenges for phylogenetics coming from this type of work.
+In this paper I review the impact of phylogenetics and tree-thinking on the methods used in the analysis of this data, as well as describing current challenges for phylogenetics coming from this type of work.
 
 \forarxiv{
 \end{abstract}
@@ -167,74 +93,108 @@ In this talk I will review the impact of phylogenetics and tree-thinking on the 
 
 \section{Introduction to the human microbiome}
 
-Starter paragraph about the scope of human microbiome research.
-Our idea is to highlight areas that may be of particular interest for the phylogenetics community by potentially having wider applications or by being areas for future exploration.
+The human microbiome is the collection of microbial organisms that live inside of and on the surface of humans.
+In this section I will review what is known ...
 
-Terminology: survey versus metagenome.
-Definition of a single sample.
+Archaea has been found in the gut.
 
-The human microbiome is.
-Virome.
-Has been opened up by high-throughput sequencing.
-Non-culturable organisms.
-
-This sequencing has shown that the microbiome contains a diverse collection of organisms, has remarkable metabolic potential.
-Number of species.
-\cite{qin2010human}
-% To understand the impact of gut microbes on human health and well-being it is crucial to assess their genetic potential. Here we describe the Illumina-based metagenomic sequencing, assembly and characterization of 3.3 million non-redundant microbial genes, derived from 576.7 gigabases of sequence, from faecal samples of 124 European individuals. The gene set, ~150 times larger than the human gene complement, contains an overwhelming majority of the prevalent (more frequent) microbial genes of the cohort and probably includes a large proportion of the prevalent human intestinal microbial genes. The genes are largely shared among individuals of the cohort. Over 99% of the genes are bacterial, indicating that the entire cohort harbours between 1,000 and 1,150 prevalent bacterial species and each individual at least 160 such species, which are also largely shared. We define and describe the minimal gut metagenome and the minimal gut bacterial genome in terms of functions present in all individuals and most bacteria, respectively.
+Genetics.
 
 The microbiome is dynamic in terms of representation but apparently constant in terms of function.
 \cite{hmp2012structure}
 
-Human microbiome is spatially organized, as can be seen on skin \cite{grice2009topographical}.
+The microbiome has remarkable metabolic potential.
+\cite{qin2010human}
+% To understand the impact of gut microbes on human health and well-being it is crucial to assess their genetic potential. Here we describe the Illumina-based metagenomic sequencing, assembly and characterization of 3.3 million non-redundant microbial genes, derived from 576.7 gigabases of sequence, from faecal samples of 124 European individuals. The gene set, ~150 times larger than the human gene complement, contains an overwhelming majority of the prevalent (more frequent) microbial genes of the cohort and probably includes a large proportion of the prevalent human intestinal microbial genes. The genes are largely shared among individuals of the cohort. Over 99% of the genes are bacterial, indicating that the entire cohort harbours between 1,000 and 1,150 prevalent bacterial species and each individual at least 160 such species, which are also largely shared. We define and describe the minimal gut metagenome and the minimal gut bacterial genome in terms of functions present in all individuals and most bacteria, respectively.
 
-Inter-individual versus intra-individual variation \cite{hmp2012structure}
+Core microbiome \cite{turnbaugh2008core}.
+Human microbiome is spatially organized, as can be seen on skin \cite{grice2009topographical}.
+Bacterial community variation in human body habitats across space and time \cite{costello2009bacterial}.
+Inter-individual versus intra-individual variation \cite{hmp2012structure}.
 
 16s surveys have shown that antibiotics fundamentally disturb microbial communities, resulting in an effect that lasts years.
 \cite{jernberg2007long,dethlefsen2008pervasive,jakobsson2010short,dethlefsen2011incomplete}
+
+
+Major finding: antibiotics.
+\cite{dethlefsen2008pervasive,dethlefsen2011incomplete,jakobsson2010short,jernberg2007long}
+
+Obesity
+
+Microbial ecology: human gut microbes associated with obesity \cite{ley2006microbial}
+
+Amish study \cite{zupancic2012analysis}
+"Neither BMI nor any metabolic syndrome trait was associated with a particular gut community. Network analysis identified twenty-two bacterial species and four OTUs that were either positively or inversely correlated with metabolic syndrome traits, suggesting that certain members of the gut microbiota may play a role in these metabolic derangements."
+
+pregancy \cite{koren2012host}
+
 
 Substantial attention was given to whether microbial ``types'' exist.
 A high-profile paper from Per Bork's group had enterotypes: Bacteroides, Prevotella or Ruminococcus.
 \cite{arumugam2011enterotypes}
 Appears that there is a real tendency to cluster around Bacteroides or Prevotella \cite{wu2011linking}
 
+Although the focus of much of the work has been on bacteria and archaea, other groups of life have attracted more attention lately, such as the fungi.
+Viruses too
+febrile study \cite{wylie2012sequence}
+
+
+
+\section{Methods used to investigate the human microbiome}
+
+Terminology: survey versus metagenome.
+Definition of a single sample.
+Despite their importance, I will not describe experimental techniques such as gnotobiotic mice to stay within scope.
+
 \cite{hugenholtz2002review}
 {Exploring prokaryotic diversity in the genomic era}
 
 
-Major finding: antibiotics.
-\cite{dethlefsen2008pervasive,dethlefsen2011incomplete,jakobsson2010short,jernberg2007long}
+\subsection{Marker genes}
+History-- bacteria?
 
-obesity
-turnbaugh papers
-http://www.nature.com/nature/journal/v444/n7122/abs/nature05414.html
-http://europepmc.org/abstract/MED/18407065/reload=0;jsessionid=Ea4YLfXjd7Cfpx5Hvafq.2
-amish study
-http://precedings.nature.com/documents/4957/version/1
+Our knowledge of the microbial world is due to a large part derived from the work of Carl Woese and colleagues who pioneered the use of marker genes as a way to distinguish between microbial lineages.
+Their work, and the scientists who followed them, used especially the 16S ribosomal gene.
+This gene was chosen because...
+They developed the first "universal" 16S PCR primers.
+The great accomplishment of this is learning that archaea, although morphologically similar to bacteria, form their own separate lineage.
 
-Data products
+Non-culturable organisms.
+
+While Woese and colleagues used primitive sequencing methods to gain information, modern researchers have the luxury of high throughput sequencing.
+This can be
+
+Despite the high-throughput and low cost of modern sequencing, inherent challenges remain for the use of population census by marker gene sequencing.
+Most fundamentally, various microbes have different DNA extraction efficiencies, even with hard core protocols, meaning that the representation of marker gene sequences is not representative of the actual communities \cite{morganEaInVitroSimulatedMetagenome10}.
+Furthermore, primer bias.
+Current sequencing technology is limited to a length that is shorter than most genes, which limits the resolution of the analyses.
+Different regions may be good for different groups of organisms.
+
+16S exists in multiple copies and there can be diversity within the copies.
+Kembel efforts to correct for it.
+
+% alternative loci
+\cite{case2007rpob}
+
+Noise and the rare biosphere?
+
+Knowledge of the impact of microbial communities has been
+
+\subsection{Metagenomes}
+
+
+\subsection{Data generated from the various studies}
 reference genomes
 HMP DACC.
 
-Core microbiome
-\cite{turnbaugh2008core}
-
 HMP nature paper
 \cite{methe2012framework}
-
-\cite{costello2009bacterial}
-Bacterial community variation in human body habitats across space and time
-
-\cite{ley2006microbial}
-Microbial ecology: human gut microbes associated with obesity
-
 
 
 \section{Tree-thinking in human microbiome research}
 
 Phylogenetics is primarily used in this realm as a framework with which data can be organized.
 It is common for researchers to equate 16s phylogeny with taxonomy.
-Trait evolution methods are not common.
 
 \subsection{Phylogenetics and taxonomy}
 
@@ -242,49 +202,29 @@ Without a doubt, the greatest impact that phylogenetics has had on microbial eco
 In the absence of sequencing, microbiologist have to rely on microscopes and staining.
 Lots of little things look alike.
 
+The reason people are attached to taxonomy is that there is a lot of information using taxonomic labels.
+
 The most stunning example of this is the discovery of the archaea by Woese.
 
 In general, this sort of approach has led to a number projects that use phylogeny to revise taxonomy.
 These attempts are less ambitious than the development of the PhyloCode, and simply work to revise the hierarchical structure of the taxonomy while (for the most part) leaving taxonomic names fixed.
-Bergey's taxonomy is supposed to be.
+Bergey's Manual of Systematic Bacteriology \cite{kreig1984bergey}.
+
 GreenGenes.
+\cite{desantis2006greengenes}
+{Greengenes, a chimera-checked 16S rRNA gene database and workbench compatible with ARB}
+\cite{dalevi2007automated}
+Automated group assignment in large phylogenetic trees using GRUNT: GRouping, Ungrouping, Naming Tool
+
+
+
 tax2tree.
 SILVA.
-%The reason people are attached to taxonomy is that there is a lot of information using taxonomic labels.
 
 Much of this work has been done using the 16s ribosomal rRNA gene.
 Exceptions.
 
 Tree-based classification.
-
-\cite{parks2011classifying}
-Classifying short genomic fragments from novel lineages using composition and homology
-
-\cite{mcdonald2011improved}
-An improved Greengenes taxonomy with explicit ranks for ecological and evolutionary analyses of bacteria and archaea
-
-\cite{phylopythia}
-McHardy, A. C.  and Martin, H. G.  and Tsirigos, A.  and Hugenholtz, P.  and Rigoutsos, I.
-
-\cite{munch2008statistical}
-Statistical assignment of DNA sequences using Bayesian phylogenetics
-
-\cite{munch2008fast}
-Fast phylogenetic DNA barcoding
-
-\cite{rosen2011nbc}
-NBC: the Naive Bayes Classification tool webserver for taxonomic classification of metagenomic reads
-
-
-\cite{segata2011metagenomic}
-Metagenomic biomarker discovery and explanation
-
-\cite{segata2012metagenomic}
-Metagenomic microbial community profiling using unique clade-specific marker genes
-
-
-
-Curation of HM databases using phylogenetics?
 
 \cite{forey2001phylocode}
 {The PhyloCode: description and commentary}
@@ -293,16 +233,6 @@ Curation of HM databases using phylogenetics?
 Reconciling taxonomy and phylogenetic inference: formalism and algorithms for describing discord and inferring taxonomic roots
 
 \cite{carma}
-
-
-\cite{kreig1984bergey}
-Bergey's Manual of Systematic Bacteriology.
-
-\cite{dalevi2007automated}
-Automated group assignment in large phylogenetic trees using GRUNT: GRouping, Ungrouping, Naming Tool
-
-\cite{desantis2006greengenes}
-{Greengenes, a chimera-checked 16S rRNA gene database and workbench compatible with ARB}
 
 \cite{bazinet2012comparative}
 A comparative evaluation of sequence classification programs
@@ -327,6 +257,31 @@ Rapid identification of high-confidence taxonomic assignments for metagenomic da
 \cite{maidak1997rdp}
 The RDP (ribosomal database project)
 
+\cite{mcdonald2011improved}
+An improved Greengenes taxonomy with explicit ranks for ecological and evolutionary analyses of bacteria and archaea
+
+\cite{parks2011classifying}
+Classifying short genomic fragments from novel lineages using composition and homology
+
+\cite{phylopythia}
+McHardy, A. C.  and Martin, H. G.  and Tsirigos, A.  and Hugenholtz, P.  and Rigoutsos, I.
+
+\cite{munch2008statistical}
+Statistical assignment of DNA sequences using Bayesian phylogenetics
+
+\cite{munch2008fast}
+Fast phylogenetic DNA barcoding
+
+\cite{rosen2011nbc}
+NBC: the Naive Bayes Classification tool webserver for taxonomic classification of metagenomic reads
+
+\cite{segata2011metagenomic}
+Metagenomic biomarker discovery and explanation
+
+\cite{segata2012metagenomic}
+Metagenomic microbial community profiling using unique clade-specific marker genes
+
+
 
 \subsection{Diversity estimates using phylogenetics}
 
@@ -340,8 +295,6 @@ Here we will focus on variants of phylogenetic diversity and their use.
 A phylogeny-driven genomic encyclopaedia of Bacteria and Archaea \cite{wu2009phylogeny}.
 
 Most wanted.
-
-Eisen darling paper on extractability.
 
 \cite{hill1973diversity}
 Diversity and evenness: a unifying notation and its consequences
@@ -394,12 +347,19 @@ Edge principal components and squash clustering: using the special structure of 
 \cite{nemergut2011global}
 ?? Global patterns in the biogeography of bacterial taxa
 
-\subsection{Inference of horizontal gene transfer}
 
+\subsection{Genome-scale inquiries using phylogenetics}
 
+GEBA \cite{wu2009phylogeny}
+
+Sushi paper, network of gene transfer.
+
+Reconciliation, team phyldog.
 
 
 \section{Phylogenetic inference as practiced by human microbiome researchers}
+
+NJ
 
 \cite{felsenstein1981evolutionary}
 {Evolutionary trees from DNA sequences: a maximum likelihood approach}
@@ -431,6 +391,7 @@ Finding biologically accurate clusterings in hierarchical tree decompositions us
 
 \cite{nawrocki2009infernal}
 Infernal 1.0: inference of RNA alignments
+
 
 \cite{white2010alignment}
 Alignment and clustering of phylogenetic markers-implications for microbial diversity studies
@@ -467,14 +428,6 @@ A simple, fast, and accurate method of phylogenomic inference
 \cite{berger2011aligning}
 Aligning short reads to reference alignments and trees
 
-\cite{caporaso2010qiime}
-
-\cite{schloss2009introducing}
-Introducing mothur: open-source, platform-independen
-
-\cite{lynch2013axiome}
-AXIOME: automated exploration of microbial diversity
-
 
 \cite{wang2007naive}
 {Naive Bayesian classifier for rapid assignment of rRNA sequences into the new bacterial taxonomy}
@@ -489,8 +442,14 @@ Impact of training sets on classification of high-throughput bacterial 16s rRNA 
 \cite{vonMeringEaQuantitative08}
 {Quantitative phylogenetic assessment of microbial communities in diverse environments}
 
-% alternative loci
-\cite{case2007rpob}
+\subsection{Software}
+\cite{caporaso2010qiime}
+
+\cite{schloss2009introducing}
+Introducing mothur: open-source, platform-independen
+
+\cite{lynch2013axiome}
+AXIOME: automated exploration of microbial diversity
 
 % databases
 \cite{chen2010human}
@@ -515,6 +474,8 @@ HGT.
 
 There has been a shift from interest in community dynamics to fine-scale interactions between host and immune system.
 
+hooper2012interactions,
+
 Trait evolution methods are conspicuously absent.
 
 \cite{wylie2012sequence}
@@ -528,12 +489,20 @@ Trait evolution methods are conspicuously absent.
 Microbiome analysis among bats describes influences of host phylogeny, life history, physiology and geography
 
 
+\subsection{Notably absent}
+Trait evolution methods are not common.
+
 
 \section{Discussion}
 
 What we can expect next.
+Interactions with the immune system:
+\cite{hooper2012interactions}
+
+Clinical applications, but MALDI-TOF
 
 Field is still not yet mature.
+Need to think about study design.
 
 \notforarxiv{
 \newpage
