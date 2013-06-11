@@ -1,4 +1,3 @@
-% PI-CRUST
 
 \documentclass{amsart}
 \usepackage{amsmath,amsfonts,amssymb,amsthm}
@@ -167,16 +166,16 @@ Current sequencing technology is limited to a length that is shorter than most g
 Different regions may be good for different groups of organisms.
 
 16S exists in multiple copies and there can be diversity within the copies.
-Kembel efforts to correct for it.
+\citet{kembel2012incorporating}
 
 Some groups have reported advantages to using alternate single-copy genes as markers, (e.g. \cite{case2007rpob},\cite{mcnabb2004hsp65}), however nothing has really come close to 16S.
 
 Noise and the rare biosphere?
 
 As we will see, 16S is used frequently as a way of measuring diversity.
-Those used to microbial genetics may think this surprising, because the genetic repertoire of microbes may not be so much vertically inherited.
-However, \cite{zaneveld}
-This approach has recently been taken to its logical conclusion by trying to infer.
+Those accustomed to microbial genetics may think this surprising, because the genetic repertoire of microbes may not be so much vertically inherited.
+However, \citep{zaneveld2010ribosomal} have shown that there is a correlation between pairwise distances of 16S genes and genetic repertoire.
+This approach has recently been taken to its logical conclusion by trying to infer functional characteristics using discrete trait evolution models on 16S gene trees (cite PI-CRUST).
 
 
 \subsection{Metagenomes}
@@ -184,16 +183,13 @@ This approach has recently been taken to its logical conclusion by trying to inf
 As described above ``metagenome" means that data is sheared randomly.
 This type of data has a complication above that taken from 16S survey data, which is that the genetic region sequenced is unknown in addition to the organism it was taken from.
 
-Metagenomic data is typically used to infer functional information directly.
-
+Metagenomic data is typically used to infer information about metabolic capacity (cite Humann) rather than make statements of an evolutionary nature.
 One approach to using metagenomic data is simply to subset to genes that are found in a large proportion of micro-organisms.
-This is the approach taken by the team of Jonathan Eisen, starting first with AMPHORA \cite{wu2008amphora} and subsequently with PhyloSift (in preparation).
+This is the approach taken by the teams of Christian von Mering \cite{von2007quantitative,stark2010mltreemap} and Jonathan Eisen \cite{wu2008amphora} (in preparation).
+Because of the diversity of gene repertoire in microbes, the gene sets may have only limited overlap with one another, and even the largest collection of genes in these databases only recruits around 1 percent of a metagenome.
 
-In parallel, MLTreeMap.
-
-Because of the diversity of gene repertoire in microbes, the gene sets may have only limited overlap with one another.
-One solution is assembly and then phylogenetic analysis.
-metAMOS pipeline \cite{treangen2011metamos}.
+An alternative approach is to use metagenomic reads directly for analysis.
+The authors of the metAMOS pipeline \cite{treangen2013metamos} report speedups and much higher accuracy when reads are assembled before they are classified.
 
 A fascinating approach is that of \citet{segata2012metagenomic}, who start by compiling a database of clade-specific genes \citep{segata2011metagenomic}.
 Then they classify the origin of a given read as being the only clade that has this gene.
@@ -210,7 +206,7 @@ HMP nature paper
 \section{Tree-thinking in human microbiome research}
 
 Phylogenetics is primarily used in this realm as a framework with which data can be organized.
-It is common for researchers to equate 16s phylogeny with taxonomy.
+It is common for researchers to equate 16S phylogeny with taxonomy.
 
 \subsection{Phylogenetics and taxonomy}
 
@@ -223,76 +219,13 @@ The reason people are attached to taxonomy is that there is a lot of information
 The most stunning example of this is the discovery of the archaea by Woese.
 
 In general, this sort of approach has led to a number projects that use phylogeny to revise taxonomy.
-These attempts are less ambitious than the development of the PhyloCode, and simply work to revise the hierarchical structure of the taxonomy while (for the most part) leaving taxonomic names fixed.
-Bergey's Manual of Systematic Bacteriology \cite{kreig1984bergey}.
-
-GreenGenes.
-\cite{desantis2006greengenes}
-{Greengenes, a chimera-checked 16S rRNA gene database and workbench compatible with ARB}
-\cite{dalevi2007automated}
-Automated group assignment in large phylogenetic trees using GRUNT: GRouping, Ungrouping, Naming Tool
-
-\cite{forey2001phylocode}
-{The PhyloCode: description and commentary}
-
-\cite{matsen2011reconciling}
-Reconciling taxonomy and phylogenetic inference: formalism and algorithms for describing discord and inferring taxonomic roots
-
-
-
-tax2tree.
-SILVA.
+These attempts are less ambitious than the development of the PhyloCode \cite{forey2001phylocode}, and simply work to revise the hierarchical structure of the taxonomy while (for the most part) leaving taxonomic names fixed.
+Bergey's Manual of Systematic Bacteriology has adopted 16S \cite{kreig1984bergey}.
+The GreenGenes taxonomy \cite{desantis2006greengenes} has been very active in updating their taxonomy according to 16S, first with their GRUNT tool \cite{dalevi2007automated} and more recently with their tax2tree tool \cite{mcdonald2011improved}.
+Rather than proposing changes to the taxonomy, our group \cite{matsen2011reconciling} has developed ways of quantifying discordance between phylogeny and taxonomy.
 
 Tree-based classification.
-
-\cite{carma}
-
 \cite{bazinet2012comparative}
-A comparative evaluation of sequence classification programs
-
-\cite{brady2011phymmbl}
-PhymmBL expanded: confidence scores, custom databases, parallelization and more
-
-\cite{brady2009phymm}
-Phymm and PhymmBL: metagenomic phylogenetic classification with interpolated Markov models
-
-\cite{ColeEaRDP2009}
-
-\cite{liu2008accurate}
-Accurate taxonomy assignments from 16S rRNA sequences produced by highly parallel pyrosequencers
-
-\cite{lan2012using}
-Using the RDP Classifier to Predict Taxonomic Novelty and Reduce the Search Space for Finding Novel Organisms
-
-\cite{macdonald2012rapid}
-Rapid identification of high-confidence taxonomic assignments for metagenomic data
-
-\cite{maidak1997rdp}
-The RDP (ribosomal database project)
-
-\cite{mcdonald2011improved}
-An improved Greengenes taxonomy with explicit ranks for ecological and evolutionary analyses of bacteria and archaea
-
-\cite{parks2011classifying}
-Classifying short genomic fragments from novel lineages using composition and homology
-
-\cite{phylopythia}
-McHardy, A. C.  and Martin, H. G.  and Tsirigos, A.  and Hugenholtz, P.  and Rigoutsos, I.
-
-\cite{munch2008statistical}
-Statistical assignment of DNA sequences using Bayesian phylogenetics
-
-\cite{munch2008fast}
-Fast phylogenetic DNA barcoding
-
-\cite{rosen2011nbc}
-NBC: the Naive Bayes Classification tool webserver for taxonomic classification of metagenomic reads
-
-\cite{segata2011metagenomic}
-Metagenomic biomarker discovery and explanation
-
-\cite{segata2012metagenomic}
-Metagenomic microbial community profiling using unique clade-specific marker genes
 
 
 
@@ -317,9 +250,6 @@ Diversity and evenness: a unifying notation and its consequences
 Phylogenetic Diversity Theory Sheds Light on the Structure of Microbial Communities
 
 cite kembel paper
-
-\cite{morlon2011spatial}
-Spatial patterns of phylogenetic diversity
 
 
 \subsection{Community comparison using phylogenetics}
@@ -477,8 +407,6 @@ Functional genes and phylogenomics.
 
 HGT.
 
-\subsection{Notably absent}
-Trait evolution methods are not common.
 
 
 \section{Discussion}
