@@ -91,21 +91,27 @@ In this paper I review the impact of phylogenetics and tree-thinking on the meth
 
 Why, as systematic biologists, should we be interested in what these microbial ecologists have done?
 System with a lot of data and a lot of questions.
+Microbes can only be identified by their molecular sequence.
 Indeed, just to do ecology you have to do sequencing.
 Many of the issues that are raised by high throughput sequencing of beasties that are more commonly of interest for phylogenetics folk are present, and worse, in microbial studies.
-Taxonomic issues.
 
-Lack of "obvious" ways of grouping beasties has led to innovation.
+Taxonomic issues.
+Lack of "obvious" ways of grouping beasties.
+Lack of broad phenotypic characterization.
+These issues motivate sequence- and evolution-based methodology.
+
+This has led to innovation in ways of using trees.
 It means something that they have developed their own way of using trees, although there is some overlap with previous literature.
-Questions of microbial genomics, translated into questions of function, have real consequences.
+Questions of microbial genomics, translated into questions of function, have important consequences for human health.
 
 Why human microbiome versus microbial ecology?
 Relevance to health.
 We know a lot more about these bugs.
 Can manipulate the systems-- feeding studies and gnotobiotic mice.
 
-Opportunities for SB audience to contribute to this field.
-
+In this review I will describe human microbiome research from the perspective of a phylogenetics researcher.
+I will first briefly review the recent literature on the human microbiome, then describe novel ways in which human microbiome researchers have used trees and the challenges that human microbiome research poses for the phylogenetics community.
+I will finish with opportunities for SB audience to contribute to this field.
 
 \section{The human microbiome}
 The human microbiome is the collection of microbial organisms that live inside of and on the surface of humans.
@@ -203,7 +209,7 @@ Noise and the rare biosphere?
 As we will see, 16S is used frequently as a way of measuring diversity.
 Those accustomed to microbial genetics may think this surprising, because the genetic repertoire of microbes may not be so much vertically inherited.
 However, \citep{zaneveld2010ribosomal} have shown that there is a correlation between pairwise distances of 16S genes and genetic repertoire.
-This approach has recently been taken to its logical conclusion by trying to infer functional characteristics using discrete trait evolution models on 16S gene trees (cite PI-CRUST).
+This approach has recently been taken to its logical conclusion by trying to infer functional characteristics using discrete trait evolution models on 16S gene trees \citep{langille2013predictive} using either parsimony \citep{kluge1969quantitative} or likelihood \citep{pagel1994detecting} methods via the ape package \citep{paradis2004ape}.
 
 
 \subsection{Metagenomes}
@@ -213,7 +219,7 @@ This type of data has a complication above that taken from 16S survey data, whic
 
 Metagenomic data is typically used to infer information about metabolic capacity (cite Humann) rather than make statements of an evolutionary nature.
 One approach to using metagenomic data is simply to subset to genes that are found in a large proportion of micro-organisms.
-This is the approach taken by the teams of Christian von Mering \cite{von2007quantitative,stark2010mltreemap} and Jonathan Eisen \cite{wu2008amphora} (in preparation).
+This is the approach taken by \citep{von2007quantitative,stark2010mltreemap} and Jonathan Eisen \citep{wu2008amphora} (in preparation).
 Because of the diversity of gene repertoire in microbes, the gene sets may have only limited overlap with one another, and even the largest collection of genes in these databases only recruits around 1 percent of a metagenome.
 
 An alternative approach is to use metagenomic reads directly for analysis.
@@ -433,7 +439,7 @@ CORE: a phylogenetically-curated 16S rDNA database of the core oral microbiome
 \cite{srinivasan2012bacterial}
 
 
-\section{Phylogenetic challenges for human microbiome research}
+\section{Phylogenetic challenges and opportunities in human microbiome research}
 
 Usual challenges.
 Non-overlapping reads.
@@ -445,10 +451,17 @@ However, the apparent success of 16s tree based comparisons leads to some intere
 Continued research on the correlation between phylogeny and function.
 Can we correct the 16s tree somehow, or what sort of thing can we use that is a better predictor?
 
+There is a strange divide between trait evolution methods for macro- and micro-fauna.
+The results of simple methods are reasonable.
+Possible that improved methods, perhaps involving whole-genome evolutionary modeling, could shed light on the problem.
+
 There continues to be discussion about whether there is a tree of life.
 Examples.
 This can be a theoretical one.
 What is the correct representation of the genetic ancestry of an organism that allows us to best predict.
+
+In any case, what about trait evolution models that take HGT into account?
+What about trait evolution models that are on KEGG?
 
 Hubbell's neutral theory applied to human microbiome \cite{fierer2012animalcules,costello2012application}.
 
@@ -466,7 +479,7 @@ Except to the extent that it is useful to look at gene trees to understand funct
 
 But in addition to deeper probing we can also expect wider coverage.
 Lots of data.
-Citizen microbiome
+Citizen microbiome projects.
 
 Comparative studies of microbiomes.
 \cite{phillips2012microbiome}
@@ -490,10 +503,20 @@ There are limitations to what we can learn.
 Genome doesn't tell all.
 Host side is sometimes missing, but experiments are good.
 
+Perhaps there is a role for trait evolution methods, or perhaps a simple method does prediction to within how good the data is.
+There is the possibility that we don't have to think about individual organisms at all, but rather can think about the collection of genes and their metabolic network as a meta-organism (cite Elbo).
+Question: to what extent is modeling cellular-level evolutionary history interesting?
+
+
 The field has experienced a frenetic rate of expansion over the past xxx years, and sometimes it can feel like researchers in this area have forgotten some of the basic principles of study design, such as power calculations, that are well recognized in other areas of medical research.
 Although the human microbiome has led to a lot of "hype," our microbes are here to stay and so is research on them.
 Thus we can look forward to the field of human microbiome analysis settling down to a comfortable and mature middle age as an interesting intersection between ecology and medicine.
 
+
+\section{Acknowledgements}
+Aaron Darling, Connor McCoy,
+FHCRC folk.
+ATD grant.
 
 
 \notforarxiv{
