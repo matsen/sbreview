@@ -148,26 +148,12 @@ These findings have yet to find their way into a real understanding.
 Amish study \cite{zupancic2012analysis}
 "Neither BMI nor any metabolic syndrome trait was associated with a particular gut community. Network analysis identified twenty-two bacterial species and four OTUs that were either positively or inversely correlated with metabolic syndrome traits, suggesting that certain members of the gut microbiota may play a role in these metabolic derangements."
 
-more virome
-http://www.pnas.org/content/early/2013/07/03/1300833110.short
-review paper:http://genomebiology.com/2013/14/7/127
-
-mycobiome
-http://genomemedicine.com/content/5/7/63
-
-
 In order to really get an understanding, researchers are shifting from community dynamics to fine-scale interactions between host and microbe \cite{hooper2012interactions}.
 Some major findings there.
 
-So far we have been focusing on bacteria, though archaea also play a role.
-Archaea have also been found in the gut.
-and fungi too
-http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0066019
-
-Although the focus of much of the work has been on bacteria and archaea, other groups of life have attracted more attention lately, such as the fungi.
-
-Viruses too
-febrile study \cite{wylie2012sequence}
+We will be focusing on bacterial, as they have formed the bulk of the research.
+However, archaea \cite{hoffmann2013archaea} and fungi play a role.
+Viruses too \citep{reyes2010viruses,minot2011human,wylie2012sequence,minot2013rapid}.
 
 
 \section{Methods used to investigate the human microbiome via sequencing.}
@@ -221,12 +207,24 @@ The authors of the metAMOS pipeline \cite{treangen2013metamos} report speedups a
 If not used as an expanded marker gene panel then typically used to infer information about metabolic capacity (cite Humann) rather than make statements of an evolutionary nature.
 
 
-\subsection{Data generated from the various studies}
+\subsection{Whole genomes}
+Whole-genome sequencing used for microbial outbreak tracking \cite{snitkin2012tracking}.
+Now from culture, but next we will see single-cell sequencing.
+
+
+\subsection{Data availability and future}
 reference genomes
 HMP DACC.
 
 HMP nature paper
 \cite{methe2012framework}
+
+Future will give deeper sequencing, which can mean massive parallelization.
+Citizen microbiome projects.
+
+Comparative studies of microbiomes.
+\cite{phillips2012microbiome}
+Microbiome analysis among bats describes influences of host phylogeny, life history, physiology and geography
 
 
 
@@ -404,15 +402,17 @@ Impact of training sets on classification of high-throughput bacterial 16s rRNA 
 
 
 \subsection{Software}
-\cite{caporaso2010qiime}
 
-\cite{schloss2009introducing}
-Introducing mothur: open-source, platform-independen
+People do most phylogenetic inferences as part of a pipeline.
+The most popular ones are QIIME \cite{caporaso2010qiime} and mothur \cite{schloss2009introducing}.
+AXIOME streamlines and manages analysis of small subunit (SSU) rRNA marker data in QIIME and mothur \cite{lynch2013axiome}.
 
-\cite{lynch2013axiome}
-AXIOME: automated exploration of microbial diversity
+mothur has ported in the clearcut \cite{evans2006relaxed,sheneman2006clearcut} program.
+QIIME wraps clearcut and \cite{price2010fasttree}.
 
-% databases
+Bayesian inference is very rare.
+
+Databases:
 \cite{chen2010human}
 The Human Oral Microbiome Database: a web accessible resource for investigating oral microbe taxonomic and genomic information
 
@@ -462,14 +462,6 @@ Could we do tree shape statistics?
 \section{Discussion}
 What we can expect next.
 
-But in addition to deeper probing we can also expect wider coverage.
-Lots of data.
-Citizen microbiome projects.
-
-Comparative studies of microbiomes.
-\cite{phillips2012microbiome}
-Microbiome analysis among bats describes influences of host phylogeny, life history, physiology and geography
-
 Clinical applications,
 \cite{clarridge2004}
 {{I}mpact of 16{S} r{RNA} gene sequence analysis for identification of bacteria on clinical microbiology and infectious diseases}
@@ -479,10 +471,6 @@ Bioinformatics will get hardened into fixed workflows.
 
 Understand cause and effect of diseases.
 Take an ecololgical view on atopic dermititis.
-
-Microbial outbreak tracking.
-Very common in RNA viruses.
-Already using similar methods by applying whole-genome sequencing.
 
 Perhaps there is a role for trait evolution methods, or perhaps a simple method does prediction to within how good the data is.
 There is the possibility that we don't have to think about individual organisms at all, but rather can think about the collection of genes and their metabolic network as a meta-organism (cite Elbo).
