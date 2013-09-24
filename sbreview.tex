@@ -171,16 +171,18 @@ febrile study \cite{wylie2012sequence}
 
 Terminology: survey versus metagenome.
 Definition of a single sample.
-There are a number of non-sequence-based experimental techniques that have been crucial for the development of the field, such as manipulation of gnotobiotic mice, but these are beyond the scope of this paper.
 
 Many of these methods cross over with microbial ecology in general.
 Exploring prokaryotic diversity in the genomic era \cite{hugenholtz2002review}.
+
+Gnotobiotic mice.
+Human intervention.
 
 
 \subsection{Microbial community estimation using marker genes}
 History-- bacteria?
 
-Our modern knowledge of the microbial world is due to a large part derived from the work of Carl Woese and colleagues who pioneered the use of marker genes as a way to distinguish between microbial lineages.
+Our modern knowledge of the microbial world is due to a large part derived from the methods of Carl Woese and colleagues who pioneered the use of marker genes as a way to distinguish between microbial lineages.
 Their work, and the scientists who followed them, used especially the 16S ribosomal gene.
 This gene was chosen because...
 They developed the first "universal" 16S PCR primers.
@@ -206,11 +208,6 @@ Some groups have reported advantages to using alternate single-copy genes as mar
 
 Noise and the rare biosphere?
 
-As we will see, 16S is used frequently as a way of measuring diversity.
-Those accustomed to microbial genetics may think this surprising, because the genetic repertoire of microbes may not be so much vertically inherited.
-However, \citep{zaneveld2010ribosomal} have shown that there is a correlation between pairwise distances of 16S genes and genetic repertoire.
-This approach has recently been taken to its logical conclusion by trying to infer functional characteristics using discrete trait evolution models on 16S gene trees \citep{langille2013predictive} using either parsimony \citep{kluge1969quantitative} or likelihood \citep{pagel1994detecting} methods via the ape package \citep{paradis2004ape}.
-
 
 \subsection{Metagenomes}
 
@@ -224,10 +221,6 @@ Because of the diversity of gene repertoire in microbes, the gene sets may have 
 
 An alternative approach is to use metagenomic reads directly for analysis.
 The authors of the metAMOS pipeline \cite{treangen2013metamos} report speedups and much higher accuracy when reads are assembled before they are classified.
-
-A fascinating approach is that of \citet{segata2012metagenomic}, who start by compiling a database of clade-specific genes \citep{segata2011metagenomic}.
-Then they classify the origin of a given read as being the only clade that has this gene.
-They show that this has good specificity, however, sensitivity is limited to genomes that have been sequenced.
 
 
 \subsection{Data generated from the various studies}
@@ -251,13 +244,12 @@ UniFrac is interesting.
 
 \subsection{Phylogenetics and taxonomy}
 
-Without a doubt, the greatest impact that phylogenetics has had on microbial ecology research is on changing our view of the taxonomic relationships between microorganisms.
+Phylogenetics has had a substantial impact on microbial ecology research by changing our view of the taxonomic relationships between microorganisms.
+The most stunning example of this is the discovery of the archaea by Woese.
 In the absence of sequencing, microbiologist have to rely on microscopes and staining.
 Lots of little things look alike.
 
-The reason people are attached to taxonomy is that there is a lot of information using taxonomic labels.
-
-The most stunning example of this is the discovery of the archaea by Woese.
+However, the reason people are attached to taxonomy is that there is a lot of information using taxonomic labels.
 
 In general, this sort of approach has led to a number projects that use phylogeny to revise taxonomy.
 These attempts are less ambitious than the development of the PhyloCode \cite{forey2001phylocode}, and simply work to revise the hierarchical structure of the taxonomy while (for the most part) leaving taxonomic names fixed.
@@ -268,7 +260,9 @@ Rather than proposing changes to the taxonomy, our group \cite{matsen2011reconci
 Tree-based classification.
 \cite{bazinet2012comparative}
 
-
+A fascinating approach is that of \citet{segata2012metagenomic}, who start by compiling a database of clade-specific genes \citep{segata2011metagenomic}.
+Then they classify the origin of a given read as being the only clade that has this gene.
+They show that this has good specificity, however, sensitivity is limited to genomes that have been sequenced.
 
 \subsection{Diversity estimates using phylogenetics}
 
@@ -276,10 +270,6 @@ Because 16s surveys are inherently complex and noisy data, summary statistics ar
 For the most part, this literature adapts methods from the classical ecological literature.
 
 Here we will focus on variants of phylogenetic diversity and their use.
-
-A phylogeny-driven genomic encyclopaedia of Bacteria and Archaea \cite{wu2009phylogeny}.
-
-Most wanted.
 
 \cite{hill1973diversity}
 Diversity and evenness: a unifying notation and its consequences
@@ -290,8 +280,9 @@ Phylogenetic Diversity Theory Sheds Light on the Structure of Microbial Communit
 
 cite kembel paper
 
-
-Surprisingly little work on alpha diversity.
+Despite this work, and the enthusiasm with which microbial ecologists have accepted between-community comparison, phylogenetic alpha diversity seems under-developed.
+We have recently shown that partially-weighted abundance diversity measures do a good job of distinguishing between dysbiotic and "normal" states \cite{mccoy2013abundance}.
+We have also looked at PD under rarefaction \cite{nipperess2013mean}.
 
 \subsection{Community comparison using phylogenetics}
 
@@ -332,9 +323,20 @@ Edge principal components and squash clustering: using the special structure of 
 ?? Global patterns in the biogeography of bacterial taxa
 
 
+
+\subsection{Phylogeny and function}
+
+As we will see below, 16S is frequently used as a way of measuring diversity.
+Those accustomed to microbial genetics may think this surprising, because the genetic repertoire of microbes may not be so much vertically inherited.
+However, \citep{zaneveld2010ribosomal} have shown that there is a correlation between pairwise distances of 16S genes and genetic repertoire.
+This approach has recently been taken to its logical conclusion by trying to infer functional characteristics using discrete trait evolution models on 16S gene trees \citep{langille2013predictive} using either parsimony \citep{kluge1969quantitative} or likelihood \citep{pagel1994detecting} methods via the ape package \citep{paradis2004ape}.
+
+
 \subsection{Genome-scale inquiries using phylogenetics}
 
-GEBA \cite{wu2009phylogeny}
+A phylogeny-driven genomic encyclopaedia of Bacteria and Archaea \cite{wu2009phylogeny}.
+
+Most wanted.
 
 Sushi paper, network of gene transfer.
 
@@ -343,51 +345,37 @@ Reconciliation, team phyldog.
 
 \section{Phylogenetic inference as practiced by human microbiome researchers}
 
-NJ
-
-\cite{felsenstein1981evolutionary}
-{Evolutionary trees from DNA sequences: a maximum likelihood approach}
-
-\cite{eddy1998profile}
-Profile hidden Markov models.
-
-\cite{li2006cdhit}
-Li, W.  and Godzik, A.
-\cite{edgar2010usearch}
-
-\cite{mirarabsepp}
-{SEPP: SAT{\'e}-Enabled Phylogenetic Placement}
-
-\cite{monierEaLargeViruses08}
-{Taxonomic distribution of large DNA viruses in the sea}
-
-\cite{huson2007megan}
-
-\cite{price2010fasttree}
-{FastTree 2--approximately maximum-likelihood trees for large alignments}
-
-\cite{navlakha2009finding}
-Finding biologically accurate clusterings in hierarchical tree decompositions using the variation of information
-
-\cite{nawrocki2009infernal}
-Infernal 1.0: inference of RNA alignments
-
-\cite{white2010alignment}
-Alignment and clustering of phylogenetic markers-implications for microbial diversity studies
-
-RNA copy number
-\cite{morgan2010metagenomic}
-
+\subsection{Alignment and tree inference}
 
 Very large data sets.
 
 Some groups are not interested in accuracy per se.
 
 Alignment.
+\cite{eddy1998profile}
+Profile hidden Markov models.
 
-Networks not considered.
+\cite{nawrocki2009infernal}
+Infernal 1.0: inference of RNA alignments
+
+PYNAST
+
+
+\cite{felsenstein1981evolutionary}
+{Evolutionary trees from DNA sequences: a maximum likelihood approach}
+
+NJ
+\cite{price2010fasttree}
+{FastTree 2--approximately maximum-likelihood trees for large alignments}
 
 Species delineation problem not explicitly considered. Clustering.
+\cite{li2006cdhit}
+Li, W.  and Godzik, A.
+\cite{edgar2010usearch}
+\cite{navlakha2009finding} Finding biologically accurate clusterings in hierarchical tree decompositions using the variation of information
+\cite{white2010alignment} Alignment and clustering of phylogenetic markers-implications for microbial diversity studies
+
+Networks not considered.
 
 Chimeric sequences are a real problem, and similar to recombination.
 
@@ -406,6 +394,20 @@ A simple, fast, and accurate method of phylogenomic inference
 \cite{berger2011aligning}
 Aligning short reads to reference alignments and trees
 
+\cite{mirarabsepp}
+{SEPP: SAT{\'e}-Enabled Phylogenetic Placement}
+
+\cite{monierEaLargeViruses08}
+{Taxonomic distribution of large DNA viruses in the sea}
+
+\cite{stark2010mltreemap}
+{{MLTreeMap}-accurate Maximum Likelihood placement of environmental DNA sequences into taxonomic and functional reference phylogenies.}
+
+\cite{vonMeringEaQuantitative08}
+{Quantitative phylogenetic assessment of microbial communities in diverse environments}
+
+
+\cite{huson2007megan}
 
 \cite{wang2007naive}
 {Naive Bayesian classifier for rapid assignment of rRNA sequences into the new bacterial taxonomy}
@@ -414,11 +416,6 @@ Aligning short reads to reference alignments and trees
 Impact of training sets on classification of high-throughput bacterial 16s rRNA gene surveys
 
 
-\cite{stark2010mltreemap}
-{{MLTreeMap}-accurate Maximum Likelihood placement of environmental DNA sequences into taxonomic and functional reference phylogenies.}
-
-\cite{vonMeringEaQuantitative08}
-{Quantitative phylogenetic assessment of microbial communities in diverse environments}
 
 \subsection{Software}
 \cite{caporaso2010qiime}
@@ -457,8 +454,7 @@ Possible that improved methods, perhaps involving whole-genome evolutionary mode
 
 There continues to be discussion about whether there is a tree of life.
 Examples.
-This can be a theoretical one.
-What is the correct representation of the genetic ancestry of an organism that allows us to best predict.
+This can be a theoretical one, but here is a practical formalism: what is the correct representation of the genetic ancestry of an organism that allows us to best predict.
 
 In any case, what about trait evolution models that take HGT into account?
 What about trait evolution models that are on KEGG?
@@ -467,15 +463,18 @@ Hubbell's neutral theory applied to human microbiome \cite{fierer2012animalcules
 
 Functional genes and phylogenomics.
 
-HGT.
+The field has already benefited significantly from phylogeny using 16S.
+Now we have more full-genome data.
+We also have more full-genome methods.
+What can we do with that?
 
+HGT.
+What about tree models of within-organism transfer?
+Could we do tree shape statistics?
 
 
 \section{Discussion}
 What we can expect next.
-As described above, we can expect much more development in terms of specifics.
-\cite{hooper2012interactions}
-Except to the extent that it is useful to look at gene trees to understand function, phylogenenetics doesn't really have a role.
 
 But in addition to deeper probing we can also expect wider coverage.
 Lots of data.
@@ -499,14 +498,17 @@ Microbial outbreak tracking.
 Very common in RNA viruses.
 Already using similar methods by applying whole-genome sequencing.
 
+Perhaps there is a role for trait evolution methods, or perhaps a simple method does prediction to within how good the data is.
+There is the possibility that we don't have to think about individual organisms at all, but rather can think about the collection of genes and their metabolic network as a meta-organism (cite Elbo).
+Has limitation that you forget about cellular boundaries, which matter-- not a freely diffusing soup.
+Question: to what extent is modeling cellular-level evolutionary history interesting?
+As an extension microbes have to be close to one another-- requires population modeling.
+
 There are limitations to what we can learn.
 Genome doesn't tell all.
 Host side is sometimes missing, but experiments are good.
-
-Perhaps there is a role for trait evolution methods, or perhaps a simple method does prediction to within how good the data is.
-There is the possibility that we don't have to think about individual organisms at all, but rather can think about the collection of genes and their metabolic network as a meta-organism (cite Elbo).
-Question: to what extent is modeling cellular-level evolutionary history interesting?
-
+As described above, we can expect much more development in terms of specifics.
+\cite{hooper2012interactions}
 
 The field has experienced a frenetic rate of expansion over the past xxx years, and sometimes it can feel like researchers in this area have forgotten some of the basic principles of study design, such as power calculations, that are well recognized in other areas of medical research.
 Although the human microbiome has led to a lot of "hype," our microbes are here to stay and so is research on them.
