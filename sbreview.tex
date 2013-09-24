@@ -4,6 +4,7 @@
 \usepackage[english]{babel}
 \usepackage{graphicx}
 \usepackage{url}
+\usepackage{palatino}
 \usepackage[round]{natbib}
 \newcommand{\forarxiv}[1]{#1}
 \newcommand{\notforarxiv}[1]{}
@@ -98,6 +99,8 @@ Many of the issues that are raised by high throughput sequencing of beasties tha
 Taxonomic issues.
 Lack of "obvious" ways of grouping beasties.
 Lack of broad phenotypic characterization.
+In the absence of sequencing, microbiologist have to rely on microscopes and staining.
+Lots of little things look alike.
 These issues motivate sequence- and evolution-based methodology.
 
 This has led to innovation in ways of using trees.
@@ -167,26 +170,19 @@ Viruses too
 febrile study \cite{wylie2012sequence}
 
 
-\section{Methods used to investigate the human microbiome}
+\section{Methods used to investigate the human microbiome via sequencing.}
 
 Terminology: survey versus metagenome.
-Definition of a single sample.
-
-Many of these methods cross over with microbial ecology in general.
-Exploring prokaryotic diversity in the genomic era \cite{hugenholtz2002review}.
-
-Gnotobiotic mice.
-Human intervention.
+Many of these methods cross over with microbial ecology in general \citep{hugenholtz2002review} (cite this?).
+I will not be talking about manipulations of these systems, such as gnotobiotic mice and human intervention.
 
 
 \subsection{Microbial community estimation using marker genes}
-History-- bacteria?
 
 Our modern knowledge of the microbial world is due to a large part derived from the methods of Carl Woese and colleagues who pioneered the use of marker genes as a way to distinguish between microbial lineages.
 Their work, and the scientists who followed them, used especially the 16S ribosomal gene.
 This gene was chosen because...
 They developed the first "universal" 16S PCR primers.
-The great accomplishment of this is learning that archaea, although morphologically similar to bacteria, form their own separate lineage.
 
 Non-culturable organisms.
 
@@ -206,21 +202,23 @@ Different regions may be good for different groups of organisms.
 
 Some groups have reported advantages to using alternate single-copy genes as markers, (e.g. \cite{case2007rpob},\cite{mcnabb2004hsp65}), however nothing has really come close to 16S.
 
-Noise and the rare biosphere?
-
 
 \subsection{Metagenomes}
 
 As described above ``metagenome" means that data is sheared randomly.
 This type of data has a complication above that taken from 16S survey data, which is that the genetic region sequenced is unknown in addition to the organism it was taken from.
 
-Metagenomic data is typically used to infer information about metabolic capacity (cite Humann) rather than make statements of an evolutionary nature.
+Some use metagenomic data as an expanded marker gene library.
+\cite{kembel2011phylogenetic}
+AMPHORA, Phylosift.
 One approach to using metagenomic data is simply to subset to genes that are found in a large proportion of micro-organisms.
 This is the approach taken by \citep{von2007quantitative,stark2010mltreemap} and Jonathan Eisen \citep{wu2008amphora} (in preparation).
 Because of the diversity of gene repertoire in microbes, the gene sets may have only limited overlap with one another, and even the largest collection of genes in these databases only recruits around 1 percent of a metagenome.
 
 An alternative approach is to use metagenomic reads directly for analysis.
 The authors of the metAMOS pipeline \cite{treangen2013metamos} report speedups and much higher accuracy when reads are assembled before they are classified.
+
+If not used as an expanded marker gene panel then typically used to infer information about metabolic capacity (cite Humann) rather than make statements of an evolutionary nature.
 
 
 \subsection{Data generated from the various studies}
@@ -230,10 +228,6 @@ HMP DACC.
 HMP nature paper
 \cite{methe2012framework}
 
-
-% \cite{hummelen2010deep} Deep sequencing of the vaginal microbiota of women with HIV
-% \cite{ravel2011vaginal} Vaginal microbiome of reproductive-age women
-% \cite{fredricks2005molecular} Molecular identification of bacteria associated with bacterial vaginosis
 
 
 \section{Tree-thinking in human microbiome research}
@@ -245,9 +239,7 @@ UniFrac is interesting.
 \subsection{Phylogenetics and taxonomy}
 
 Phylogenetics has had a substantial impact on microbial ecology research by changing our view of the taxonomic relationships between microorganisms.
-The most stunning example of this is the discovery of the archaea by Woese.
-In the absence of sequencing, microbiologist have to rely on microscopes and staining.
-Lots of little things look alike.
+The most stunning example of this is the discovery that archaea, although morphologically similar to bacteria, form their own separate lineage.
 
 However, the reason people are attached to taxonomy is that there is a lot of information using taxonomic labels.
 
@@ -264,8 +256,8 @@ A fascinating approach is that of \citet{segata2012metagenomic}, who start by co
 Then they classify the origin of a given read as being the only clade that has this gene.
 They show that this has good specificity, however, sensitivity is limited to genomes that have been sequenced.
 
-\subsection{Diversity estimates using phylogenetics}
 
+\subsection{Diversity estimates using phylogenetics}
 Because 16s surveys are inherently complex and noisy data, summary statistics are often used; summaries of the diversity of a single sample are often called \emph{alpha diversity}.
 For the most part, this literature adapts methods from the classical ecological literature.
 
@@ -274,53 +266,47 @@ Here we will focus on variants of phylogenetic diversity and their use.
 \cite{hill1973diversity}
 Diversity and evenness: a unifying notation and its consequences
 
+On expanded marker tree \cite{kembel2011phylogenetic}.
+
+hill numbers
+\cite{chao2010phylogenetic}
 
 \cite{odwyer2012phylogenetic}
 Phylogenetic Diversity Theory Sheds Light on the Structure of Microbial Communities
-
-cite kembel paper
 
 Despite this work, and the enthusiasm with which microbial ecologists have accepted between-community comparison, phylogenetic alpha diversity seems under-developed.
 We have recently shown that partially-weighted abundance diversity measures do a good job of distinguishing between dysbiotic and "normal" states \cite{mccoy2013abundance}.
 We have also looked at PD under rarefaction \cite{nipperess2013mean}.
 
+
 \subsection{Community comparison using phylogenetics}
 
-The level of similarity between samples or groups thereof are often called \emph{beta diversity}; it is the current standard to employ phylogenetic tree structure in this sort of comparison.
+The level of similarity between samples or groups thereof are often called \emph{beta diversity};
+Traditional way: \cite{jaccard1908nouvelles} Nouvelles recherches sur la distribution florale
+
+UniFrac distance and variants has been very successful.
+\cite{LozuponeKnightUniFrac05}
+\cite{LozuponeEaWeightedUnifrac07}
+\cite{kuczynski2010microbial} Microbial community resemblance methods differ in their ability to detect biologically relevant patterns
+
+It recovers gradients.
+\cite{nemergut2011global}
+?? Global patterns in the biogeography of bacterial taxa
+
+Figure: example principal coordinates plot.
+
+This has precedents.
+\cite{evans2012phylogenetic}
+The phylogenetic Kantorovich-Rubinstein metric for environmental sequence samples
+
+\cite{BikEaMicrobiotaStomach06}
+\cite{PurdomAnalyzingDataGraphs08}
 
 \cite{chen2012associating}
 Associating microbiome composition with environment-- generalized unifrac
 
-UniFrac distance and variants.
-\cite{LozuponeKnightUniFrac05}
-\cite{LozuponeEaWeightedUnifrac07}
-
-Figure: example principal coordinates plot.
-
-\cite{BikEaMicrobiotaStomach06}
-
-hill numbers
-\cite{chao2010phylogenetic}
-
-\cite{evans2012phylogenetic}
-The phylogenetic Kantorovich-Rubinstein metric for environmental sequence samples
-
-\cite{kuczynski2010microbial}
-Microbial community resemblance methods differ in their ability to detect biologically relevant patterns
-
-
-\cite{jaccard1908nouvelles}
-Nouvelles recherches sur la distribution florale
-
-
 \cite{matsen2013edge}
 Edge principal components and squash clustering: using the special structure of phylogenetic placement data for sample comparison
-
-\cite{PurdomAnalyzingDataGraphs08}
-
-
-\cite{nemergut2011global}
-?? Global patterns in the biogeography of bacterial taxa
 
 
 
