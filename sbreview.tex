@@ -146,10 +146,6 @@ Our understanding of the true effect of the microbiome will eventually come from
 
 
 \section{Investigating the human microbiome via sequencing}
-
-% Many of these methods cross over with microbial ecology in general \citep{hugenholtz2002review} (cite this?).
-% I will not be talking about manipulations of these systems, such as gnotobiotic mice and human intervention.
-
 It is now possible to assay microbial communities in high throughput using via sequencing.
 There are two ways of doing so.
 The first is to amplify a specific ``marker'' gene in the genome, and perform sequencing.
@@ -158,32 +154,25 @@ Although there is some vagueness in the usage of these words, we will consistent
 
 
 \subsection{Microbial community estimation using marker gene surveys}
-
-Definition. Goal.
-
-Our modern knowledge of the microbial world is due to a large part derived from the methods of Carl Woese and colleagues who pioneered the use of marker genes as a way to distinguish between microbial lineages.
+Our modern knowledge of the microbial world is due to a large part derived from the methods of Carl Woese and colleagues who pioneered the use of marker genes as a way to distinguish between microbial lineages \citep{fox1977comparative}.
 Their work, and the scientists who followed them, used especially the 16S ribosomal gene.
-This gene was chosen because...
-They developed the first "universal" 16S PCR primers.
+This gene was chosen because it has regions of high and low diversity, which enable resolution on a variety of evolutionary time scales.
+Regions of low diversity in 16S also enabled the development of the first ``universal'' 16S PCR primers \citep{lane1985rapid} which initiated surveys of all organisms regardless of whether they can be cultured.
 
-Non-culturable organisms.
-
-While Woese and colleagues used primitive sequencing methods to gain information, modern researchers have the luxury of high throughput sequencing.
+Where Woese and colleagues labored over digestion and gel electrophoresis to infer sequences, modern researchers have the luxury of high throughput sequencing.
 This can be done with a high level of multiplexing, making an explicit trade-off between depth of sequencing for each specimen and the number of specimens able to be put on the sequencer at the same time.
+This has led to extensive parallelization, most recently by sequencing dozens of samples on the Illumina instrument \citep{degnan2011illumina,caporaso2012ultra}.
 This leads to the question of how many sequences are needed to characterize the microbial diversity of a given environment.
-For simply separating two rather different samples, rather few samples are needed \citep{kuczynski2010microbial}.
-This has led to desire for massive parallelization (cite).
+For simply separating two rather different samples, relatively few sequences per sample are required \citep{kuczynski2010microbial} however for more subtle information deeper sequencing is required.
 
 Despite the high-throughput and low cost of modern sequencing, inherent challenges remain for the use of population census by marker gene sequencing.
 Most fundamentally, various microbes have different DNA extraction efficiencies, even with hard core protocols, meaning that the representation of marker gene sequences is not representative of the actual communities \citep{morgan2010metagenomic}.
-Furthermore, primer bias.
 Current sequencing technology is limited to a length that is shorter than most genes, which limits the resolution of the analyses.
-Different regions may be good for different groups of organisms.
-
-16S exists in multiple copies and there can be diversity within the copies.
-\citet{kembel2012incorporating}
-
-Some groups have reported advantages to using alternate single-copy genes as markers, (e.g. \citep{case2007rpob},\citep{mcnabb2004hsp65}), however nothing has really come close to 16S.
+``Primer bias,'' or differing amplification levels of various sequences based on their affinity for the primers \citep{suzuki1996bias,polz1998bias}, is a challenge and has led to the standardization of primers \citep{methe2012framework}.
+Worse, multiplex PCR is known to create chimeric sequences via partial PCR products \citep{hugenholtz2003chimeric,ashelford2005least,haas2011chimeric,schloss2011reducing}.
+Also, 16S can be present in up to 15 copies and there can be diversity within the copies \citep{klappenbach2001rrndb};
+recent work \citep{kembel2012incorporating} implements the independent contrasts \citep{felsenstein1985phylogenies} method to correct for copy number, which has been successful despite a moderate evolutionary signal \citep{klappenbach2000rrna}.
+Some groups have reported advantages to using alternate single-copy genes as markers for characterization of microbial communities \citep[e.g.][]{case2007rpob,mcnabb2004hsp65}, however 16S remains the dominant locus used by a large margin.
 
 
 \subsection{Metagenomes}
@@ -234,7 +223,7 @@ UniFrac is interesting.
 \subsection{Phylogenetics and taxonomy}
 
 Phylogenetics has had a substantial impact on microbial ecology research by changing our view of the taxonomic relationships between microorganisms.
-The most stunning example of this is the discovery that archaea, although morphologically similar to bacteria, form their own separate lineage.
+The most stunning example of this is the discovery that archaea, although morphologically similar to bacteria, form their own separate lineage \citep{woese1977phylogenetic}.
 
 However, the reason people are attached to taxonomy is that there is a lot of information using taxonomic labels.
 
