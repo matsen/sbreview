@@ -201,25 +201,28 @@ This data will become common for unculturable organisms as single-cell sequencin
 
 \section{Tree-thinking in human microbiome research}
 
-Phylogenetics is primarily used in this realm as a framework with which data can be organized.
-It is common for researchers to equate 16S phylogeny with taxonomy.
-UniFrac is interesting.
+In this section I consider the ways in which phylogenetic thinking has impacted human microbiome research.
+What may be most interesting for this audience is the way in which phylogenetic trees are being used to actively revise taxonomy and used as a structure on which to perform sample comparison.
 
 \subsection{Phylogenetics and taxonomy}
 
-Phylogenetics has had a substantial impact on microbial ecology research by changing our view of the taxonomic relationships between microorganisms.
+Phylogenetic inference has had a substantial impact on microbial ecology research by changing our view of the taxonomic relationships between microorganisms.
 The most stunning example of this is the discovery that archaea, although morphologically similar to bacteria, form their own separate lineage \citep{woese1977phylogenetic}.
 
-However, the reason people are attached to taxonomy is that there is a lot of information using taxonomic labels.
-
 In general, this sort of approach has led to a number projects that use phylogeny to revise taxonomy.
-These attempts are less ambitious than the development of the PhyloCode \citep{forey2001phylocode}, and simply work to revise the hierarchical structure of the taxonomy while (for the most part) leaving taxonomic names fixed.
-Bergey's Manual of Systematic Bacteriology has adopted 16S \citep{kreig1984bergey}.
-The GreenGenes taxonomy \citep{desantis2006greengenes} has been very active in updating their taxonomy according to 16S, first with their GRUNT tool \citep{dalevi2007automated} and more recently with their tax2tree tool \citep{mcdonald2011improved}.
-Rather than proposing changes to the taxonomy, our group \citep{matsen2011reconciling} has developed ways of quantifying discordance between phylogeny and taxonomy.
+These attempts are less ambitious than the development of the PhyloCode \citep{forey2001phylocode}, and simply work to revise the hierarchical structure of the taxonomy while (for the most part) leaving taxonomic names fixed to preserve information associated with taxonomic classifications.
+Bergey's Manual of Systematic Bacteriology has officially adopted 16S as the basis for their taxonomy, although the actual revision process is somewhat opaque \citep{kreig1984bergey}.
+The GreenGenes taxonomy \citep{desantis2006greengenes} has been very active in updating their taxonomy according to 16S, first with their GRUNT tool \citep{dalevi2007automated} and more recently with their tax2tree tool \citep{mcdonald2011improved} which uses a heuristic algorithm to optimize $F$-measure of precision and recall.
+Interestingly, this latter tool allows for polyphyletic taxonomic groups as allowance for either lack of resolution of the 16S gene or taxonomic groups with no evolutionary basis.
+Our group \citep{matsen2011reconciling} has developed ways of quantifying discordance between phylogeny and taxonomy based on a previously described coloring problem.
+
+An obvious application of phylogenetics is to perform taxonomic classification, as the taxonomy is at least in part defined by phylogeny.
+There is also SAP.
+However, comparisons of taxonomic classification programs \citep{liu2008accurate,bazinet2012comparative} have indicated that current implementations of phylogenetic methods do not perform as well as simple na\"ive Bayes classifiers based on $k$-mer composition \citep{wang2007naive,rosen2008metagenome}.
+
+Some authors report that a combination of composition-based and homology-based classifiers work best \citep{brady2009phymm,parks2011classifying}.
 
 Tree-based classification.
-\citep{bazinet2012comparative}
 
 A fascinating approach is that of \citet{segata2012metagenomic}, who start by compiling a database of clade-specific genes \citep{segata2011metagenomic}.
 Then they classify the origin of a given read as being the only clade that has this gene.
@@ -229,6 +232,8 @@ They show that this has good specificity, however, sensitivity is limited to gen
 \subsection{Diversity estimates using phylogenetics}
 Because 16s surveys are inherently complex and noisy data, summary statistics are often used; summaries of the diversity of a single sample are often called \emph{alpha diversity}.
 For the most part, this literature adapts methods from the classical ecological literature.
+
+One approach is to apply diversity metrics to classified reads.
 
 Here we will focus on variants of phylogenetic diversity and their use.
 
