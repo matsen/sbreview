@@ -295,10 +295,11 @@ This approach has recently been taken to its logical conclusion by trying to inf
 \subsection{Genome-scale inquiries using phylogenetics}
 
 A phylogeny-driven genomic encyclopaedia of Bacteria and Archaea \citep{wu2009phylogeny}.
+However, for the most wanted \cite{fodor2012most} list phylogenetic methods were not used-- they just wanted to get microbes that were prevalent in the microbiome but not sequenced.
+% http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0041294
 
-Most wanted.
-
-Sushi paper, network of gene transfer.
+Sushi paper \cite{hehemann2010transfer}
+network of gene transfer \cite{smillie2011ecology}
 
 Reconciliation, team phyldog.
 
@@ -404,36 +405,55 @@ Usual challenges.
 Non-overlapping reads.
 Assemblies.
 
-However, the apparent success of 16s tree based comparisons leads to some interesting questions.
+In this paper I have devoted considerable space to the ways in which microbial ecologists have used the 16s tree as a proxy structure for the evolutionary history of their favorite organisms.
+They have even shown that 16S distance recapitulates gene content divergence and used this correlation to predict gene functions.
+16s tree has taken us remarkably far, but it is not a complete representation of the evolutionary history of these microbes.
 
-16s tree has taken us remarkably far, but it's clearly limited.
-Continued research on the correlation between phylogeny and function.
-Can we correct the 16s tree somehow, or what sort of thing can we use that is a better predictor?
+Indeed, in the microbial phylogenetics community there continues to be discussion about whether there is a tree of life.
+Examples.
 
-There is a strange divide between trait evolution methods for macro- and micro-fauna.
+However, the apparent success of 16s tree based comparisons begs the question of if a better representation of the evolutionary history of the microbes would yield better predictions.
+That is, if the 16S tree is incomplete and useful, what could we replace it with that would also be incomplete but even more useful?
+This yields a practical perspective on the theoretical issue of the tree of life: what is the representation of the genetic ancestry of an organism that allows us to best predict?
+This representation could be simple.
+For example, one of the results of \citet{zaneveld2010ribosomal} is that 16S correlates better with gene repertoire in some taxonomic groups than others.
+If we were to equip the 16S tree with some measure of the strength of that correlation, would that allow for more accurate prediction?
+Would a species tree reconciled with a collection of gene trees allow for better prediction?
+It is quite possible that there is nothing better given the inherent noise of the data, but if we allow an arbitrary ``hidden'' object, what such object would perform best?
+
+What can we do with improved genome-level phylo reconstruction methods like Bastien's.
+
+Trait evolution models are notably absent for the most part, except for PICRUSt.
 The results of simple methods are reasonable.
 Possible that improved methods, perhaps involving whole-genome evolutionary modeling, could shed light on the problem.
-
-There continues to be discussion about whether there is a tree of life.
-Examples.
-This can be a theoretical one, but here is a practical formalism: what is the correct representation of the genetic ancestry of an organism that allows us to best predict.
-
 In any case, what about trait evolution models that take HGT into account?
 What about trait evolution models that are on KEGG?
+Continued research on the correlation between phylogeny and function.
+
+Trait evolution is used for macroorganisms to describe, say, environmental effects on recent evolution.
+However, evolution of microbes is all ancient?
+Or we can assume that all the genetic diversity needed is already out there, and it's just a question of who gets what?
 
 Hubbell's neutral theory applied to human microbiome \citep{fierer2012animalcules,costello2012application}.
+What about macroevolutionary modeling in general.
 
-Functional genes and phylogenomics.
+Preservation of diversity.
+"Overall these studies reveal that human microbiome data has been preserved in some coprolites, and these preserved human microbiomes match more closely to those from the rural communities than to those from cosmopolitan communities. These results suggest that the modern cosmopolitan lifestyle resulted in a dramatic change to the human gut microbiome."
 
-The field has already benefited significantly from phylogeny using 16S.
-Now we have more full-genome data.
-We also have more full-genome methods.
-What can we do with that?
+% note there is also http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0013963
+\citet{ochman2010evolutionary} found identical trees for primate evolution and microbiome.
+They used maximum parsimony such that each column was a bug and each entry took discrete states according to how much of that bug was present.
+What sort of models could be used for microbiome evolution?
+Questions of convergent evolution from nutrition versus history.
 
-HGT.
-What about tree models of within-organism transfer?
-Could we do tree shape statistics?
+Coevolutionary studies between hosts and microbes.
 
+What about diversity of organisms within a population.
+ILS?
+
+How could we do independent contrasts on a collection of reconciled gene trees?
+
+Gut microbiomes of Malawian twin pairs discordant for kwashiorkor \cite{smith2013gut}
 
 \section{Discussion}
 What we can expect next.
@@ -448,28 +468,34 @@ Microbiome analysis among bats describes influences of host phylogeny, life hist
 Clinical applications,
 \citep{clarridge2004}
 {{I}mpact of 16{S} r{RNA} gene sequence analysis for identification of bacteria on clinical microbiology and infectious diseases}
+
 For routine identification of a single microbe in culture, MALDI-TOF kicks ass and is cheap.
 Diagnostics involving mixed communities.
+
 Bioinformatics will get hardened into fixed workflows.
 
 Understand cause and effect of diseases.
-Take an ecololgical view on atopic dermititis.
+Take an ecological view on atopic dermititis.
 
-Perhaps there is a role for trait evolution methods, or perhaps a simple method does prediction to within how good the data is.
+Although we have raised the possibility of using organism-level modeling via phylogeny
 There is the possibility that we don't have to think about individual organisms at all, but rather can think about the collection of genes and their metabolic network as a meta-organism (cite Elbo).
 Has limitation that you forget about cellular boundaries, which matter-- not a freely diffusing soup.
 Question: to what extent is modeling cellular-level evolutionary history interesting?
 As an extension microbes have to be close to one another-- requires population modeling.
 
-There are limitations to what we can learn.
-Genome doesn't tell all.
+There are limitations to what we can learn using genetics because more intricate processes such as gene regulation may be at play, limiting what sequence-level phylogenetics can do.
+However, evolution still acts and there is nothing saying that we couldn't model evolution of phenotype in some other way.
+
+Future work will need to include specific interactions.
 Host side is sometimes missing, but experiments are good.
 As described above, we can expect much more development in terms of specifics.
 \citep{hooper2012interactions}
 
 The field has experienced a frenetic rate of expansion over the past xxx years, and sometimes it can feel like researchers in this area have forgotten some of the basic principles of study design, such as power calculations, that are well recognized in other areas of medical research.
-Although the human microbiome has led to a lot of "hype," our microbes are here to stay and so is research on them.
+Although the human microbiome has gained a lot of attention recently, and in some cases too much attention, our microbes are here to stay and so is research on them.
 Thus we can look forward to the field of human microbiome analysis settling down to a comfortable and mature middle age as an interesting intersection between ecology and medicine.
+Phylogenetics has contributed significantly to ecology in the past, and indeed has already contributed significantly to microbial ecology; the next generation of methods may require integration of genome-level data.
+
 
 
 \section{Acknowledgements}
