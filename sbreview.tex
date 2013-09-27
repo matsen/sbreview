@@ -299,28 +299,36 @@ We have developed an alternative ordination process that explicitly labels the a
 
 \subsection{Phylogeny and function}
 
-As we will see below, 16S is frequently used as a way of measuring diversity.
-Those accustomed to microbial genetics may think this surprising, because the genetic repertoire of microbes may not be so much vertically inherited.
-However, \citep{zaneveld2010ribosomal} have shown that there is a correlation between pairwise distances of 16S genes and genetic repertoire.
-This approach has recently been taken to its logical conclusion by trying to infer functional characteristics using discrete trait evolution models on 16S gene trees \citep{langille2013predictive} using either parsimony \citep{kluge1969quantitative} or likelihood \citep{pagel1994detecting} methods via the ape package \citep{paradis2004ape}.
+16S distance is frequently used as a proxy for a functional comparison.
+Those accustomed to microbial genetics may think this surprising, because the genetic repertoire of microbes is commonly acquired horizontally as well as vertically, and horizontal transmission may leave no trace in the 16S ancestry.
+
+However, \citep{zaneveld2010ribosomal} have shown that organisms that are more distant in terms of 16S are also more divergent in terms of gene repertoire.
+Such observations generally follow a nonlinear curve, and the extent to which they lie on the curve appears to be phylum-dependent.
+This approach has recently been taken to its logical conclusion by trying to infer functional characteristics using discrete trait evolution models on 16S gene trees \citep{langille2013predictive} by either parsimony \citep{kluge1969quantitative} or likelihood \citep{pagel1994detecting} methods via the ape package \citep{paradis2004ape}.
+
+Similar logic has been applied to prioritize microbes for sequencing.
+\citet{wu2009phylogeny} have derived a ``phylogeny-driven genomic encyclopaedia of Bacteria and Archaea'' by selecting organisms for sequencing that are divergent from organisms that have a sequenced genome.
+By doing so they have recovered more novel open reading frames than they would have using other methods NNN.
+However, for the equivalent effort for the human microbiome \cite{fodor2012most} list phylogenetic methods were not used-- they just wanted to get microbes that were prevalent in the microbiome but not sequenced.
+NNN wasn't there a previous effort that used ppacer?
+% http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0041294
 
 
 \subsection{Genome-scale inquiries using phylogenetics}
+With some notable exceptions, mainstream applications of phylogenetics have typically been with the idea of finding ``the'' tree of a collection of human-associated microbes rather than explicitly exploring divergence between various gene trees.
+As described above, whole-genome data is typically used to directly infer functional information rather than information concerning ancestry.
+The debate concerning whether a microbial tree of life is a useful concept does not seem to have dampened human microbiome researchers' enthusiasm for using such a tree.
 
-A phylogeny-driven genomic encyclopaedia of Bacteria and Archaea \citep{wu2009phylogeny}.
-However, for the most wanted \cite{fodor2012most} list phylogenetic methods were not used-- they just wanted to get microbes that were prevalent in the microbiome but not sequenced.
-% http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0041294
+Nevertheless, the work that has been done to infer horizontal gene transfer has revealed interesting results.
+\citet{hehemann2010transfer} found that a gene found in seaweed has been transferred into the microbiome of Japanese such that individuals with this resulting microbiome are better able to digest algae.
+Following on this work, \citet{smillie2011ecology} found that the human gut is in fact a common location for gene transfer.
 
-Sushi paper \cite{hehemann2010transfer}
-network of gene transfer \cite{smillie2011ecology}
-
-Reconciliation, team phyldog.
+NNN look for gene transfer work in microbiome.
 
 
 \section{Phylogenetic inference as practiced by human microbiome researchers}
 
 \subsection{Alignment and tree inference}
-
 In general, human microbiome researchers are interested in quickly doing phylogenetic inference on large data sets, and are less interested in clade-level accuracy or measures of uncertainty.
 This can be defended by saying for many applications such as UniFrac, the tree is used as a framework to structure the data, and there is a certain amount of flexibility in that framework that will give the same results.
 Furthermore, given that the underlying data is typically 16S only we can expect some tree problems even with the best methods.
@@ -340,7 +348,6 @@ SILVA alignment version 115 has XXX sequences and is over 96\% gap,
 % .79914084873730799272
 while the GreenGenes 13\_5 alignment has 1,262,986 sequences and  is almost 80\% gap when aligned by SSU-Align \cite{nawrocki2009structural}
 The SILVA alignment is... hand aligned?
-
 
 Such large data
 
