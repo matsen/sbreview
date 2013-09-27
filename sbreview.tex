@@ -308,19 +308,33 @@ Reconciliation, team phyldog.
 
 \subsection{Alignment and tree inference}
 
-Very large data sets.
+In general, human microbiome researchers are interested in quickly doing phylogenetic inference on large data sets, and are less interested in clade-level accuracy or measures of uncertainty.
+This is not unreasonable, as for many applications such as UniFrac, the tree is used as a framework to structure the data, and there is a certain amount of flexibility in that framework that will give the same results.
+Furthermore, if the underlying data it 16S we can expect some tree problems even with the best methods.
 
-Some groups are not interested in accuracy per se.
+Data sets can be very large.
+Size of GreenGenes tree.
 
-Alignment.
+The alignment culture seems to be mostly around large, established alignments.
+One such alignment is the SILVA alignment \citep{pruesse2007silva,quast2013silva}, which is available as part of a web tool.
+
+Because of the high rate of insertion and deletion
+OMG the SILVA alignment is mostly gap.
+
+Fixed alignment inferred with heuristic algorithms.
+
+Such large data
+
+MSA tool specializing in 16S \cite{pruesse2012sina}.
+
+PYNAST
+ARB alignment.
+
 \citep{eddy1998profile}
 Profile hidden Markov models.
 
 \citep{nawrocki2009infernal}
 Infernal 1.0: inference of RNA alignments
-
-PYNAST
-
 
 \citep{felsenstein1981evolutionary}
 {Evolutionary trees from DNA sequences: a maximum likelihood approach}
@@ -328,6 +342,8 @@ PYNAST
 NJ
 \citep{price2010fasttree}
 {FastTree 2--approximately maximum-likelihood trees for large alignments}
+
+Living tree project.
 
 Species delineation problem not explicitly considered. Clustering.
 \citep{li2006cdhit}
@@ -341,6 +357,7 @@ Networks not considered.
 Chimeric sequences are a real problem, and similar to recombination.
 
 ARB software.
+parsimony insertion.
 Phylogenetic placement.
 
 \citep{wu2008simple}
@@ -455,6 +472,10 @@ ILS?
 How could we do independent contrasts on a collection of reconciled gene trees?
 
 Gut microbiomes of Malawian twin pairs discordant for kwashiorkor \cite{smith2013gut}
+
+How bad of tree inference can we do and still get the same trends?
+This is kind of a similar question to what is driving UniFrac?
+Obviously everything can matter, but what does matter?
 
 \section{Discussion}
 What we can expect next.
