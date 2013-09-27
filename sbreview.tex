@@ -245,10 +245,10 @@ An OTU is a proxy species concept that is typically defined with a fixed diverge
 It is common for trees to be built on sequence representatives from these OTUs, and the abundance of an OTU to be given by the number of sequences that sit within that cluster.
 
 There is an entire industry of OTU inference software with various strategies of various speeds; we will not attempt a systematic review here.
-Of the fixed-cutoff methods, the traditional choice has been CD-HIT NNN, which supplanted by UCLUST.
+Of the fixed-cutoff methods, the traditional choice has been CD-HIT \citep{li2006cdhit}, which seems to have been supplanted by clustering features of USEARCH \citep{edgar2010usearch}.
 These methods are very fast and heuristic, in that they are described as an algorithm rather than a routine attempting to optimize some notion of goodness of clustering.
-It is well known that different ways of doing this heuristic clustering can result in very different results NNN.
-There are also methods that try to come up with sequence groupings that more reflect the type of species divisions found in taxonomies NNN VI-CUT.
+It is well known that different ways of doing this heuristic clustering can result in very different results \citep{white2010alignment}.
+There are also methods that try to come up with sequence groupings that more reflect the type of species divisions found in taxonomies \citep{navlakha2009finding}.
 The centrality of the OTU concept can be seen by the fact that the contingency table of OTU observations is considered to be the fundamental data type NNN, or that methods have been devised to find OTUs from non-overlapping sequences NNN.
 With the exception of this last reference, OTU inference is not considered to be a phylogenetic problem but rather something to be performed before phylogenetic inference begins.
 
@@ -371,15 +371,9 @@ NJ
 
 Living tree project.
 
-Given the scale of the problems, it is not surprising Bayesian phylogenetic inference is absent.
+Bayesian phylogenetic inference is absent.
 
-
-Species delineation problem not explicitly considered. Clustering.
-\citep{li2006cdhit}
-Li, W.  and Godzik, A.
-\citep{edgar2010usearch}
-\citep{navlakha2009finding} Finding biologically accurate clusterings in hierarchical tree decompositions using the variation of information
-\citep{white2010alignment} Alignment and clustering of phylogenetic markers-implications for microbial diversity studies
+However, it is surprising that so much focus is on complete de novo tree inference, and that methods such as DCM NNN have not gained traction.
 
 Networks not considered.
 
@@ -389,13 +383,15 @@ ARB software.
 parsimony insertion.
 Phylogenetic placement.
 
-\citep{wu2008simple}
+
+The scale of the data has motivated strategies to insert sequences into a tree.
+Although such insertion has a long history as a means to sequentially build a phylogenetic tree NNN farris
+, the first software with insertion specifically as a goal was by \citep{ludwig2004arb}.
+Other analogous methods have been used \citep{wu2008simple}.
 A simple, fast, and accurate method of phylogenomic inference
 
 \citep{matsen2010pplacer}
 
-\citep{ludwig2004arb}
-{{ARB}: a software environment for sequence data}
 \citep{berger2011performance}
 
 \citep{berger2011aligning}
