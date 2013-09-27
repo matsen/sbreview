@@ -232,6 +232,9 @@ However, comparisons of taxonomic classification programs \citep{liu2008accurate
 % \citep{werner2011impact} Impact of training sets on classification of high-throughput bacterial 16s rRNA gene surveys
 Some authors report that a combination of composition-based and homology-based classifiers work best \citep{brady2009phymm,parks2011classifying}.
 
+The MEGAN program \citep{huson2007megan,huson2011integrative} uses a least common ancestor (LCA) strategy to turn a taxonomy and a collection of BLAST results of a unknown sequence on a database of sequences with those taxonomic labels into taxonomic assignments for the unknown sequence.
+
+
 A fascinating approach is that of \citet{segata2012metagenomic}, who start by compiling a database of clade-specific genes \citep{segata2011metagenomic}.
 Then they classify the origin of a given read as being the only clade that has this gene.
 They show that this has good specificity, however, sensitivity is limited to genomes that have been sequenced.
@@ -330,92 +333,54 @@ Furthermore, given that the underlying data is typically 16S only we can expect 
 Additionally, as specified below, these data sets can be very large.
 There does not seem to be contentious discussion of specific features of the inferred trees equivalent to, say, the current discussion around the rooting of the placental mammal tree.
 
-Alignment is focused on creation of large curated alignments, and alignment of additional sequences to those established alignments.
+Alignment methods are primarily focused on extending a curated ``seed alignment'' with additional sequences; tools have been created with exactly this application for 16S in mind \citep{desantis2006nast,caporaso2010pynast,pruesse2012sina}.
+The community also uses profile hidden Markov models \citep{eddy1998profile} and CM models \citep{nawrocki2009infernal,nawrocki2009structural}.
+
+The large data sets associated with human microbiome analysis require highly efficient algorithms for \emph{de novo} tree inference.
+Historically this has meant relaxed neighbor joining \cite{evans2006relaxed,sheneman2006clearcut}, but more recently FastTree 2 \citep{price2010fasttree} has emerged as the \textit{de facto} standard.
+People do most phylogenetic inferences as part of a pipeline such as mothur \citep{schloss2009introducing} which has ported in clearcut \citep{evans2006relaxed,sheneman2006clearcut} program, and QIIME \citep{caporaso2010qiime}, which wraps clearcut and FastTree 2.
+% AXIOME streamlines and manages analysis of small subunit (SSU) rRNA marker data in QIIME and mothur \citep{lynch2013axiome}.
+% Bayesian phylogenetic inference is absent.
+
+The scale of the data has motivated strategies other than complete phylogenetic inference.
+Although such insertion has a long history as a means to sequentially build a phylogenetic tree \citep{kluge1969quantitative}, the first software with insertion specifically as a goal was by \citep{ludwig2004arb} which works by parsimony.
+ARB is commonly used to reconstruct a full tree by direct insertion.
+
+There are also other methods with the less ambitious goal of mapping sequences of unknown origin into a tree, sometimes with uncertainty estimates.
+Other analogous methods have been used \citep{wu2008simple,monierEaLargeViruses08,vonMeringEaQuantitative08,stark2010mltreemap,matsen2010pplacer,berger2011performance} with various speeds and features.
+Such questions have also found the interest of the alignment community as well.
+\citet{berger2011aligning} focus on the problem of inferring the optimal alignment and insertion of sequences into a tree.
+\citet{mirarabsepp} uses data set partitioning to improve alignments on subsets of taxa.
+
+Considerable effort goes to the creation of large curated alignments and phylogenetic trees on 16S.
 There are two primary such projects: one is the SILVA project \citep{pruesse2007silva,quast2013silva}, and the other is the GreenGenes \citep{desantis2006greengenes,mcdonald2011improved} database.
 Because of the high rate of insertion and deletion of nucleotides in 16S, these alignments have a high percentage of gap.
 Taking the length of 16S to be 1543 nt,
 % SILVA
 % 1543 / 42284
 % .96353230536373096207
-SILVA alignment version 115 has XXX sequences and is over 96\% gap,
+SILVA reference alignment version 115 has 479,726 sequences and is over 96\% gap,
 % GreenGenes
 % 1543 / 7682
 % .79914084873730799272
-while the GreenGenes 13\_5 alignment has 1,262,986 sequences and  is almost 80\% gap when aligned by SSU-Align \cite{nawrocki2009structural}
-The SILVA alignment is... hand aligned?
-
-Such large data
-
-MSA tool specializing in 16S \cite{pruesse2012sina}.
-
-PYNAST
-ARB alignment.
-
-\citep{eddy1998profile}
-Profile hidden Markov models.
-
-\citep{nawrocki2009infernal}
-Infernal 1.0: inference of RNA alignments
-
-\cite{peplies2008standard,yarza2008all}
+while the GreenGenes 13\_5 alignment has 1,262,986 sequences and is almost 80\% gap.
+The SILVA-associated 'all-species living tree' project \cite{yarza2008all} started with a tree inferred by maximum likelihood and has been continually updated  by inserting sequences via parsimony.
+The GreenGenes tree is updated by running FastTree from scratch.
+In addition to these 16S-based resources, the MicrobesOnline resource \citep{dehal2010microbesonline} offers a tree-based genome browser.
+On a much smaller scale, there curated reference sets that are microbiome body-site specific \citep{chen2010human,griffen2011core,srinivasan2012bacterial}
 
 
-\citep{felsenstein1981evolutionary}
-{Evolutionary trees from DNA sequences: a maximum likelihood approach}
-
-NJ
-\citep{price2010fasttree}
-{FastTree 2--approximately maximum-likelihood trees for large alignments}
-
-Living tree project.
-
-Bayesian phylogenetic inference is absent.
-
-However, it is surprising that so much focus is on complete de novo tree inference, and that methods such as DCM NNN have not gained traction.
-
-Networks not considered.
-
-The scale of the data has motivated strategies other than complete phylogenetic inference.
-Although such insertion has a long history as a means to sequentially build a phylogenetic tree NNN farris
-, the first software with insertion specifically as a goal was by \citep{ludwig2004arb} which works by parsimony.
-ARB is used to reconstruct a full tree.
-
-There are also other methods with the less ambitious goal of mapping sequences of unknown origin into a tree.
-Other analogous methods have been used \citep{wu2008simple,monierEaLargeViruses08,vonMeringEaQuantitative08,stark2010mltreemap,matsen2010pplacer,berger2011performance} with various speeds and features.
-Such questions have also found the interest of the alignment community as well.
-\citet{berger2011aligning} focus on the problem of inferring the optimal alignment and insertion of sequences into a tree.
-\citet{mirarabsepp} does an approximately.
-
-There are other strategies still that do something related to phylogenetics.
-\citep{huson2007megan}
-LCA strategy
-
-
-\subsection{Software}
-
-People do most phylogenetic inferences as part of a pipeline.
-The most popular ones are QIIME \citep{caporaso2010qiime} and mothur \citep{schloss2009introducing}.
-AXIOME streamlines and manages analysis of small subunit (SSU) rRNA marker data in QIIME and mothur \citep{lynch2013axiome}.
-
-mothur has ported in the clearcut \citep{evans2006relaxed,sheneman2006clearcut} program.
-QIIME wraps clearcut and \citep{price2010fasttree}.
-
-Databases:
-\citep{chen2010human}
-The Human Oral Microbiome Database: a web accessible resource for investigating oral microbe taxonomic and genomic information
-
-\citep{griffen2011core}
-CORE: a phylogenetically-curated 16S rDNA database of the core oral microbiome
-
-\citep{srinivasan2012bacterial}
-
+% Networks are not considered.
 
 \section{Phylogenetic challenges and opportunities in human microbiome research}
 
-In addition to the usual challenges surrounding large-scale phylogenetic inference, there are some questions that are specific to the microbial setting.
-I have collected some of these questions here.
+I have collected some of questions motivated by human microbiome research.
 
-In this paper I have devoted considerable space to the ways in which microbial ecologists have used the 16s tree as a proxy structure for the evolutionary history of their favorite organisms.
+The first and most general challenge is to address the gap between on one hand complete \emph{de novo} tree inference, and sequence insertion or placement that leaves the reference tree fixed.
+Sequence data is continually being added to large databases, and so it would be nice to have methods that could continually update trees.
+% Surprising that methods such as DCM \cite{huson1999disk} have not gained traction.
+
+In this review I have devoted considerable space to the ways in which microbial ecologists have used the 16s tree as a proxy structure for the evolutionary history of their favorite organisms.
 They have even shown that 16S distance recapitulates gene content divergence and used this correlation to predict gene functions.
 16s tree has taken us remarkably far, but it is not a complete representation of the evolutionary history of these microbes.
 
@@ -455,7 +420,7 @@ Would methods using these models do better than clustering or distance methods a
 Other studies \citep[e.g.][]{phillips2012microbiome,delsuc2013convergence} see a combination of historical and dietary influences.
 This seems like a setting in which convergent evolution could be quantified.
 
-Finally, the conventional wisdom from the microbiome community that conclusions of a UniFrac analysis are robust to tree reconstruction methodology begs further exploration.
+Finally, the conventional wisdom from the microbiome community that UniFrac analysis is robust to tree reconstruction methodology begs further exploration.
 Would it be possible to infer an ``equivalence class'' of phylogenetic trees, where two trees are deemed equivalent if they induce the same principal coordinates projection with the same underlying data?
 Given that a tree is an integral part of a UniFrac analysis, it would also be interesting to be able to infer the features of a tree that determine the primary trends in a projection.
 % How bad of tree inference can we do and still get the same trends?
