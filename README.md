@@ -2,7 +2,8 @@
 
 This is a review article in preparation for *Systematic Biology.*
 My intent is to write a paper that will introduce the phylogenetics-savvy (but microbe-naïve) reader to this field.
-Please read, comment, and raise issues.
+
+**Please read, comment, raise issues, and point out the many areas that I have missed.**
 
 
 ## Compilation
