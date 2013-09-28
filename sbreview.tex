@@ -75,9 +75,10 @@ Program in Computational Biology, Fred Hutchinson Cancer Research Center, Seattl
 \subsubsection{Abstract}
 }
 
-The human microbiome is the collection of microbes that live inside and on the outside of humans.
-Recent work including the Human Microbiome Project (HMP) and the Metagenomics of the Human Intestinal Tract (MetaHIT) consortia has advanced human microboime research by generating thousands of 16s surveys and terabases of metagenomic data on the human microbiome.
-In this paper I review the impact of phylogenetics and tree-thinking on the methods used in the analysis of human microbiome data, as well as describing current challenges for phylogenetics coming from this type of work.
+The human microbiome is the collection of microbes that live inside and on the surface of humans.
+Because microbial sequencing information is now much easier to come by than phenotypic information, there has been an explosion of sequencing information of microbiome samples.
+Much of the analytical work for these sequences involves phylogenetics, at least indirectly, and methodology has developed in a somewhat different direction than for eukaryotic phylogenetics.
+In this paper I review the field and its methods from the perspective of a phylogeneticist, in particular the impact of tree-thinking on the methods used in the analysis of human microbiome data, as well as describing current challenges for phylogenetics coming from this type of work.
 
 \forarxiv{
 \end{abstract}
@@ -92,119 +93,119 @@ In this paper I review the impact of phylogenetics and tree-thinking on the meth
 
 \section{Introduction}
 
-The parameter regime and focus of microbiome research sits outside of the traditional setting of eukaryotic phylogenetics, thus why should our community be interested in what these microbial ecologists and medical researchers have done?
-This system is data- and question-rich.
-It absolutely requires molecular methods, as microbes can be identified by their molecular sequence, which is much more straightforward to do in high throughput than morphological or phenotypic characterization.
-Indeed, just to do ecology you have to do sequencing.
+The parameter regime and focus of microbiome research sits outside of the traditional setting for phylogenetics methods development and application; why should our community be interested in what these microbial ecologists and medical researchers have done?
+The answer is simple: this system is data- and question-rich.
+It absolutely requires molecular methods, as microbes are now primarily identified by their molecular sequence, which is much more straightforward to do in high throughput than morphological or phenotypic characterization.
+Indeed, microbial ecology has recently become for the most part the study of the relative abundances of various sequences derived from the environment.
 
-Although there appears to be an artificial divide between phylogeny as practiced as part of microbial ecology and that for multicellular organisms, however there are many parallels between the two enterprises.
+Although there is something of a divide between phylogeny as practiced as part of microbial ecology and that for multicellular organisms, there are many parallels between the two enterprises.
 Both communities struggle with issues of sequence alignment, large-scale tree reconstruction, species definition.
-However, approaches differ between the microbial ecology community and that of eukaryotic phylogenetics, in part because the former has access to a fantastic diversity of organisms directly through culture-independent methods, leading to additional problems above usual.
-The species concept is problematic for microbes and there is also considerable discussion concerning how to group them into species-like units.
-The diversity of these organisms is great and organizing them into a taxonomy is a serious challenge, especially in the absence of obvious morphological features.
+However, approaches differ between the microbial ecology community and that of eukaryotic phylogenetics, in part because the scope of the former contains an almost unlimited diversity of organisms, leading to additional problems above the usual.
+The species concept is even more problematic for microbes than for larger eukaryotes and there is also considerable discussion concerning how to group them into species-like units.
+The organizing microbes into a sensible taxonomy is a serious challenge, especially in the absence of obvious morphological features.
 
-Because of challenges with species definitions, microbial ecology researchers have developed their own techniques for doing comparing samples which are explicitly phylogenetic rather than requiring species concepts.
+Because of this high level of diversity and challenges with species definitions, microbial ecology researchers have developed their own explicitly phylogenetic techniques for doing comparing samples rather than comparing on the level of species abundances.
 Although there is some overlap with previous literature, these techniques are novel and could be used in a wider setting and deserve wider consideration by the phylogenetics community.
 
-The human microbiome part of microbial ecology is specifically interesting because questions of microbial genomics, translated into questions of function, have important consequences for human health.
-Additionally, due to more than a century of hospital lab medicine, our knowledge about human-associated microbes is much richer than about microbes in general.
-It is relatively routine to manipulate the human microbiome or models thereof via intervention studies and germ-free animals.
+The human microbiome is specifically interesting because questions of microbial genomics, translated into questions of function, have important consequences for human health.
+Additionally, due to more than a century of hospital lab medicine, our knowledge about human-associated microbes relatively rich.
+It is also common to manipulate the human microbiome or models thereof via intervention studies and germ-free animals, and is easier to do than for many other microbial communities.
 
-In this review I intend to inform the \textit{Systematic Biology} readership of phylogenetics-related research happening in microbial ecology and contrast approaches between the two community.
-I will use \textit{eukaryotic phylogenetics} to indicate what I think of as the mainstream of SB readership, and \textit{microbial phylogenetics} to denote the other.
-I realize that there is substantial overlap-- for instance the microbial community is very interested in unicellular fungi-- but we will use this terminology with the associated caveats.
+In this review I will describe phylogenetics-related research happening in microbial ecology and contrast approaches between what I think of as the typical \emph{Systematic Biology} audience and microbial researchers.
+Despite an obvious oversimplification, I will use \textit{eukaryotic phylogenetics} to indicate what I think of as the mainstream of SB readership, and \textit{microbial phylogenetics} to denote the other.
+I realize that there is substantial overlap-- for instance the microbial community is very interested in unicellular fungi, and many in the SB community do work on microbes-- but this terminology will be useful for concreteness.
 There is of course also substantial overlap in methodology, however as we will see there are significant differences in approach and the two areas have developed somewhat in parallel.
 I will first briefly review the recent literature on the human microbiome, then describe novel ways in which human microbiome researchers have used trees and the challenges that human microbiome research poses for the phylogenetics community.
 I will finish with opportunities for the \textit{Systematic Biology} audience to contribute to this field.
-I firmly believe that both fields would benefit from more interactions.
-I have made explicit effort to make a neutral comparison between two areas; indeed, microbial phylogenetics requires algorithms and ideas that work in parameter regimes orders of magnitude larger than typical for eukaryotic phylogenetics.
+I have made an explicit effort to make a neutral comparison between two directions rather than criticize the approximate methods common in microbial phylogenetics; indeed, microbial phylogenetics requires algorithms and ideas that work in parameter regimes orders of magnitude larger than typical for eukaryotic phylogenetics.
 
 \section{The human microbiome}
 The human microbiome is the collection of microbial organisms that live inside of and on the surface of humans.
 These organisms are populous: it has been estimated that there are ten times as many bacteria associated with each individual than there are human cells.
-The microbiome has remarkable metabolic potential, with a set of genes estimated to be about 150 times larger than the human collection of genes \citep{qin2010human}.
-Much of our metabolic interaction with the outside world is mediated by our microbiome, as it has important roles in both vitamin
-% http://www.sciencedirect.com/science/article/pii/S095816691200119X
-and drug \citep{maurice2013xenobiotics} metabolism; our food and drug intake also impacts the diversity of microbes present.
+The microbiome has remarkable metabolic potential, with an ensemble of genes estimated to be about 150 times larger than the human collection of genes \citep{qin2010human}.
+Much of our metabolic interaction with the outside world is mediated by our microbiome, as it has important roles in immune system development, nutrition, and drug metabolism \citep{kau2011human,maurice2013xenobiotics}; our food and drug intake in turn impacts the diversity of microbes present.
 In this section I will briefly review what is known about the human microbiome and its effect on our health.
 
 The human microbiome is an ecosystem.
-The microbiome is dynamic in terms of representation but apparently constant in terms of function \citep{hmp2012structure}.
-The ``core'' microbiome, or the microbiome shared between all humans, has been described \citep{turnbaugh2008core}.
-Human microbiome is spatially organized, as can be seen on skin \citep{grice2009topographical}, with substantial variation in human body habitats across space and time \citep{costello2009bacterial}.
+It is dynamic in terms of taxonomic representation but apparently constant in terms of function \citep{hmp2012structure}.
+There is a ``core'' microbiome which is shared between all humans \citep{turnbaugh2008core}.
+The human microbiome is spatially organized, as can be seen on skin \citep{grice2009topographical}, with substantial variation in human body habitats across space and time \citep{costello2009bacterial}.
 There is a substantial range of inter-individual versus intra-individual variation \citep{hmp2012structure}.
 
 Our actions can shift the composition of our microbiome.
-Changes in diet very quickly shift its composition, and there is a strong correlation between long-term diet and microbiome \citep{li2009human,wu2011linking}.
+Changes in diet can very quickly shift its composition, but there is also a strong correlation between long-term diet and microbiome \citep{li2009human,wu2011linking}.
 Antibiotics fundamentally disturb microbial communities, resulting in an effect that lasts for years \citep{jernberg2007long,dethlefsen2008pervasive,jakobsson2010short,dethlefsen2011incomplete}.
 
-Considerable attention has been given to how the microbiome influences host phenotype \cite[reviewed in][]{cho2012human}.
-% claesson2012gut
-% kwashiorkor \cite{smith2013gut}.
-Considerable attention has been given to the interaction between the gut microbiome and obesity, but the story is yet clear.
+The microbiome interacts on many levels with host phenotype \citep[reviewed in][]{cho2012human}.
+For example, the gut microbiome correlates with health of individuals from the elderly in industrialized nations \citep{claesson2012gut} to acute metabolic syndromes in rural Africa \citep{smith2013gut}.
+Considerable attention has also been given to the interaction between the gut microbiome and obesity, although the story is yet clear.
 An intervention study has established human gut microbes associated with obesity \citep{ley2006microbial}.
-An obese phenotype can be transferred from mouse to mouse by gut microbiome transplantation \citep{turnbaugh2006obesity}.
-Pregnant human gut microbiome leads to obesity in mice \citep{koren2012host}.
-However, a study of obesity in the old-order Amish did not find any correlation between obesity and particular gut communities \citep{zupancic2012analysis}.
+A causal role for microbiome leading to phenotype is clear for mice: an obese phenotype can be transferred from mouse to mouse by gut microbiome transplantation \citep{turnbaugh2006obesity}, pregnant human gut microbiome leads to obesity in mice \citep{koren2012host}, and probiotics can lead to a lean phenotype and healthy eating behavior \citep{poutahidis2013microbial}.
+However, these promising leads have not yet been confirmed causally or in population studies of humans \citep{zhao2013gut}.
+For example, a study of obesity in the old-order Amish did not find any correlation between obesity and particular gut communities \citep{zupancic2012analysis}.
 
 Bacteria have been the primary focus of human microbiome research, and other domains have been investigated though to a lesser extent.
 Changes in archaeal and fungi have been shown to covary with bacterial residents \citep{hoffmann2013archaea}.
 Viral populations have been observed to be highly dynamic and variable across individuals \citep{reyes2010viruses,minot2011human,minot2013rapid}.
+We will focus on bacteria here.
 
-In this paper we will be primarily be describing the human microbiome from the perspective of ecological dynamics.
-We will be ignoring recent research on fine-scale immune-mediated interactions between host and microbe \citep[reviewed in][]{hooper2012interactions}.
-Our understanding of the true effect of the microbiome will eventually come from such a molecular-level understanding, although until we can characterize all of the molecular interactions between microbes and with the human body, ecological methods will continue to have an important role.
+In this paper we will be primarily be describing the human microbiome from a large-scale phylogenetic perspective rather than from the fine-scale perpsective of immune-mediated interactions between host and microbe \citep[reviewed in][]{hooper2012interactions}.
+Our understanding of the true effect of the microbiome will eventually come from such a molecular-level understanding, although until we can characterize all of the molecular interactions between microbes and with the human body, a wide perspective will continue to be important.
 
 
 \section{Investigating the human microbiome via sequencing}
-It is now possible to assay microbial communities in high throughput using via sequencing.
+It is now possible to assay microbial communities in high throughput using sequencing.
 There are two ways of doing so.
-The first is to amplify a specific ``marker'' gene in the genome, and perform sequencing.
+The first is to amplify a specific gene in the genome for sequencing using polymerase chain reaction (PCR).
+Scientists typically pick a ``marker'' gene in that case suitable for phylogenetic analysis.
 The second is to randomly shear input DNA and/or RNA and then perform sequencing directly.
-Although these words are not consistently used in the literature, we will consistently refer to the former as a \textit{survey} and the second a \textit{metagenome}.
+We will consistently refer to the former as a \textit{survey} and the second a \textit{metagenome}, although these words have not always been consistently used in the literature.
 
-Lots of survey, metagenome, and whole-genome sequencing data has been generated by the Human Microbiome Project \citep{methe2012framework} and is available on its website\footnote{\url{http://www.hmpdacc.org/}}.
-The MetaHIT study also generated lots of data but it is not available to outside researchers.
+The Human Microbiome Project \citep{methe2012framework} generated lots of survey, metagenome, and whole-genome sequencing data and this data is available on a dedicated website\footnote{\url{http://www.hmpdacc.org/}}.
+The MetaHIT study \citep{qin2010human} also generated lots of data but it is not available to outside researchers.
 
 \subsection{Microbial community estimation using marker gene surveys}
 Our modern knowledge of the microbial world is due to a large part derived from the methods of Carl Woese and colleagues who pioneered the use of marker genes as a way to distinguish between microbial lineages \citep{fox1977comparative}.
-Their work, and the scientists who followed them, used especially the 16S ribosomal gene.
+Their work, and the scientists who followed them, focused on the 16S ribosomal gene as a genetic marker.
 This gene was chosen because it has regions of high and low diversity, which enable resolution on a variety of evolutionary time scales.
-Regions of low diversity in 16S also enabled the development of the first ``universal'' 16S PCR primers \citep{lane1985rapid} which initiated surveys of all organisms regardless of whether they can be cultured.
+Regions of low diversity in 16S also enabled the development of the first ``universal'' 16S PCR primers \citep{lane1985rapid} which enabled surveys of all organisms regardless of whether they can be cultured.
 
 Where Woese and colleagues labored over digestion and gel electrophoresis to infer sequences, modern researchers have the luxury of high throughput sequencing.
 This can be done with a high level of multiplexing, making an explicit trade-off between depth of sequencing for each specimen and the number of specimens able to be put on the sequencer at the same time.
-This has led to extensive parallelization, most recently by sequencing dozens of samples on the Illumina instrument \citep{degnan2011illumina,caporaso2012ultra}.
+This has led to extensive parallelization, most recently by sequencing dozens of samples at a time on the Illumina instrument \citep{degnan2011illumina,caporaso2012ultra}.
 This leads to the question of how many sequences are needed to characterize the microbial diversity of a given environment.
-For simply separating two rather different samples, relatively few sequences per sample are required \citep{kuczynski2010microbial} however for more subtle information deeper sequencing is required.
-In addition to sequencing samples across individuals, this parallelization has also enabled sampling through time \cite{caporaso2011moving}.
+To distinguish between two rather different samples, relatively few sequences per sample are required \citep{kuczynski2010microbial} however for more subtle information deeper sequencing is required.
+In addition to sequencing samples across individuals, this parallelization has also enabled sampling through time \citep{caporaso2011moving}.
 
 Despite the high-throughput and low cost of modern sequencing, inherent challenges remain for the use of population census by marker gene sequencing.
 Most fundamentally, various microbes have different DNA extraction efficiencies, even with hard core protocols, meaning that the representation of marker gene sequences is not representative of the actual communities \citep{morgan2010metagenomic}.
 Current sequencing technology is limited to a length that is shorter than most genes, which limits the resolution of the analyses.
 ``Primer bias,'' or differing amplification levels of various sequences based on their affinity for the primers \citep{suzuki1996bias,polz1998bias}, is a challenge and has led to the standardization of primers \citep{methe2012framework}.
-Worse, multiplex PCR is known to create chimeric sequences via partial PCR products \citep{hugenholtz2003chimeric,ashelford2005least,haas2011chimeric,schloss2011reducing}, and chimera checking software has been developed \citep[including][]{ashelford2006new,edgar2011uchime}.
+Worse, multiplex PCR is known to create chimeric sequences via partial PCR products \citep{hugenholtz2003chimeric,ashelford2005least,haas2011chimeric,schloss2011reducing}.
+Correspondingly, chimera checking software has been developed \citep[including][]{ashelford2006new,edgar2011uchime}.
 Also, 16S can be present in up to 15 copies and there can be diversity within the copies \citep{klappenbach2001rrndb};
-recent work \citep{kembel2012incorporating} implements the independent contrasts \citep{felsenstein1985phylogenies} method to correct for copy number, which has been successful despite a moderate evolutionary signal \citep{klappenbach2000rrna}.
+recent work by \citet{kembel2012incorporating} implements the independent contrasts \citep{felsenstein1985phylogenies} method to correct for copy number, which has been helpful despite a moderate evolutionary signal \citep{klappenbach2000rrna}.
 Some groups have reported advantages to using alternate single-copy genes as markers for characterization of microbial communities \citep[e.g.][]{case2007rpob,mcnabb2004hsp65}, however 16S remains the dominant locus used by a large margin.
 
 \subsection{Metagenomes}
-As described above ``metagenome" means that data is sheared randomly across the genome, thus the genetic region of a read is unknown in addition to the organism it was derived from.
-Because it does proceed through an amplification step, it does not have the same primer biases as a marker gene survey, although sequencing is known to have biases.
+As described above ``metagenome" means that data is sheared randomly across the genome rather than amplified from a specific region, thus the genetic region of a read is unknown in addition to the organism it was derived from.
+Because it does proceed through an amplification step, it does not have the same PCR primer biases as a marker gene survey, although sequencing is known to have biases.
 
 It is possible to use metagenomic data as an expanded set of marker genes.
-That is, one can use 16S reads that appear in the metagenome as well as other ``core" genes present in a large proportion of micro-organisms that are expected to follow the same evolutionary path \citep{von2007quantitative,wu2008amphora,stark2010mltreemap,kembel2011phylogenetic}.
-Because of the diversity of gene repertoire in microbes, the gene sets may have only limited overlap with one another, and even the largest collection of genes in these databases only recruits around 1 percent of a metagenome.
+That is, one can use 16S reads that appear in the metagenome as well as reads from other ``core" genes present in a large proportion of micro-organisms that are expected to follow the same evolutionary path \citep{von2007quantitative,wu2008amphora,stark2010mltreemap,kembel2011phylogenetic}.
+However, because of the diversity of gene repertoire in microbes, the gene sets may have only limited overlap with one another, and even the largest collection of genes in these databases only recruits around 1 percent of a metagenome.
+The rest of the data can be taxonomically classified
+\citep[methods reviewed by][]{mande2012classification}; \citet{treangen2013metamos} report speedups and much higher accuracy when reads are assembled before they are classified.
 
-Metagenomic data can be used to infer information about metabolic capacity \cite{greenblum2012metagenomic,abubucker2012metabolic}.
-The authors of the metAMOS pipeline \citep{treangen2013metamos} report speedups and much higher accuracy when reads are assembled before they are classified.
+Metagenomic data is often used to infer information of a metabolic rather than phylogenetic nature \citep{greenblum2012metagenomic,abubucker2012metabolic}.
+Such inference is beyond the scope of this paper.
 
 
 \subsection{Whole genomes}
 Whole-genome sequencing from culture is currently being used for microbial outbreak tracking \citep{koser2012rapid,snitkin2012tracking}.
 The Food and Drug Administration maintains GenomeTrakr, an openly accessible database of whole genome sequences from culture\footnote{\url{http://www.fda.gov/Food/FoodScienceResearch/WholeGenomeSequencingProgramWGS/}}.
-This data will become common for unculturable organisms as single-cell sequencing \citep[reviewed in][]{kalisky2011single} becomes common.
-The assembly of complete genomes from metagenomes, once limited to samples with a very small number of organisms \citep{baker2010enigmatic}, is now becoming feasible for more diverse populations with improved sequencing technology and computational approaches \cite{howe2012assembling,pell2012scaling,iverson2012untangling,emerson2012metagenomic,podell2013assembly}.
+This data may become common for unculturable organisms as single-cell sequencing methods \citep[reviewed in][]{kalisky2011single} improve.
+The assembly of complete genomes from metagenomes, once limited to samples with a very small number of organisms \citep{baker2010enigmatic}, is now becoming feasible for more diverse populations with improved sequencing technology and computational approaches \citep{howe2012assembling,pell2012scaling,iverson2012untangling,emerson2012metagenomic,podell2013assembly}.
 
 
 \section{Tree-thinking in human microbiome research}
@@ -230,14 +231,14 @@ However, comparisons of taxonomic classification programs \citep{liu2008accurate
 Some authors report that a combination of composition-based and homology-based classifiers work best \citep{brady2009phymm,parks2011classifying}.
 
 The MEGAN program \citep{huson2007megan,huson2011integrative} uses a least common ancestor (LCA) strategy to turn a taxonomy and a collection of BLAST results of a unknown sequence on a database of sequences with those taxonomic labels into taxonomic assignments for the unknown sequence.
-Another program, called SAP \cite{munch2008fast,munch2008statistical} infers taxonomic assignment by automatically retrieving  and building a tree on retrieved sequences equipped with taxonomic information.
+Another program, called SAP \citep{munch2008fast,munch2008statistical} infers taxonomic assignment by automatically retrieving  and building a tree on retrieved sequences equipped with taxonomic information.
 
 A fascinating approach is that of \citet{segata2012metagenomic}, who start by compiling a database of clade-specific genes \citep{segata2011metagenomic}.
 Then they classify the origin of a given read as being the only clade that has this gene.
 They show that this has good specificity, however, sensitivity is limited to genomes that have been sequenced.
 
 \subsection{The role of Operational Taxonomic Units (OTUs)}
-There continues to be a lively debate on if there is a meaningful concept of species for microbes \cite{bapteste2009prokaryotic,caro2012bacterial}, and most human microbiome research has replaced any traditional species concept with the notion of an Operational Taxonomic Units (OTUs).
+There continues to be a lively debate on if there is a meaningful concept of species for microbes \citep{bapteste2009prokaryotic,caro2012bacterial}, and most human microbiome research has replaced any traditional species concept with the notion of an Operational Taxonomic Units (OTUs).
 An OTU is a proxy species concept that is typically defined with a fixed divergence cutoff, most commonly a 97\% sequence identity, such that each OTU consists of sequences that are closer to each other than that cutoff.
 It is common for trees to be built on sequence representatives from these OTUs, and the abundance of an OTU to be given by the number of sequences that sit within that cluster.
 
@@ -304,7 +305,7 @@ This approach has recently been taken to its logical conclusion by trying to inf
 Similar logic has been applied to prioritize microbes for sequencing.
 \citet{wu2009phylogeny} have derived a ``phylogeny-driven genomic encyclopaedia of Bacteria and Archaea'' by selecting organisms for sequencing that are divergent from organisms that have a sequenced genome.
 By doing so they have recovered more novel protein families than they would have using methods organized by taxonomy.
-However, for the equivalent effort for the human microbiome \cite{fodor2012most} list phylogenetic methods were not used-- they just wanted to get microbes that were prevalent in the microbiome but not sequenced.
+However, for the equivalent effort for the human microbiome \citep{fodor2012most} list phylogenetic methods were not used-- they just wanted to get microbes that were prevalent in the microbiome but not sequenced.
 % http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0041294
 
 
@@ -332,7 +333,7 @@ Alignment methods are primarily focused on extending a curated ``seed alignment'
 The community also uses profile hidden Markov models \citep{eddy1998profile} and CM models \citep{nawrocki2009infernal,nawrocki2009structural}.
 
 The large data sets associated with human microbiome analysis require highly efficient algorithms for \emph{de novo} tree inference.
-Historically this has meant relaxed neighbor joining \cite{evans2006relaxed,sheneman2006clearcut}, but more recently FastTree 2 \citep{price2010fasttree} has emerged as the \textit{de facto} standard.
+Historically this has meant relaxed neighbor joining \citep{evans2006relaxed,sheneman2006clearcut}, but more recently FastTree 2 \citep{price2010fasttree} has emerged as the \textit{de facto} standard.
 People do most phylogenetic inferences as part of a pipeline such as mothur \citep{schloss2009introducing} which has ported in clearcut \citep{evans2006relaxed,sheneman2006clearcut} program, and QIIME \citep{caporaso2010qiime}, which wraps clearcut and FastTree 2.
 % AXIOME streamlines and manages analysis of small subunit (SSU) rRNA marker data in QIIME and mothur \citep{lynch2013axiome}.
 % Bayesian phylogenetic inference is absent.
@@ -359,7 +360,7 @@ SILVA reference alignment version 115 has 479,726 sequences and is over 96\% gap
 % 1543 / 7682
 % .79914084873730799272
 while the GreenGenes 13\_5 alignment has 1,262,986 sequences and is almost 80\% gap.
-The SILVA-associated 'all-species living tree' project \cite{yarza2008all} started with a tree inferred by maximum likelihood and has been continually updated  by inserting sequences via parsimony.
+The SILVA-associated 'all-species living tree' project \citep{yarza2008all} started with a tree inferred by maximum likelihood and has been continually updated  by inserting sequences via parsimony.
 The GreenGenes tree is updated by running FastTree from scratch.
 In addition to these 16S-based resources, the MicrobesOnline resource \citep{dehal2010microbesonline} offers a tree-based genome browser.
 On a much smaller scale, there curated reference sets that are microbiome body-site specific \citep{chen2010human,griffen2011core,srinivasan2012bacterial}
@@ -373,7 +374,7 @@ I have collected some of questions motivated by human microbiome research.
 
 The first and most general challenge is to address the gap between on one hand complete \emph{de novo} tree inference, and sequence insertion or placement that leaves the reference tree fixed.
 Sequence data is continually being added to large databases, and so it would be nice to have methods that could continually update trees.
-% Surprising that methods such as DCM \cite{huson1999disk} have not gained traction.
+% Surprising that methods such as DCM \citep{huson1999disk} have not gained traction.
 
 In this review I have devoted considerable space to the ways in which microbial ecologists have used the 16s tree as a proxy structure for the evolutionary history of their favorite organisms.
 They have even shown that 16S distance recapitulates gene content divergence and used this correlation to predict gene functions.
@@ -389,7 +390,7 @@ It is quite possible that there is nothing better given the inherent noise of th
 For example, collections of reconciled gene trees in the presence of gene deletion, transfer, and loss, and could be used \citep[see][for interesting recent results]{szollHosi2013lateral,szollHosi2013efficient}.
 
 In addition to using phylogenies to infer gene repertoire, it appears that neutral models involving phylogenetics could be more fully developed.
-Methods explicitly invoking trait evolution seem notably absent, with one recent exception \cite{langille2013predictive}.
+Methods explicitly invoking trait evolution seem notably absent, with one recent exception \citep{langille2013predictive}.
 The results of this simple method are reasonable.
 It is possible that improved methods, perhaps involving whole-genome evolutionary modeling or models of metabolic network evolution, could shed light on the problem.
 How could we formulate a useful notion of independent contrasts \citep{felsenstein1985phylogenies} on a collection of reconciled gene trees?
@@ -397,15 +398,15 @@ How could we formulate a useful notion of independent contrasts \citep{felsenste
 Given that microbes are cosmopolitan and have been evolving for a long time, another important project is to model community assembly.
 One direction is to apply Hubbell's neutral theory to the human microbiome \citep{fierer2012animalcules,costello2012application}.
 A recent paper does so with an explicitly phylogenetic perspective \citep{o2012phylogenetic}, and includes some comparison of models to data.
-Continued work in this direction seems warranted, given the way in which phylogenetic tree shape statistics have had a significant impact on macroevolutionary modeling \cite{mooers1997inferring,aldous2011five}.
+Continued work in this direction seems warranted, given the way in which phylogenetic tree shape statistics have had a significant impact on macroevolutionary modeling \citep{mooers1997inferring,aldous2011five}.
 In this case various (alpha and beta) diversity statistics would take the role of tree shape statistics.
 It will be challenging to bring together macroevolutionary modeling with species abundance modeling, but some very first steps have been made in another setting \citep{lambert2013predicting}.
 
 Diversity preservation is of interest for microbiome researchers, but has not received the formalization and algorithmic treatment surrounding phylogenetic diversity for larger organisms.
-Martin Blaser in particular has argued that changes in our microbiomes are leading to an increase in autoimmune disease and certain types of cancer and has made passionate appeals to preserve microbiome diversity \cite{blaser2011antibiotic,cho2012human}.
+Martin Blaser in particular has argued that changes in our microbiomes are leading to an increase in autoimmune disease and certain types of cancer and has made passionate appeals to preserve microbiome diversity \citep{blaser2011antibiotic,cho2012human}.
 Indeed, studies show that the modern lifestyle, including antibiotic use, has led to significant changes in microbiome.
 Because microbiomes are seeded from mother to child, there is a somewhat equivalent notion of extinction of microbiome when the chain is interrupted.
-Consequently, a recent study has explicitly contrasted microbiome development in urban, forest-dwelling, and rural African populations \cite{yatsunenko2012human}, and one study has endeavored to characterize the microbiome from ancient feces \cite{tito2012insights}.
+Consequently, a recent study has explicitly contrasted microbiome development in urban, forest-dwelling, and rural African populations \citep{yatsunenko2012human}, and one study has endeavored to characterize the microbiome from ancient feces \citep{tito2012insights}.
 
 Perhaps in part because of the importance of mother-to-child transmission, there are indications of coevolution between microbiomes and their hosts.
 \citet{ochman2010evolutionary} found identical trees for primate evolution and microbiome,
@@ -415,7 +416,7 @@ Would methods using these models do better than clustering or distance methods a
 Other studies \citep[e.g.][]{phillips2012microbiome,delsuc2013convergence} see a combination of historical and dietary influences.
 This seems like a setting in which convergent evolution could be quantified.
 
-The approach of considering a collection of genes and their metabolic network as a meta-organism has yielded some interesting results \cite{borenstein2008large,greenblum2012metagenomic}.
+The approach of considering a collection of genes and their metabolic network as a meta-organism has yielded some interesting results \citep{borenstein2008large,greenblum2012metagenomic}.
 A clear limitation to this approach is that cellular boundaries are ignored: populations are not a freely diffusing soup.
 Could these approaches be improved by using phylogenetic methods to reconstruct the compartmentalization of genomes and processes into cells?
 % As an extension microbes have to be close to one another-- requires population modeling.
