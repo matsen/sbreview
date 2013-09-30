@@ -33,12 +33,6 @@
 
 \hyphenation{Ge-nome Ge-nomes Me-ta-ge-nome Me-ta-ge-nomes Ma-cro-ev-o-lu-tion-ary}
 
-% Noah suggests making a table for
-%alpha diversity
-%beta diversity
-%PCA
-%taxonomic assignment/classification
-%clustering/binning
 
 \begin{document}
 
@@ -307,6 +301,10 @@ Biplots display variables (in the microbial case summarized by taxonomic labels)
 Elizabeth Purdom \citep{BikEaMicrobiotaStomach06,PurdomAnalyzingDataGraphs08} describes how generalized principal component eigenvectors can be interpreted via weightings on the leaves of a phylogenetic tree.
 \citet{matsen2013edge} have developed a variant of principal components analysis that explicitly labels the axes with weightings on phylogenetic trees that indicate their meanings.
 
+In another vein, \citet{la2012statistical} consider the induced taxonomic tree of a sample as a statistical object and, using a framework where a sampling probability is defined in terms of a distance between such induced trees, define and investigate maximum likelihood estimation of and likelihood ratio tests for these trees.
+They focus on distances between trees induced by matrix metrics on the corresponding adjacency matrices.
+A similar framework was used by \citet{steel2008maximum} to construct maximum likelihood supertrees.
+
 
 \subsection{Phylogeny and function}
 
@@ -447,13 +445,23 @@ Furthermore, there was no clear taxonomic signal in their observations of the va
 However, presumably \textit{something} about their genome is determining extraction efficiency; it would be interesting and useful to search for the genetic determinants.
 As described above, abundances are commonly used as part of community comparison, thus a better quantification of error in those observations of abundance would be a great help.
 
+In a similar vein, assessing the significance level an observed difference between communities is not straightforward and poses difficult problems.
+The randomization test that is very commonly used in combination with UniFrac does not have appropriate properties when in the regime of incomplete sampling with non-independent observations, which is certainly the correct regime for surveys and metagenomes.
+Such non-independence can lead to incorrect rejection of the null hypothesis.
+Imagine, for example, that we have a random observation process on the tree equipped with some collection of ``base observations.''
+Each process takes a random subset of those base observations and then throws down some number of reads for each observation in that set, the number of which has mean significantly greater than 1.
+If the set of base observations is large compared to the number of sample observations, then two draws will always appear significantly different even though they are from the same underlying process.
+Even basic definitions pose a challenge here: the question of whether two communities are the ``same'' and ``different'' probably needs to be approached from the perspective of ecosystem modeling.
 
-Noah-- AFAIK nobody has done phylogenetic modeling of primer bias, which would seem to be very useful! Couldn't we check for phylogenetic signal and if there is some, do modeling? I mean, there has got to be some phylogenetic signal, right?
-
-
+In general, sample normalization has not received nearly the attention that it has in other applications of high throughput sequencing \citep[such as RNA-Seq, e.g.][]{anders2010differential,robinson2010edger}.
+The present sample normalization techniques are simply in terms of \textit{rarefaction}, which means uniform sub-sampling, typically without replacement \citep{caporaso2010qiime,schloss2009introducing}.
+Such normalization implicitly assumes a model whereby reads are sequenced independently of one another, which as explained is almost certainly not the case.
+One might hope to overcome these problems through clustering reads from the ``same'' organism and then performing rarefaction, but as described in the section on OTUs this is a challenge on its own.
+\citet{holmes2012dirichlet,la2012hypothesis} use models where read counts are modeled as overdispersed samples of the true distributions.
+\citet{o2012phylogenetic} provide a ``UniFrac score normalization curve'' based on a sampling model of community assembly, but more work could be done exploring results under deviation from that model.
 
 Finally, the conventional wisdom that UniFrac analysis is robust to tree reconstruction methodology begs further exploration.
-Would it be possible to infer an ``equivalence class'' of phylogenetic trees, where two trees are deemed equivalent if they induce the same principal coordinates projection given the same underlying presence/absence or count data?
+Would it be possible to infer an equivalence class of phylogenetic trees, where two trees are deemed equivalent if they induce the same principal coordinates projection given the same underlying presence/absence or count data?
 Given that a tree is an integral part of a UniFrac analysis, it would be interesting to be able to infer the features of a tree that determine the primary trends in a projection.
 
 
@@ -461,7 +469,7 @@ Given that a tree is an integral part of a UniFrac analysis, it would be interes
 What can we expect next at the intersection of phylogenetics and the human microbiome?
 At least for the next several years we can expect more related work.
 Future will continue to bring deeper sequencing on more samples.
-The uBiome project (\url{http://ubiome.com/}) promises to bring gut microbiome sequencing to the average citizen for a low price \citep{costandi2013citizen}.
+The uBiome project\footnote{(\url{http://ubiome.com/}} promises to bring gut microbiome sequencing to the average citizen for a low price \citep{costandi2013citizen}.
 Comparative studies will continue to study what shapes and is shaped by the microbiome.
 However, some of the initial excitement may have died down, as neither the Human Microbiome Project nor the MetaHIT project were extended.
 
@@ -483,7 +491,7 @@ Phylogenetics has already contributed significantly to human microbiome research
 
 \section{Acknowledgements}
 I thank Olivier Gascuel for the opportunity to present on this subject during the 2013 LIRMM Mathematical and Computational Evolutionary Biology workshop and for organizing a corresponding special section of \textit{Systematic Biology}.
-I am also grateful to Aaron Darling, David Fredricks, Noah Hoffman, Connor McCoy, Martin Morgan, and Sujatha Srinivasan for interesting discussions that informed this review, and to the NIH (R01 HG005966-01) and NSF (1223057) for financial support.
+I am also grateful to Aaron Darling, David Fredricks, Noah Hoffman, Steven Kembel, Connor McCoy, Martin Morgan, and Sujatha Srinivasan for interesting discussions that informed this review, to Noah Hoffman and Bj\"orn Winckler for providing feedback on the manuscript, and to the NIH (R01 HG005966-01) and NSF (1223057) for financial support.
 
 
 \notforarxiv{
