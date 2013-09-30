@@ -97,26 +97,26 @@ In this paper I review the field and its methods from the perspective of a phylo
 The parameter regime and focus of microbiome research sits outside of the traditional setting for phylogenetics methods development and application; why should our community be interested in what these microbial ecologists and medical researchers have done?
 The answer is simple: this system is data- and question-rich.
 It absolutely requires molecular methods, as microbes are now primarily identified by their molecular sequence, which is much more straightforward to do in high throughput than morphological or phenotypic characterization.
-Indeed, microbial ecology has recently become for the most part the study of the relative abundances of various sequences derived from the environment.
+Indeed, microbial ecology has recently become for the most part the study of the relative abundances of various sequences derived from the environment, even if the framework for understanding between-microbe relationships includes metabolic information and other information not derived directly from sequences derived from the sample.
 
-Although there is something of a divide between phylogeny as practiced as part of microbial ecology and that for multicellular organisms, there are many parallels between the two enterprises.
-Both communities struggle with issues of sequence alignment, large-scale tree reconstruction, species definition.
+Although there is something of a divide between phylogeny as practiced as part of microbial ecology on one hand and that for multicellular organisms on the other, there are many parallels between the two enterprises.
+Both communities struggle with issues of sequence alignment, large-scale tree reconstruction, and species definition.
 However, approaches differ between the microbial ecology community and that of eukaryotic phylogenetics, in part because the scope of the former contains an almost unlimited diversity of organisms, leading to additional problems above the usual.
 The species concept is even more problematic for microbes than for larger eukaryotes and there is also considerable discussion concerning how to group them into species-like units.
-The organizing microbes into a sensible taxonomy is a serious challenge, especially in the absence of obvious morphological features.
+Organizing microbes into a sensible taxonomy is a serious challenge, especially in the absence of obvious morphological features.
 
 Because of this high level of diversity and challenges with species definitions, microbial ecology researchers have developed their own explicitly phylogenetic techniques for doing comparing samples rather than comparing on the level of species abundances.
-Although there is some overlap with previous literature, these techniques are novel and could be used in a wider setting and deserve wider consideration by the phylogenetics community.
+Although there is some overlap with previous literature, these techniques and could be used in a wider setting and may deserve broader consideration by the phylogenetics community.
 
 The human microbiome is specifically interesting because questions of microbial genomics, translated into questions of function, have important consequences for human health.
-Additionally, due to more than a century of hospital lab medicine, our knowledge about human-associated microbes relatively rich.
+Additionally, due to more than a century of hospital laboratory work, our knowledge about human-associated microbes relatively rich.
 It is also common to manipulate the human microbiome or models thereof via intervention studies and germ-free animals, and is easier to do than for many other microbial communities.
 
-In this review I will describe phylogenetics-related research happening in microbial ecology and contrast approaches between what I think of as the typical \emph{Systematic Biology} audience and microbial researchers.
+In this review I will describe phylogenetics-related research happening in microbial ecology and contrast approaches between microbial researchers and what I think of as the typical \emph{Systematic Biology} audience.
 Despite an obvious oversimplification, I will use \textit{eukaryotic phylogenetics} to indicate what I think of as the mainstream of SB readership, and \textit{microbial phylogenetics} to denote the other.
-I realize that there is substantial overlap-- for instance the microbial community is very interested in unicellular fungi, and many in the SB community do work on microbes-- but this terminology will be useful for concreteness.
+I realize that there is substantial overlap-- for instance the microbial community is very interested in unicellular fungi, and additionally many in the SB community do work on microbes-- but this terminology will be useful for concreteness.
 There is of course also substantial overlap in methodology, however as we will see there are significant differences in approach and the two areas have developed somewhat in parallel.
-I will first briefly review the recent literature on the human microbiome, then describe novel ways in which human microbiome researchers have used trees and the challenges that human microbiome research poses for the phylogenetics community.
+I will first briefly review the recent literature on the human microbiome, then describe novel ways in which human microbiome researchers have used trees.
 I will finish with opportunities for the \textit{Systematic Biology} audience to contribute to this field.
 I have made an explicit effort to make a neutral comparison between two directions rather than criticize the approximate methods common in microbial phylogenetics; indeed, microbial phylogenetics requires algorithms and ideas that work in parameter regimes orders of magnitude larger than typical for eukaryotic phylogenetics.
 
@@ -238,7 +238,7 @@ Another program, called SAP, infers taxonomic assignment by automatically retrie
 They show that this has good sensitivity and specificity, however, this method can only be used to classify to organisms that have complete genome sequences.
 
 \subsection{The role of Operational Taxonomic Units (OTUs)}
-There continues to be a lively debate on if there is a meaningful concept of species for microbes \citep{bapteste2009prokaryotic,caro2012bacterial}, and most human microbiome research has replaced any traditional species concept with the notion of Operational Taxonomic Units (OTUs).
+Although there continues to be a lively debate on if there is a meaningful concept of species for microbes \citep{bapteste2009prokaryotic,caro2012bacterial}, most human microbiome research has replaced any traditional species concept with the notion of Operational Taxonomic Units (OTUs).
 An OTU is a proxy species concept that is typically defined with a fixed divergence cutoff, most commonly at 97\% sequence identity, such that each OTU consists of sequences that are closer to each other than that cutoff.
 It is common for trees to be built on sequence representatives from these OTUs, and the abundance of an OTU to be given by the number of sequences that sit within that cluster.
 I briefly describe the mini-industry of OTU clustering techniques to contrast with the phylogenetic literature on species delimitation \citep{pons2006sequence,yang2010bayesian}.
@@ -250,6 +250,7 @@ Of the fixed-cutoff methods, the traditional choice has been CD-HIT \citep{li200
 These methods are very fast and are heuristic in that they are described as an algorithm rather than as global optimization of some notion of goodness of clustering.
 It is well known that different ways of doing this heuristic clustering can result in very different results \citep{white2010alignment}.
 There are also methods that try to come up with sequence groupings that more closely reflect the type of species divisions found in taxonomies \citep{navlakha2009finding}.
+\citet{hao2011clustering} use a Gaussian mixture model formulation for clustering to avoid fixed cutoff values.
 The centrality of the OTU concept can be seen by the fact that the contingency table of OTU observations is considered to be the fundamental data type for 16S studies \citep{mcdonald2012biological}, or that methods have been devised to find OTUs from non-overlapping sequences \citep{sharpton2011phylotu}.
 With the exception of this last reference, OTU inference is not considered to be a phylogenetic problem but rather something to be performed before phylogenetic inference begins.
 
@@ -262,7 +263,7 @@ For the most part, this literature adapts methods from the classical ecological 
 However, phylogenetic diversity metrics are also used and here we will focus on their applications and methods.
 
 Despite the enthusiasm with which microbial ecologists have accepted between-community comparison using phylogenetics (see next section), phylogenetic alpha diversity seems under-developed: whereas just about every 16S survey investigation involves an OTU-based alpha diversity estimate, only a few involve phylogenetic diversity (PD) measures.
-Faith's PD \citep{faith1992conservation} has been applied to some 16S survey data \cite{lozupone2007global,costello2009bacterial} and to metagenomic reads expanded marker tree \citep{kembel2011phylogenetic}.
+Faith's PD \citep{faith1992conservation} has been applied to some 16S survey data \citep{lozupone2007global,costello2009bacterial} and to metagenomic reads expanded marker tree \citep{kembel2011phylogenetic}.
 
 Although abundance-weighted non-phylogenetic diversity measures such as \citet{simpson1949measurement} and \citet{shannon1948mathematical} are among the most common, abundance-weighted phylogenetic diversity measures are not used in human microbiome studies.
 Such measures do exist \citep{rao1982diversity,barker2002phylogenetic,allen2009new,chao2010phylogenetic,vellend2011measuring}.
@@ -294,7 +295,7 @@ Indeed, the separation of two communities in a principal components plot is ofte
 \textbf{[Figure: example principal coordinates plot?]}
 
 There have been efforts to augment the ordination visualizations with additional information giving more structure to the visualizations.
-Biplots display variables (in the microbial case summarized by taxonomic labels) as points in addition to samples \cite[e.g.][]{hewitt2013bacterial,lozupone2013meta}.
+Biplots display variables (in the microbial case summarized by taxonomic labels) as points in addition to samples \citep[e.g.][]{hewitt2013bacterial,lozupone2013meta}.
 Elizabeth Purdom \citep{BikEaMicrobiotaStomach06,PurdomAnalyzingDataGraphs08} describes how generalized principal component eigenvectors can be interpreted via weightings on the leaves of a phylogenetic tree.
 \citet{matsen2013edge} have developed a variant of principal components analysis that explicitly labels the axes with weightings on phylogenetic trees that indicate their meanings.
 
