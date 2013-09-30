@@ -13,3 +13,4 @@ To compile via the [SCons](http://www.scons.org/) build system, type `scons` in 
 Here is a collection of PDF builds, named by date and time, if you don't want to compile.
 
 * [09-28-15h17](http://cl.ly/351R3q0h3q2B/sbreview-09-28-15h17.pdf)
+* [09-30-09h14](http://cl.ly/0a331C242z43/sbreview-09-30-09h14.pdf)
