@@ -453,12 +453,17 @@ Each process takes a random subset of those base observations and then throws do
 If the set of base observations is large compared to the number of sample observations, then two draws will always appear significantly different even though they are from the same underlying process.
 Even basic definitions pose a challenge here: the question of whether two communities are the ``same'' and ``different'' probably needs to be approached from the perspective of ecosystem modeling.
 
-In general, sample normalization has not received nearly the attention that it has in other applications of high throughput sequencing \citep[such as RNA-Seq, e.g.][]{anders2010differential,robinson2010edger}.
-The present sample normalization techniques are simply in terms of \textit{rarefaction}, which means uniform sub-sampling, typically without replacement \citep{caporaso2010qiime,schloss2009introducing}.
-Such normalization implicitly assumes a model whereby reads are sequenced independently of one another, which as explained is almost certainly not the case.
-One might hope to overcome these problems through clustering reads from the ``same'' organism and then performing rarefaction, but as described in the section on OTUs this is a challenge on its own.
-\citet{holmes2012dirichlet,la2012hypothesis} use models where read counts are modeled as overdispersed samples of the true distributions.
-\citet{o2012phylogenetic} provide a ``UniFrac score normalization curve'' based on a sampling model of community assembly, but more work could be done exploring results under deviation from that model.
+In general, read count normalization has not received nearly the attention that it has in other applications of high throughput sequencing \citep[such as RNA-Seq, e.g.][]{anders2010differential,robinson2010edger}.
+One type of normalization handles differential depths of sequencing across samples.
+The presently used approach is \textit{rarefaction}, which means uniform sub-sampling, typically without replacement \citep{caporaso2010qiime,schloss2009introducing} to the number of reads in the lowest abundance sample.
+In addition to throwing away data, this normalization implicitly assumes a model whereby reads are sequenced independently of one another, which as explained is almost certainly not the case.
+An alternative is provided by \citet{o2012phylogenetic}, who provide a ``UniFrac score normalization curve'' based on a sampling model of community assembly.
+This is a good start, but more work could be done exploring results under deviation from that model.
+
+Another type of normalization seeks to infer the true abundances from noisy observations of the various taxonomic groups or OTUs.
+\citet{holmes2012dirichlet,la2012hypothesis} use models where read counts are modeled as overdispersed samples of the true abundance and provide methods for statistical testing.
+\citet{paulson2013differential} estimate true abundances using a zero-inflated Gaussian model for read counts.
+This work could be extended to a phylogenetic context by making use of the relationship between OTUs and modeling the way in which the abundance of one OTU may increase the abundance of a related OTU because of sequencing error or a change of condition that changes the abundance of both.
 
 Finally, the conventional wisdom that UniFrac analysis is robust to tree reconstruction methodology begs further exploration.
 Would it be possible to infer an equivalence class of phylogenetic trees, where two trees are deemed equivalent if they induce the same principal coordinates projection given the same underlying presence/absence or count data?
