@@ -5,31 +5,18 @@
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{palatino}
+\usepackage{wrapfig}
 \usepackage[hidelinks]{hyperref}
 \usepackage[round]{natbib}
+\usepackage[labelfont=bf,labelsep=period,font=small]{caption} % bold the 'Figure #' in the caption and separate it with a period
 \newcommand{\forarxiv}[1]{#1}
 \newcommand{\notforarxiv}[1]{}
 
 % show keys for eqs, etc.
 % \usepackage[notref,notcite]{showkeys}
 
-% code
-\newcommand{\program}{\textsf{program}}
-
 \newcommand{\eat}[1]{}
 
-\newcommand{\FIGmassTransport}{\
-\begin{figure}[ht]
-\begin{center}
-  \forarxiv{\includegraphics[width=13cm]{mass_transport.pdf}}
-\end{center}
-\caption{\
-  Caption goes here.
-}
-\label{FIGmassTransport}
-\end{figure}
-}
-\newcommand{\refFIGmassTransport}{1}
 
 \hyphenation{Ge-nome Ge-nomes Me-ta-ge-nome Me-ta-ge-nomes Ma-cro-ev-o-lu-tion-ary}
 
@@ -73,7 +60,7 @@ Program in Computational Biology, Fred Hutchinson Cancer Research Center, Seattl
 The human microbiome is the collection of microbes that live inside and on the surface of humans.
 Because microbial sequencing information is now much easier to come by than phenotypic information, there has been an explosion of sequencing information of microbiome samples.
 Much of the analytical work for these sequences involves phylogenetics, at least indirectly, and methodology has developed in a somewhat different direction than for other applications of phylogenetics.
-In this paper I review the field and its methods from the perspective of a phylogeneticist, in particular the impact of tree-thinking on the methods used in the analysis of human microbiome data, as well as describing current challenges for phylogenetics coming from this type of work.
+In this paper I review the field and its methods from the perspective of a phylogeneticist, as well as describing current challenges for phylogenetics coming from this type of work.
 
 \forarxiv{
 \end{abstract}
@@ -242,8 +229,6 @@ It is common for trees to be built on sequence representatives from these OTUs, 
 I briefly describe the mini-industry of OTU clustering techniques to contrast with the phylogenetic literature on species delimitation \citep{pons2006sequence,yang2010bayesian}.
 I will use the term \emph{OTU inference} despite the fact that there is no clear definition of the OTU concept.
 
-\textbf{[Figure: \url{http://i.imgur.com/3rs1bND.png}]?}
-
 There are many OTU inference methods of various speeds and strategies.
 Of the fixed-cutoff methods, the traditional choice has been CD-HIT \citep{li2006cdhit}, which seems to have been supplanted by clustering features of USEARCH \citep{edgar2010usearch} and perhaps now its descendant UPARSE \citep{edgar2013uparse}.
 These methods are very fast and are heuristic in that they are described as an algorithm rather than as global optimization of some notion of goodness of clustering.
@@ -272,29 +257,55 @@ Such measures do exist \citep{rao1982diversity,barker2002phylogenetic,allen2009n
 \citet{mccoy2013abundance} have recently shown that partially abundance-weighted diversity measures do a good job of distinguishing between dysbiotic and "normal" states of the human microbiome; in particular that they do a better job than the traditionally-used OTU-based measures.
 \citet{nipperess2013mean} have also determined formulas for the expectation and variance of PD under random sub-sampling, which is often applied to enable comparison between samples of different sequencing depths.
 
-\textbf{[Figure: \url{http://cl.ly/image/3k3n3W3U443G/ref_tree_bwpd.png} to show a partially abundance weighted PD measure?]}
-
 \subsection{Community comparison using phylogenetics}
+
+\newcommand{\unifracLegend}{
+    The UniFrac divergence measure \citep[figure adapted from][]{LozuponeKnightUniFrac05}.
+    When samples are interspersed across the tree (left tree), they have a smaller \textit{fraction} of branch lengths that can be \textit{uniquely} assigned to one sample or another compared to when they are separate (right tree).
+}
+\forarxiv{
+\begin{wrapfigure}[23]{r}{2.5in}
+  \capstart
+  \vspace{-19pt}
+  \begin{center}
+    \includegraphics[width=2.5in]{figures/unifrac.pdf}
+  \end{center}
+  \vspace{-10pt}
+  \caption{\unifracLegend}
+  \label{fig:unifrac}
+\end{wrapfigure}
+}
+
 The level of similarity between samples or groups of samples is called \emph{beta diversity}.
 As with alpha diversity, it is not uncommon to use classical measures \citep[e.g.][]{jaccard1908nouvelles} applied to OTU counts, however phylogenetics-based methods are the most popular.
 They are generally variants of the ``UniFrac'' phylogenetic dissimilarity measure \citep[as described and named by][]{LozuponeKnightUniFrac05}.
 \citet{kuczynski2010microbial} claim that the UniFrac framework is superior to other methods for community comparison via real data and simulations \citep[for a contrary viewpoint using simulations see][]{schloss2008evaluating}.
 % It recovers gradients. \citep{nemergut2011global}
 
-\textbf{[Figure: canonical unifrac explanation picture?]}
-
 The name UniFrac is a contraction of ``Unique Fraction,'' which refers to the fact that the original UniFrac definition compares the fraction of edges that connect only tips from one sample or another via the shortest path rather than edges that connect between samples \citep{LozuponeKnightUniFrac05}.
 Weighted UniFrac is an abundance weighted version \citep{LozuponeEaWeightedUnifrac07}.
 \citet{evans2012phylogenetic} showed that weighted UniFrac is in fact a special case of the earth-movers distance, is special in that it can be calculated in linear time, and that the commonly-used randomization procedure to attach a p-value to an observed distance has a central limit theorem approximation as a Gaussian process.
 Recent work \citep{chen2012associating} has shown that a partially abundance-weighted variant of UniFrac may have greater power to resolve community differences than either unweighted or weighted UniFrac.
 
-\textbf{[Figure: \url{http://cl.ly/image/3K472T0K3S3S/tree_dirtpiles.png}]?}.
-
 The most common way to use a pairwise distance matrix found from an application of UniFrac is to apply an ordination method such as principal coordinates analysis.
 Indeed, the separation of two communities in a principal components plot is often used as \emph{prima facie} evidence of a difference between them
 \citep[e.g.][]{lozupone2007global,costello2009bacterial,yatsunenko2012human}, while the lack of such a difference is interpreted as showing that the communities are not different overall.
 
-\textbf{[Figure: example principal coordinates plot?]}
+\newcommand{\dirtpilesLegend}{
+    Part of a minimal mass movement to calculate the earth-mover's distance on a phylogenetic tree.
+}
+\forarxiv{
+\begin{wrapfigure}[19]{l}{1.6in}
+  \capstart
+% \vspace{-24pt}
+  \begin{center}
+    \includegraphics[width=1.6in]{figures/tree_dirtpiles.pdf}
+  \end{center}
+  \vspace{-5pt}
+  \caption{\dirtpilesLegend}
+  \label{fig:dirtpiles}
+\end{wrapfigure}
+}
 
 There have been efforts to augment the ordination visualizations with additional information giving more structure to the visualizations.
 Biplots display variables (in the microbial case summarized by taxonomic labels) as points in addition to samples \citep[e.g.][]{hewitt2013bacterial,lozupone2013meta}.
@@ -474,7 +485,7 @@ Given that a tree is an integral part of a UniFrac analysis, it would be interes
 What can we expect next at the intersection of phylogenetics and the human microbiome?
 At least for the next several years we can expect more related work.
 Future will continue to bring deeper sequencing on more samples.
-The uBiome project\footnote{(\url{http://ubiome.com/}} promises to bring gut microbiome sequencing to the average citizen for a low price \citep{costandi2013citizen}.
+The uBiome project\footnote{\url{http://ubiome.com/}} promises to bring gut microbiome sequencing to the average citizen for a low price \citep{costandi2013citizen}.
 Comparative studies will continue to study what shapes and is shaped by the microbiome.
 However, some of the initial excitement may have died down, as neither the Human Microbiome Project nor the MetaHIT project were extended.
 
@@ -496,13 +507,20 @@ Phylogenetics has already contributed significantly to human microbiome research
 
 \section{Acknowledgements}
 I thank Olivier Gascuel for the opportunity to present on this subject during the 2013 LIRMM Mathematical and Computational Evolutionary Biology workshop and for organizing a corresponding special section of \textit{Systematic Biology}.
-I am also grateful to Aaron Darling, David Fredricks, Noah Hoffman, Steven Kembel, Connor McCoy, Martin Morgan, and Sujatha Srinivasan for interesting discussions that informed this review, to Noah Hoffman and Bj\"orn Winckler for providing feedback on the manuscript, and to the NIH (R01 HG005966-01) and NSF (1223057) for financial support.
+I am also grateful to Aaron Darling, David Fredricks, Noah Hoffman, Steven Kembel, Connor McCoy, Martin Morgan, and Sujatha Srinivasan for interesting discussions that informed this review, to Noah Hoffman, Christopher Small and Bj\"orn Winckler for providing feedback on the manuscript, and to the NIH (R01 HG005966-01) and NSF (1223057) for financial support.
 
 
 \notforarxiv{
 \newpage
 \section{Figure Legends}
 %\FIGmassTransport
+
+\noindent
+Figure 1: \unifracLegend
+
+\noindent
+Figure 2: \dirtpilesLegend
+
 \clearpage
 
 \newpage
