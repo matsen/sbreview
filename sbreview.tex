@@ -131,7 +131,7 @@ Changes in archaeal and fungal populations have been shown to covary with bacter
 Viral populations have been observed to be highly dynamic and variable across individuals \citep{reyes2010viruses,minot2011human,minot2013rapid}.
 We will focus on bacteria here.
 
-In this paper we will be primarily be describing the human microbiome from a community-level phylogenetic perspective rather than from the fine-scale perpsective of immune-mediated interactions between host and microbe \citep[reviewed in][]{hooper2012interactions}.
+In this paper we will be primarily be describing the human microbiome from a community-level phylogenetic perspective rather than from the fine-scale perspective of immune-mediated interactions between host and microbe \citep[reviewed in][]{hooper2012interactions}.
 Our understanding of the true effect of the microbiome will eventually come from such a molecular-level understanding, although until we can characterize all of the molecular interactions between microbes and the human body, a broad perspective will continue to be important.
 
 
@@ -159,7 +159,7 @@ To distinguish between two rather different samples, relatively few sequences pe
 In addition to sequencing samples across individuals, this parallelization has also enabled sampling through time \citep[e.g.][]{caporaso2011moving}.
 
 Despite the high throughput and low cost of modern sequencing, inherent challenges remain for applications of marker gene sequencing to take a census of microbes.
-Most fundamentally, various microbes have different DNA extraction efficiencies, even with stringent protocols, meaning that the representation of marker gene sequences is not representative of the actual communities \citep{morgan2010metagenomic}.
+Most fundamentally, various microbes have different DNA extraction efficiencies, even with stringent protocols, meaning that a collection of sequences need not be representative of the communities from which they were derived \citep{morgan2010metagenomic}.
 Current high throughput sequencing technology is limited to a length that is shorter than most genes, which limits the resolution of the analyses.
 ``Primer bias,'' or differing amplification levels of various sequences based on their affinity for the primers \citep{suzuki1996bias,polz1998bias}, is a challenge and has led to the standardization of primers \citep{methe2012framework}.
 Worse, multiplex PCR is known to create chimeric (i.e.\ spurious recombinant) sequences via partial PCR products \citep{hugenholtz2003chimeric,ashelford2005least,haas2011chimeric,schloss2011reducing}.
@@ -168,11 +168,11 @@ Also, 16S can be present in up to 15 copies and there can be diversity within th
 Recent work by \citet{kembel2012incorporating} implements the independent contrasts \citep{felsenstein1985phylogenies} method to correct for copy number, which has been helpful despite a moderate evolutionary signal in copy number variation \citep{klappenbach2000rrna}.
 Some groups have reported advantages to using alternate single-copy genes as markers for characterization of microbial communities \citep[e.g.][]{case2007rpob,mcnabb2004hsp65}, however 16S remains the dominant locus used by a large margin.
 A final cause of noise is next-generation sequencing error: this is certainly a problem for both surveys and metagenomes, but is becoming less of a problem as technology improves.
-I will not address it specifically except for in the inference of operational taxonomic units as described below.
+I will not address it specifically except in the inference of operational taxonomic units as described below.
 
 \subsection{Metagenomes}
 As described above ``metagenome" means that data is sheared randomly across the genome rather than amplified from a specific location, and thus the genetic region of a read is unknown in addition to what organism it was derived from.
-Because metagenomes do not proceed through an amplification step, it does not have the same PCR primer biases as a marker gene survey, although multiplex sequencing is known to have biases of its own.
+Because metagenomes do not proceed through an amplification step, it does not have the same PCR primer biases as a marker gene survey, however extraction efficiency concerns remain and multiplex sequencing is known to have biases of its own.
 
 It is possible to use metagenomic data as an expanded set of marker genes.
 That is, one can use 16S reads that appear in the metagenome as well as reads from other ``core" genes that are expected to follow the same evolutionary path and are present in a large proportion of micro-organisms.
@@ -181,7 +181,7 @@ Indeed, even the largest collection of genes in these databases only recruits ar
 At least some portion of the rest of the data can be taxonomically classified \citep[methods reviewed by][]{mande2012classification}; \citet{treangen2013metamos} report speedups and much higher accuracy when reads are assembled before they are classified.
 
 Metagenomic data is often used to infer information about metabolism rather than phylogenetic nature \citep{greenblum2012metagenomic,abubucker2012metabolic}.
-Discussing these methods is beyond the scope of this paper.
+Discussing these methods is beyond the scope of this paper, as is ``metatranscriptomics": the sequencing of mRNA in bulk.
 
 
 \subsection{Whole genomes}
@@ -236,7 +236,7 @@ These methods are very fast and are heuristic in that they are described as an a
 \citet{hao2011clustering} use a Gaussian mixture model formulation for clustering to avoid fixed cutoff values.
 
 The centrality of the OTU concept can be seen by the fact that the contingency table of OTU observations is considered to be the fundamental data type for 16S studies \citep{mcdonald2012biological}, or that methods have been devised to find OTUs from non-overlapping sequences \citep{sharpton2011phylotu}.
-A significant amount of effort has been made to distinguish sequencing error in environmental samples from true rare variants; much of this work has played out in the OTU inference literature \citep{quince2009accurate,quince2011removing,bragg2012fast,edgar2013uparse} as it such errors are especially problematic there.
+A significant amount of effort has been made to distinguish sequencing error in environmental samples from true rare variants; much of this work has played out in the OTU inference literature \citep{quince2009accurate,quince2011removing,bragg2012fast,edgar2013uparse} as such errors are especially problematic there.
 With the exception of \citet{sharpton2011phylotu}, OTU inference is not considered to be a phylogenetic problem but rather something to be performed before phylogenetic inference begins.
 
 
@@ -340,7 +340,7 @@ As described above, whole-genome data is typically used to directly infer functi
 The continuing debate concerning whether a microbial tree of life is a useful concept \citep{bapteste2009prokaryotic,caro2012bacterial} does not seem to have dampened human microbiome researchers' enthusiasm for using a single such tree.
 
 Nevertheless, the work that has been done to infer horizontal gene transfer in the human microbiome has revealed interesting results.
-\citet{hehemann2010transfer} found that a gene found in seaweed has been transferred into a bacterium in the gut microbiome of Japanese such that individuals with this resulting microbiome are better able to digest the algae in their diet.
+\citet{hehemann2010transfer} found that a seaweed gene has been transferred into a bacterium in the gut microbiome of Japanese such that individuals with this resulting microbiome are better able to digest the algae in their diet.
 Following on this work, \citet{smillie2011ecology} found that the human microbiome is in fact a common location for gene transfer.
 \citet{stecher2012gut} find that in a mouse model, horizontal transfer between pathogenic bacteria is blocked by commensal bacteria except for periods of gut inflammation.
 
@@ -375,7 +375,7 @@ This work has also spurred development of specialized alignment tools for this m
 \citet{mirarabsepp} use data set partitioning to improve alignments on subsets of taxa specifically for this application.
 
 Considerable effort goes to the creation of large curated alignments and phylogenetic trees on 16S.
-There are two primary such projects: one is the SILVA database \citep{pruesse2007silva,quast2013silva}, and the other is the GreenGenes database \citep{desantis2006greengenes,mcdonald2011improved}.
+There are two major projects to do so: one is the SILVA database \citep{pruesse2007silva,quast2013silva}, and the other is the GreenGenes database \citep{desantis2006greengenes,mcdonald2011improved}.
 Because of the high rate of insertion and deletion of nucleotides in 16S, these alignments have a high percentage of gap.
 Taking the length of 16S to be 1543 nt,
 % SILVA
@@ -391,7 +391,7 @@ The GreenGenes tree is updated by running FastTree from scratch for every releas
 There appears to be a commonly held belief that FastTree in particular works well even with such gappy alignments \citep[e.g.][]{sharpton2011phylotu}.
 
 In addition to these 16S-based resources, the MicrobesOnline resource \citep{dehal2010microbesonline} offers a very nice interactive tree-based genome browser.
-On a much smaller scale, there curated reference sets that are microbiome body-site specific \citep{chen2010human,griffen2011core,srinivasan2012bacterial}
+On a much smaller scale, there are microbiome body-site specific reference sets \citep{chen2010human,griffen2011core,srinivasan2012bacterial}
 
 
 % Networks are not considered.
@@ -403,7 +403,7 @@ Some of them are familiar, such as how to build phylogenies on the scale needed 
 I review some others here.
 
 One clear challenge is to fill the gap between on one hand complete \emph{de novo} tree inference versus sequence insertion or placement that leaves the ``reference tree'' fixed.
-These two extremes are each each useful in different parameter regimes, but something between the two would be helpful as well.
+These two extremes are each useful in different parameter regimes, but something between the two would be helpful as well.
 For example, sequence data is continually being added to large databases, motivating methods that could continually update trees with this new sequence data while allowing the previous tree to change according to this new information.
 % Surprising that methods such as DCM \citep{huson1999disk} have not gained traction.
 
@@ -459,7 +459,7 @@ Furthermore, there was no clear taxonomic signal in their observations of the va
 However, presumably \textit{something} about their genome is determining extraction efficiency; it would be interesting and useful to search for the genetic determinants.
 As described above, abundances are commonly used as part of community comparison, thus a better quantification of error in those observations of abundance would be a great help.
 
-In a similar vein, assessing the significance level an observed difference between communities is not straightforward and poses difficult problems.
+In a similar vein, assessing the significance level of an observed difference between communities is not straightforward and poses difficult problems.
 The randomization of group membership commonly used in combination with UniFrac to determine significance does not have appropriate properties when in the regime of incomplete sampling with non-independent observations, which is certainly the correct regime for surveys and metagenomes.
 Such non-independence can lead to incorrect rejection of the null hypothesis.
 Imagine, for example, that we have a random observation process on the tree equipped with some collection of ``base observations'' at the leaves.
