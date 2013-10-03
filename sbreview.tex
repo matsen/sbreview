@@ -202,7 +202,7 @@ Phylogenetic inference has had a substantial impact on microbial ecology researc
 The clearest such example is the discovery that archaea, although morphologically similar to bacteria, form their own separate lineage \citep{woese1977phylogenetic}.
 
 Several groups are continually revising taxonomy using the results of phylogenetic tree inference.
-These attempts are less ambitious than the development of the PhyloCode \citep{forey2001phylocode}, and simply work to revise the hierarchical structure of the taxonomy while for the most part leaving taxonomic names fixed.
+These attempts are less ambitious than the PhyloCode project \citep[to develop a taxonomic scheme expressed directly in terms of a phylogeny; see][]{forey2001phylocode}, and simply work to revise the hierarchical structure of the taxonomy while for the most part leaving taxonomic names fixed.
 % to preserve information associated with taxonomic classifications.
 Bergey's Manual of Systematic Bacteriology has officially adopted 16S as the basis for their taxonomy, although the actual revision process appears opaque \citep{kreig1984bergey}.
 The GreenGenes group \citep{desantis2006greengenes} has been very active in updating their taxonomy according to 16S, first with their GRUNT tool \citep{dalevi2007automated} and more recently with their tax2tree tool \citep{mcdonald2011improved}.
@@ -216,7 +216,7 @@ However, comparisons of taxonomic classification programs \citep{liu2008accurate
 \citet{srinivasan2012bacterial} find that phylogenetic methods to do taxonomic classification can outperform composition-based techniques at least for certain taxonomic groups.
 % \citep{werner2011impact} Impact of training sets on classification of high-throughput bacterial 16s rRNA gene surveys
 Some authors report that a combination of composition-based and homology-based classifiers work best \citep{brady2009phymm,parks2011classifying}.
-The MEGAN program \citep{huson2007megan,huson2011integrative} uses a least common ancestor (LCA) strategy on taxonomies to derive taxonomic assignments for that sequence from BLAST results of an unknown sequence onto a database of sequences with taxonomic labels.
+The MEGAN program \citep{huson2007megan,huson2011integrative} BLASTs an unknown sequence onto a database of sequences with taxonomic labels and assigns the sequence the lowest (i.e.\ narrowest) taxonomic group shared by all of the high-quality hits.
 \citet{munch2008statistical,munch2008fast} infer taxonomic assignment by automatically retrieving sequences equipped with taxonomic information and building a tree on them along with an unknown sequence.
 \citet{segata2012metagenomic} propose a clever approach to inferring organisms present in a metagenomic sample by compiling a database of clade-specific genes, then classifying a given read as being from the only clade that has the corresponding gene.
 They show that this has good sensitivity and specificity, however, this method can only be used to identify the presence of organisms whose genome has been sequenced.
@@ -235,12 +235,30 @@ These methods are very fast and are heuristic in that they are described as an a
 \citet{navlakha2009finding} develop methods that try to come up with sequence groupings that more closely reflect the type of species divisions found in taxonomies.
 \citet{hao2011clustering} use a Gaussian mixture model formulation for clustering to avoid fixed cutoff values.
 
+\newcommand{\pdLegend}{
+    Unweighted phylogenetic diversity (PD, left) and an abundance-weighted PD measure (right), where taxa present in a sample are shown as blue circles and abundances are shown as the size of the circles.
+    Unweighted PD takes the sum of the branch lengths connecting samples.
+    Abundance-weighted measures take a weighted sum of branch lengths where weight is determined in some way by the abundance of the taxa on either side of the branch: if we give edges width according to their weight, the abundance-weighted measure can be thought of as the sum of the areas of the edges.
+}
+\forarxiv{
+\begin{wrapfigure}[23]{r}{2.5in}
+  % \capstart
+  \vspace{-27pt}
+  \begin{center}
+    \includegraphics[width=2.5in]{figures/pd.pdf}
+  \end{center}
+  \vspace{-10pt}
+  \caption{\pdLegend}
+  \label{fig:pd}
+\end{wrapfigure}
+}
+
 The centrality of the OTU concept can be seen by the fact that the contingency table of OTU observations is considered to be the fundamental data type for 16S studies \citep{mcdonald2012biological}, or that methods have been devised to find OTUs from non-overlapping sequences \citep{sharpton2011phylotu}.
 A significant amount of effort has been made to distinguish sequencing error in environmental samples from true rare variants; much of this work has played out in the OTU inference literature \citep{quince2009accurate,quince2011removing,bragg2012fast,edgar2013uparse} as such errors are especially problematic there.
 With the exception of \citet{sharpton2011phylotu}, OTU inference is not considered to be a phylogenetic problem but rather something to be performed before phylogenetic inference begins.
 
-
 \subsection{Diversity estimates using phylogenetics}
+
 Because 16S surveys are inherently complex and noisy data, summary statistics are often used; summaries of the diversity of a single sample are often called \emph{alpha diversity}.
 For the most part, this literature adapts methods from the classical ecological literature by substituting OTUs for taxonomic groups.
 %The most common diversity indices are Simpson and Shannon.
@@ -248,15 +266,10 @@ For the most part, this literature adapts methods from the classical ecological 
 However, phylogenetic diversity metrics are also used and here we will focus on their applications and methods.
 
 Despite the enthusiasm with which microbial ecologists have accepted between-community comparison using phylogenetics (next section), phylogenetic alpha diversity seems under-developed.
-Whereas just about every 16S survey investigation involves an OTU-based alpha diversity estimate, only a few involve phylogenetic diversity (PD) measures, and only in the sense of \citet{faith1992conservation}.
-Faith's PD has been applied to some 16S survey data \citep{lozupone2007global,costello2009bacterial} and to metagenomic reads in a set of marker genes \citep{kembel2011phylogenetic}.
-
-Although abundance-weighted non-phylogenetic diversity measures such as \citet{simpson1949measurement} and \citet{shannon1948mathematical} are among the most common, abundance-weighted phylogenetic diversity measures are not used in human microbiome studies.
-Such measures do exist \citep{rao1982diversity,barker2002phylogenetic,allen2009new,chao2010phylogenetic,vellend2011measuring}.
-\citet{mccoy2013abundance} have recently shown that partially abundance-weighted diversity measures do a good job of distinguishing between dysbiotic and "normal" states of the human microbiome; in particular that they do a better job than the commonly-used OTU-based measures.
-\citet{nipperess2013mean} have also determined formulas for the expectation and variance of PD under random sub-sampling, which is often applied to enable comparison between samples of different sequencing depths.
-
-\subsection{Community comparison using phylogenetics}
+Phylogenetic diversity (PD) measures use the structure and branch lengths of a phylogenetic tree to measure the diversity of a sample (Fig.~\ref{fig:pd}).
+The original (unweighted) PD of a set of taxa is simply the total of the lengths of the branches connecting taxa in the set \citet{faith1992conservation}.
+It quantifies the ``amount of evolution'' contained in the evolutionary history of those taxa.
+Whereas just about every 16S survey investigation involves an OTU-based alpha diversity estimate, only a few involve PD: unweighted PD has been applied to some 16S survey data \citep{lozupone2007global,costello2009bacterial} and to metagenomic reads in a set of marker genes \citep{kembel2011phylogenetic}.
 
 \newcommand{\unifracLegend}{
     The UniFrac divergence measure \citep[figure adapted from][]{LozuponeKnightUniFrac05}.
@@ -265,7 +278,7 @@ Such measures do exist \citep{rao1982diversity,barker2002phylogenetic,allen2009n
 \forarxiv{
 \begin{wrapfigure}[23]{r}{2.5in}
   % \capstart
-  \vspace{-19pt}
+  \vspace{-16pt}
   \begin{center}
     \includegraphics[width=2.5in]{figures/unifrac.pdf}
   \end{center}
@@ -274,6 +287,15 @@ Such measures do exist \citep{rao1982diversity,barker2002phylogenetic,allen2009n
   \label{fig:unifrac}
 \end{wrapfigure}
 }
+
+Although abundance weighted non-phylogenetic diversity measures such as \citet{simpson1949measurement} and \citet{shannon1948mathematical} are among the most common, abundance weighted phylogenetic diversity measures are not used in human microbiome studies.
+Abundance-weighted measures take a sum of branch lengths weighted by abundance, such that branches that connect abundant taxa get a higher weight than ones that do not.
+Thus rare taxa and artifactual sequences are down-weighted compared to abundant taxa.
+Such measures do exist \citep{rao1982diversity,barker2002phylogenetic,allen2009new,chao2010phylogenetic,vellend2011measuring}.
+\citet{mccoy2013abundance} have recently shown that partially abundance weighted diversity measures do a good job of distinguishing between dysbiotic and "normal" states of the human microbiome; in particular that they do a better job than the commonly-used OTU-based measures.
+\citet{nipperess2013mean} have also determined formulas for the expectation and variance of PD under random sub-sampling, which is often applied to enable comparison between samples of different sequencing depths.
+
+\subsection{Community comparison using phylogenetics}
 
 The level of similarity between samples or groups of samples is called \emph{beta diversity}.
 As with alpha diversity, it is not uncommon to use classical measures \citep[e.g.][]{jaccard1908nouvelles} applied to OTU counts, however phylogenetics-based methods are the most popular.
@@ -355,12 +377,12 @@ Additionally, as specified below, these data sets can be very large.
 There does not seem to be contentious discussion of specific features of the inferred trees equivalent to, say, the current discussion around the rooting of the placental mammal tree.
 Given this perspective, it is not surprising that Bayesian phylogenetic methods and methods that incorporate alignment uncertainty are absent.
 
-Alignment methods are primarily focused on extending a curated ``seed alignment'' by adding additional sequences; several tools have been created with exactly this application for 16S in mind \citep{desantis2006nast,caporaso2010pynast,pruesse2012sina}.
+Alignment methods are primarily focused on developing automated methods to extend a relatively small hand-curated ``seed alignment'' with additional sequences; several tools have been created with exactly this application for 16S in mind \citep{desantis2006nast,caporaso2010pynast,pruesse2012sina}.
 The community also uses profile hidden Markov models \citep{eddy1998profile} and CM models \citep{nawrocki2009infernal,nawrocki2009structural} to achieve the same result.
 
 The large data sets associated with human microbiome analysis require highly efficient algorithms for \emph{de novo} tree inference.
 Historically this has meant relaxed neighbor joining \citep{evans2006relaxed}, but more recently FastTree 2 \citep{price2010fasttree} has emerged as the \textit{de facto} standard.
-People do most phylogenetic inferences as part of a pipeline such as mothur \citep{schloss2009introducing} which has ported in the clearcut \citep{sheneman2006clearcut} program, or QIIME \citep{caporaso2010qiime}, which wraps clearcut and FastTree.
+People do most phylogenetic inferences as part of a pipeline such as mothur \citep{schloss2009introducing} which has ported in the clearcut program \citep{sheneman2006clearcut}, or QIIME \citep{caporaso2010qiime}, which wraps clearcut and FastTree.
 % AXIOME streamlines and manages analysis of small subunit (SSU) rRNA marker data in QIIME and mothur \citep{lynch2013axiome}.
 % Bayesian phylogenetic inference is absent.
 
@@ -377,7 +399,7 @@ This work has also spurred development of specialized alignment tools for this m
 Considerable effort goes to the creation of large curated alignments and phylogenetic trees on 16S.
 There are two major projects to do so: one is the SILVA database \citep{pruesse2007silva,quast2013silva}, and the other is the GreenGenes database \citep{desantis2006greengenes,mcdonald2011improved}.
 Because of the high rate of insertion and deletion of nucleotides in 16S, these alignments have a high percentage of gap.
-Taking the length of 16S to be 1543 nt,
+Taking the length of 16S to be 1543 nucleotides,
 % SILVA
 % 1543 / 42284
 % .96353230536373096207
@@ -421,7 +443,7 @@ For example, collections of reconciled gene trees in the presence of gene deleti
 
 It appears that neutral models involving phylogenetics could be more fully developed.
 Methods explicitly invoking trait evolution are notably absent, with the recent exception of \citep{langille2013predictive}.
-The results of this simple method are reasonable, but would a species tree reconciled with a collection of gene trees allow for better prediction?
+The results of this simple method are reasonable, but would a collection of gene trees reconciled with a species tree allow for better prediction?
 Perhaps improved methods, say involving whole-genome evolutionary modeling or models of metabolic network evolution, could shed light on the problem.
 Here again the ``tree of life'' problem can be formulated in a practical light: what representation allows for the best prediction of features of underlying genomes?
 How to formulate a useful notion of independent contrasts \citep{felsenstein1985phylogenies} on such an object?
@@ -511,19 +533,22 @@ Phylogenetics has already contributed significantly to human microbiome research
 
 \section{Acknowledgements}
 I thank Olivier Gascuel for the opportunity to present on this subject during the 2013 LIRMM Mathematical and Computational Evolutionary Biology workshop and for organizing a corresponding special section of \textit{Systematic Biology}.
-I am grateful to Aaron Darling, David Fredricks, Noah Hoffman, Steven Kembel, Connor McCoy, Martin Morgan, and Sujatha Srinivasan for interesting discussions that informed this review, thank to Noah Hoffman, Christopher Small and Bj\"orn Winckler for providing feedback on the manuscript, and thank the NIH (R01 HG005966-01) and NSF (1223057) for financial support.
+I am grateful to Aaron Darling, David Fredricks, Noah Hoffman, Steven Kembel, Connor McCoy, Martin Morgan, and Sujatha Srinivasan for interesting discussions that informed this review, thank Bastien Boussau, Noah Hoffman, Christopher Small and Bj\"orn Winckler for providing feedback on the manuscript, and thank the NIH (R01 HG005966-01) and NSF (1223057) for financial support.
 
 
 \notforarxiv{
 \newpage
 \section{Figure Legends}
-%\FIGmassTransport
 
 \noindent
-Figure 1: \unifracLegend
+Figure \ref{fig:pd}: \pdLegend
 
 \noindent
-Figure 2: \dirtpilesLegend
+Figure \ref{fig:unifrac}: \unifracLegend
+
+\noindent
+Figure \ref{fig:dirtpiles}: \dirtpilesLegend
+
 
 \clearpage
 

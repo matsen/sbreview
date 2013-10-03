@@ -18,3 +18,4 @@ Here is a collection of PDF builds, named by date and time, if you don't want to
 * [09-30-17h01](http://cl.ly/0S1c240d2438/sbreview-09-30-17h01.pdf)
 * [10-01-15h38](http://cl.ly/1I2D2i440c0W/sbreview-10-01-15h38.pdf)
 * [10-01-18h21](http://cl.ly/2R1F2G043K14/sbreview-10-01-18h21.pdf)
+* [10-02-18h09](http://cl.ly/3K350x0t2T2x/sbreview-10-02-18h09.pdf)
