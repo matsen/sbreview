@@ -259,26 +259,9 @@ There are many OTU inference methods with various speeds and strategies.
 Of the fixed-cutoff methods, the traditional choice has been CD-HIT \citep{li2006cdhit}, which seems to have been supplanted by clustering features of USEARCH \citep{edgar2010usearch} and perhaps now its descendant UPARSE \citep{edgar2013uparse}.
 These methods are very fast and are heuristic in that they are described as an algorithm rather than as global optimization of some notion of goodness of clustering.
 \citet{white2010alignment} show that different ways of doing this heuristic clustering can result in very different results.
-\citet{navlakha2009finding} develop methods that try to come up with sequence groupings that more closely reflect the type of species divisions found in taxonomies.
-\citet{hao2011clustering} use a Gaussian mixture model formulation for clustering to avoid fixed cutoff values.
-
-\newcommand{\pdLegend}{
-    Unweighted phylogenetic diversity (PD, left) and an abundance-weighted PD measure (right), where taxa present in a sample are shown as blue circles and abundances are shown as the size of the circles.
-    Unweighted PD takes the sum of the branch lengths connecting samples.
-    Abundance-weighted measures take a weighted sum of branch lengths where weight is determined in some way by the abundance of the taxa on either side of the branch: if we give edges width according to their weight, the abundance-weighted measure can be thought of as the sum of the areas of the edges.
-}
-\forarxiv{
-\begin{wrapfigure}[23]{r}{2.5in}
-  % \capstart
-  \vspace{-27pt}
-  \begin{center}
-    \includegraphics[width=2.5in]{figures/pd.pdf}
-  \end{center}
-  \vspace{-10pt}
-  \caption{\pdLegend}
-  \label{fig:pd}
-\end{wrapfigure}
-}
+\citet{navlakha2009finding} and \citet{WYS13} develop methods that try to come up with sequence groupings that more closely reflect the type of species divisions found in taxonomies,
+\citet{hao2011clustering} use a Gaussian mixture model formulation for clustering to avoid fixed cutoff values,
+and \cite{CWC12} use a two step process, first with a Dirichlet multinomial mixtures on 3-mer profiles, and then a minimum description length criterion.
 
 The centrality of the OTU concept can be seen by the fact that the contingency table of OTU observations is considered to be the fundamental data type for 16S studies \citep{mcdonald2012biological}, or that methods have been devised to find OTUs from non-overlapping sequences \citep{sharpton2011phylotu}.
 A significant amount of effort has been made to distinguish sequencing error in environmental samples from true rare variants; much of this work has played out in the OTU inference literature \citep{quince2009accurate,quince2011removing,bragg2012fast,edgar2013uparse} as such errors are especially problematic there.
@@ -298,20 +281,21 @@ The original (unweighted) PD of a set of taxa is simply the total of the lengths
 It quantifies the ``amount of evolution'' contained in the evolutionary history of those taxa.
 Whereas just about every 16S survey investigation involves an OTU-based alpha diversity estimate, only a few involve PD: unweighted PD has been applied to some 16S survey data \citep{lozupone2007global,costello2009bacterial} and to metagenomic reads in a set of marker genes \citep{kembel2011phylogenetic}.
 
-\newcommand{\unifracLegend}{
-    The UniFrac divergence measure \citep[figure adapted from][]{LozuponeKnightUniFrac05}.
-    When samples are interspersed across the tree (left tree), they have a smaller \textit{fraction} of branch lengths that can be \textit{uniquely} assigned to one sample or another compared to when they are separate (right tree).
+\newcommand{\pdLegend}{
+    Unweighted phylogenetic diversity (PD, left) and an abundance-weighted PD measure (right), where taxa present in a sample are shown as blue circles and abundances are shown as the size of the circles.
+    Unweighted PD takes the sum of the branch lengths connecting samples.
+    Abundance-weighted measures take a weighted sum of branch lengths where weight is determined in some way by the abundance of the taxa on either side of the branch: if we give edges width according to their weight, the abundance-weighted measure can be thought of as the sum of the areas of the edges.
 }
 \forarxiv{
-\begin{wrapfigure}[23]{r}{2.5in}
+\begin{wrapfigure}[25]{r}{2.2in}
   % \capstart
-  \vspace{-16pt}
+  \vspace{-14pt}
   \begin{center}
-    \includegraphics[width=2.5in]{figures/unifrac.pdf}
+    \includegraphics[width=2.2in]{figures/pd.pdf}
   \end{center}
   \vspace{-10pt}
-  \caption{\unifracLegend}
-  \label{fig:unifrac}
+  \caption{\pdLegend}
+  \label{fig:pd}
 \end{wrapfigure}
 }
 
@@ -321,6 +305,7 @@ Thus rare taxa and artifactual sequences are down-weighted compared to abundant 
 Such measures do exist \citep{rao1982diversity,barker2002phylogenetic,allen2009new,chao2010phylogenetic,vellend2011measuring}.
 \citet{mccoy2013abundance} have recently shown that partially abundance weighted diversity measures do a good job of distinguishing between dysbiotic and "normal" states of the human microbiome; in particular that they do a better job than the commonly-used OTU-based measures.
 \citet{nipperess2013mean} have also determined formulas for the expectation and variance of PD under random sub-sampling, which is often applied to enable comparison between samples of different sequencing depths.
+
 
 \subsection{Community comparison using phylogenetics}
 
@@ -337,6 +322,23 @@ These dissimilarity measures have hundreds of citations.
 The earth-movers distance in this case can be defined as the minimum amount of work required to move piles of dirt in one configuration to another along the tree; in this case the size of the dirt piles is proportional to the number of reads mapping to that location in the tree (Fig.~\ref{fig:dirtpiles}).
 \citet{chen2012associating} have shown that a partially abundance-weighted variant of UniFrac may have greater power to resolve community differences than either unweighted or weighted UniFrac.
 
+\newcommand{\unifracLegend}{
+    The UniFrac divergence measure \citep[figure adapted from][]{LozuponeKnightUniFrac05}.
+    When samples are interspersed across the tree (left tree), they have a smaller \textit{fraction} of branch lengths that can be \textit{uniquely} assigned to one sample or another compared to when they are separate (right tree).
+}
+\forarxiv{
+\begin{wrapfigure}[23]{r}{2.2in}
+  % \capstart
+  \vspace{-26pt}
+  \begin{center}
+    \includegraphics[width=2.2in]{figures/unifrac.pdf}
+  \end{center}
+  \vspace{-10pt}
+  \caption{\unifracLegend}
+  \label{fig:unifrac}
+\end{wrapfigure}
+}
+
 The most common way to use a between-sample pairwise distance matrix found from an application of UniFrac is to apply an ordination method such as principal coordinates analysis.
 Indeed, the separation of two communities in a principal components plot is often used as \emph{prima facie} evidence of a difference between them
 \citep[e.g.][]{lozupone2007global,costello2009bacterial,yatsunenko2012human}, while the lack of such a difference is interpreted as showing that the communities are not different overall.
@@ -345,10 +347,11 @@ Indeed, the separation of two communities in a principal components plot is ofte
     Part of a minimal mass movement to calculate the earth-mover's distance on a phylogenetic tree.
 }
 \forarxiv{
-\begin{wrapfigure}[19]{l}{1.6in}
+\begin{wrapfigure}[14]{l}{1.2in}
   % \capstart
-% \vspace{-24pt}
+  \vspace{-17pt}
   \begin{center}
+    \includegraphics[width=1.2in]{figures/tree_dirtpiles.pdf}
   \end{center}
   \vspace{-5pt}
   \caption{\dirtpilesLegend}
@@ -356,7 +359,7 @@ Indeed, the separation of two communities in a principal components plot is ofte
 \end{wrapfigure}
 }
 
-There have been efforts to augment these ordination visualizations with additional information giving more structure to the visualizations.
+There have been several efforts to augment these ordination visualizations with additional information giving more structure to the visualizations.
 Biplots display variables (in the microbial case summarized by taxonomic labels) as points along with points representing samples \citep[e.g.][]{hewitt2013bacterial,lozupone2013meta}.
 \citet{PurdomAnalyzingDataGraphs08} describes how generalized principal component eigenvectors can be interpreted via weightings on the leaves of a phylogenetic tree.
 \citet{matsen2013edge} have developed a variant of principal components analysis that explicitly labels the axes with weightings on phylogenetic trees that indicate their influence.
