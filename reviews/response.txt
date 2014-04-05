@@ -29,8 +29,12 @@
 > randomly across the genome rather than amplified from a specific
 > location," - I assume you mean DNA is sheared randomly?
 
+Yes, thanks.
+
 > 2) Remember, "data" still is a plural noun, at least under my watch!
 > Check for "this data", "data is", "data was", etc
+
+Searched and replaced. Thanks!
 
 > 3) Pg. 10: I don't really understand what "tax2tree" does, based on
 > the description here. Does that matter?
@@ -46,12 +50,19 @@
 > 6) Pg. 20: "How to formulate a useful notion of independent contrasts
 > (Felsenstein 1985) on such an object?" - Awkward wording.
 
+I have changed this to "How might one formulate a useful notion of independent contrasts (Felsenstein 1985) on such an object?" I hope that's better.
+
 > 7) Pg. 23: I don't understand the distinction between "base
 > observations" and sample observations here. Can this be clarified?
 
 > 8) Pg. 24: "Future will continue to bring deeper sequencing on more
 > samples" - I guess this should be "The future will continue"?
 
+Thanks.
+
+
+AE, Olivier Gascuel
+-------------------
 
 > My recommendation is acceptance pending minor to major changes.
 > Actually, no change asked by the reviewers and me (see below) requires
@@ -66,14 +77,14 @@
 > containing all the comments by the referees and me, with your
 > changes/responses.
 
-
 > Specific comments, possibly redundant with those from the reviewers,
 > using Systematic Biology page numbering:
 
 > P4	these techniques AND could
 
-> P8	(Kuczynski et al. 2010). However, for more subtle information
+Thanks!
 
+> P8	(Kuczynski et al. 2010). However, for more subtle information
 > P8	"for more subtle information deeper sequencing is required" :
 > what do you have in mind here?
 > Indeed "distinguish between two rather different samples" is a modest
@@ -126,6 +137,8 @@
 > P26 "during the 2013 LIRMM Mathematical and Computational Evolutionary
 > Biology workshop", change LIRMM into MCEB
 
+I have done so, so that the sentence reads "... 2013 MCEB Mathematical and Computational Evolutionary Biology workshop ..." is that right?
+
 > Fig 2. It took time to me to understand and check on the Web that the
 > tree must be rooted, to compute the unifrac distance. This is one
 > example, among others, that more details are required when describing
@@ -137,6 +150,7 @@
 > are citing papers with a lot of authors. Check Syst Biol
 > recommendation to authors (I assume that our editorial office will
 > answer and help).
+
 
 > Reviewer 1, Alexis Stamatakis
 > -----------------------------
@@ -172,12 +186,16 @@
 > page 5 lines 7-8 "these techniques and could be used" there seems to
 > be a verb missing.
 
+Fixed, thanks.
+
 > page 14 lines 12 Here you may add our recent work on PTP, since it
 > strives to conduct OTU clustering and phylogenetic inference in one
 > single step/pipeline.
 
 > page 15 l 50: in "distance, is special" seems that it should read
 > "distance, it is special"
+
+Thanks, I've rearranged here.
 
 > page 20: lines 51-56: In fact we are currently developing a tool for
 > automatic tree extension as described here. While not published yet,
@@ -202,8 +220,14 @@
 > original latex.
 
 > 4-45 additional to
+
 > 5-8 delete and
+
+Fixed.
+
 > 7-23 delete though
+
+Nice catch!
 
 > The section "The Human Microbiome" is quite detailed (discussing mouse
 > to human transplants wrt obesity, etc.). Given the intense media
@@ -411,7 +435,21 @@
 > Typos:
 > P3, L40: I would rather use "species delimitation" instead of "species definition".
 > P4, L9: "These techniques and could be used"
+
+Fixed.
+
 > P6, L32: "we will be primarily be describing"
+
+Whoops!
+
 > P9, L29, L30: Maybe replace "diversity" by "variability"
+
+Thanks.
+
 > P18, L32: "a long history as a means to sequentially build"
+
+
+
 > P19, L16: "GreenGenes 13_5 alignment has is almost 80% gaps"
+
+Yikes, thanks.

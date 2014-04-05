@@ -108,13 +108,13 @@ It absolutely requires molecular methods, because microbes are now primarily ide
 Indeed, microbial ecology has recently become for the most part the study of the relative abundances of various sequences derived from the environment, even if the framework for understanding between-microbe relationships includes metabolic information and other information not derived directly from sampled molecular sequences.
 
 Although there is something of a divide between phylogeny as practiced as part of microbial ecology on one hand and that for multicellular organisms on the other, there are many parallels between the two enterprises.
-Both communities struggle with issues of sequence alignment, large-scale tree reconstruction, and species definition.
+Both communities struggle with issues of sequence alignment, large-scale tree reconstruction, and species delimitation.
 However, approaches differ between the microbial ecology community and that of eukaryotic phylogenetics, in part because the scope of the former contains an almost unlimited diversity of organisms, leading to additional problems above the usual.
 The species concept is even more problematic for microbes than for multicellular organisms, and hence there is also considerable discussion concerning how to group them into species-like units.
 Organizing microbes into a sensible taxonomy is a serious challenge, especially in the absence of obvious morphological features.
 
 Because of this high level of diversity and challenges with species definitions, microbial ecology researchers have developed their own explicitly phylogenetic techniques for comparing samples rather than comparing on the level of species abundances.
-Although there is some overlap with previous literature, these techniques and could be used in a wider setting and may deserve broader consideration by the phylogenetics community.
+Although there is some overlap with previous literature, these techniques could be used in a wider setting and may deserve broader consideration by the phylogenetics community.
 
 The human microbiome is specifically interesting because questions of microbial genomics, translated into questions of function, have important consequences for human health.
 Additionally, due to more than a century of hospital laboratory work, our knowledge about human-associated microbes is relatively rich.
@@ -153,12 +153,12 @@ A causal role for the microbiome leading to obesity is established for mice: an 
 However, these promising leads have not yet been confirmed causally or in population studies of humans \citep{zhao2013gut}.
 For example, a study of obesity in the old-order Amish did not find any correlation between obesity and particular gut communities \citep{zupancic2012analysis}.
 
-Bacteria have been the primary focus of human microbiome research, and other domains have been investigated though to a lesser extent.
+Bacteria have been the primary focus of human microbiome research, and other domains have been investigated to a lesser extent.
 Changes in archaeal and fungal populations have been shown to covary with bacterial residents \citep{hoffmann2013archaea}.
 Viral populations have been observed to be highly dynamic and variable across individuals \citep{reyes2010viruses,minot2011human,minot2013rapid}.
 We will focus on bacteria here.
 
-In this paper we will be primarily be describing the human microbiome from a community-level phylogenetic perspective rather than from the fine-scale perspective of immune-mediated interactions between host and microbe \citep[reviewed in][]{hooper2012interactions}.
+In this paper we will primarily be describing the human microbiome from a community-level phylogenetic perspective rather than from the fine-scale perspective of immune-mediated interactions between host and microbe \citep[reviewed in][]{hooper2012interactions}.
 Our understanding of the true effect of the microbiome will eventually come from such a molecular-level understanding, although until we can characterize all of the molecular interactions between microbes and the human body, a broad perspective will continue to be important.
 
 
@@ -169,7 +169,7 @@ Scientists typically pick a ``marker'' gene in that case that is meant to recapi
 Another way is to randomly shear input DNA and/or RNA and then perform sequencing directly.
 We will consistently refer to the former as a \textit{survey} and the second a \textit{metagenome}, although these words have not always been consistently used in the literature.
 
-The Human Microbiome Project \citep{methe2012framework} generated lots of survey, metagenome, and whole-genome sequencing data and this data is available on a dedicated website\footnote{\url{http://www.hmpdacc.org/}}.
+The Human Microbiome Project \citep{methe2012framework} generated lots of survey, metagenome, and whole-genome sequencing data and these data are available on a dedicated website\footnote{\url{http://www.hmpdacc.org/}}.
 The MetaHIT study \citep{qin2010human} also generated lots of data but it is not available to outside researchers.
 
 \subsection{Microbial community estimation using marker gene surveys}
@@ -198,16 +198,16 @@ A final cause of noise is next-generation sequencing error: this is certainly a 
 I will not address it specifically except in the inference of operational taxonomic units as described below.
 
 \subsection{Metagenomes}
-As described above ``metagenome" means that data is sheared randomly across the genome rather than amplified from a specific location, and thus the genetic region of a read is unknown in addition to what organism it was derived from.
+As described above ``metagenome" means that DNA is sheared randomly across the genome rather than amplified from a specific location, and thus the genetic region of a read is unknown in addition to what organism it was derived from.
 Because metagenomes do not proceed through an amplification step, it does not have the same PCR primer biases as a marker gene survey, however extraction efficiency concerns remain and multiplex sequencing is known to have biases of its own.
 
 It is possible to use metagenomic data as an expanded set of marker genes.
 That is, one can use 16S reads that appear in the metagenome as well as reads from other ``core" genes that are expected to follow the same evolutionary path and are present in a large proportion of micro-organisms.
-This is proven to be a useful strategy \citep{von2007quantitative,wu2008amphora,stark2010mltreemap,kembel2011phylogenetic}, however, because of the diversity of gene repertoire in microbes, this core gene set may be relatively small.
+This is proven to be a useful strategy \citep{von2007quantitative,wu2008amphora,stark2010mltreemap,kembel2011phylogenetic}, however, because of the variability of gene repertoire in microbes, this core gene set may be relatively small.
 Indeed, even the largest collection of genes in these databases only recruits around 1 percent of a metagenome.
 At least some portion of the rest of the data can be taxonomically classified \citep[methods reviewed by][]{mande2012classification}; \citet{treangen2013metamos} report speedups and much higher accuracy when reads are assembled before they are classified.
 
-Metagenomic data is often used to infer information about metabolism rather than phylogenetic nature \citep{greenblum2012metagenomic,abubucker2012metabolic}.
+Metagenomic data sets are often used to infer information about metabolism rather than phylogenetic nature \citep{greenblum2012metagenomic,abubucker2012metabolic}.
 Discussing these methods is beyond the scope of this paper, as is ``metatranscriptomics": the sequencing of mRNA in bulk.
 
 
@@ -318,7 +318,7 @@ They are generally variants of the ``UniFrac'' phylogenetic dissimilarity measur
 The name UniFrac is a contraction of ``Unique Fraction,'' which refers to the fact that the original UniFrac definition compares the fraction of edges that connect only tips from one sample via the shortest path rather than edges that connect between samples \citep[Fig.~\ref{fig:unifrac};][]{LozuponeKnightUniFrac05}.
 Weighted UniFrac is an abundance weighted version \citep{LozuponeEaWeightedUnifrac07}.
 These dissimilarity measures have hundreds of citations.
-\citet{evans2012phylogenetic} showed that weighted UniFrac is in fact a special case of the earth-movers distance, is special in that it can be calculated in linear time, and that the commonly-used randomization procedure to attach a p-value to an observed distance has a central limit theorem approximation as a Gaussian process.
+\citet{evans2012phylogenetic} showed that weighted UniFrac is in fact a specific case of the earth-movers distance, that it can be calculated in linear time in contrast to many applications of the earth-movers distance, and that the commonly-used randomization procedure to attach a p-value to an observed distance has a central limit theorem approximation as a Gaussian process.
 The earth-movers distance in this case can be defined as the minimum amount of work required to move piles of dirt in one configuration to another along the tree; in this case the size of the dirt piles is proportional to the number of reads mapping to that location in the tree (Fig.~\ref{fig:dirtpiles}).
 \citet{chen2012associating} have shown that a partially abundance-weighted variant of UniFrac may have greater power to resolve community differences than either unweighted or weighted UniFrac.
 
@@ -387,7 +387,7 @@ In a similar effort for the human microbiome \citep{fodor2012most}, phylogenetic
 
 \subsection{Genome-scale inquiries using phylogenetics}
 With some notable exceptions, mainstream applications of phylogenetics to a collection of human-associated microbes have typically been with the idea of finding ``the'' tree of such a collection rather than explicitly exploring divergence between various gene trees.
-As described above, whole-genome data is typically used to directly infer functional information rather than information concerning ancestry.
+As described above, whole-genome data sets are typically used to directly infer functional information rather than information concerning ancestry.
 The continuing debate concerning whether a microbial tree of life is a useful concept \citep{bapteste2009prokaryotic,caro2012bacterial} does not seem to have dampened human microbiome researchers' enthusiasm for using a single such tree.
 
 Nevertheless, the work that has been done to infer horizontal gene transfer in the human microbiome has revealed interesting results.
@@ -401,7 +401,7 @@ Following on this work, \citet{smillie2011ecology} found that the human microbio
 \subsection{Alignment and tree inference}
 In general, human microbiome researchers are interested in quickly doing phylogenetic inference on large data sets, and are less interested in clade-level accuracy or measures of uncertainty.
 This is defended by saying that for applications such as UniFrac, the tree is used as a framework to structure the data, and there is a certain amount of flexibility in that framework that will give the same results.
-Furthermore, given that the underlying data is typically 16S alone we can expect some topological inaccuracy in reconstructing the ``tree of cells'' even with the best methods.
+Furthermore, given that the underlying data sets are typically 16S alone we can expect some topological inaccuracy in reconstructing the ``tree of cells'' even with the best methods.
 Additionally, as specified below, these data sets can be very large.
 There does not seem to be contentious discussion of specific features of the inferred trees equivalent to, say, the current discussion around the rooting of the placental mammal tree.
 Given this perspective, it is not surprising that Bayesian phylogenetic methods and methods that incorporate alignment uncertainty are absent.
@@ -436,7 +436,7 @@ the 479,726 sequence SILVA reference alignment version 115 is over 96\% gap,
 % GreenGenes
 % 1543 / 7682
 % .79914084873730799272
-while the 1,262,986 sequence GreenGenes 13\_5 alignment has is almost 80\% gap.
+while the 1,262,986 sequence GreenGenes 13\_5 alignment is almost 80\% gap.
 The SILVA-associated 'all-species living tree' project \citep{yarza2008all} started with a tree inferred by maximum likelihood and has been continually updated  by inserting sequences via parsimony.
 The GreenGenes tree is updated by running FastTree from scratch for every release.
 There appears to be a commonly held belief that FastTree in particular works well even with such gappy alignments \citep[e.g.][]{sharpton2011phylotu}.
@@ -455,7 +455,7 @@ I review some others here.
 
 One clear challenge is to fill the gap between on one hand complete \emph{de novo} tree inference versus sequence insertion or placement that leaves the ``reference tree'' fixed.
 These two extremes are each useful in different parameter regimes, but something between the two would be helpful as well.
-For example, sequence data is continually being added to large databases, motivating methods that could continually update trees with this new sequence data while allowing the previous tree to change according to this new information.
+For example, sequence data sets are continually being added to large databases, motivating methods that could continually update trees with this new sequence data while allowing the previous tree to change according to this new information.
 % Surprising that methods such as DCM \citep{huson1999disk} have not gained traction.
 
 In this review I have devoted considerable space to the ways in which microbial ecologists have used the 16S tree as a proxy structure for the complete evolutionary history of their favorite organisms.
@@ -475,7 +475,7 @@ Methods explicitly invoking trait evolution are notably absent, with the recent 
 The results of this simple method are reasonable, but would a collection of gene trees reconciled with a species tree allow for better prediction?
 Perhaps improved methods, say involving whole-genome evolutionary modeling or models of metabolic network evolution, could shed light on the problem.
 Here again the ``tree of life'' problem can be formulated in a practical light: what representation allows for the best prediction of features of underlying genomes?
-How to formulate a useful notion of independent contrasts \citep{felsenstein1985phylogenies} on such an object?
+How might one formulate a useful notion of independent contrasts \citep{felsenstein1985phylogenies} on such an object?
 It is quite possible that inference using a more complete representation would not be able to overcome the inherent noise of the data, but further exploration seems warranted as simple methods give reasonable results.
 
 An important project for microbial ecology is to model community assembly, and perhaps further phylogeny-aware methods could be used.
@@ -539,7 +539,7 @@ Given that a tree is an integral part of a UniFrac analysis, it would be interes
 \section{Discussion}
 What can we expect next at the intersection of phylogenetics and the human microbiome?
 At least for the next several years we can expect more related work.
-Future will continue to bring deeper sequencing on more samples.
+Future research projects will continue to bring deeper sequencing on more samples.
 The uBiome project\footnote{\url{http://ubiome.com/}} promises to bring gut microbiome sequencing to the average citizen for a low price \citep{costandi2013citizen}.
 Comparative studies will continue to investigate what shapes and is shaped by the microbiome.
 However, some of the initial excitement may have died down, as neither the Human Microbiome Project nor the MetaHIT project were extended.
@@ -561,7 +561,7 @@ Phylogenetics has already contributed significantly to human microbiome research
 
 
 \section{Acknowledgements}
-I thank Olivier Gascuel for the opportunity to present on this subject during the 2013 LIRMM Mathematical and Computational Evolutionary Biology workshop and for organizing a corresponding special section of \textit{Systematic Biology}.
+I thank Olivier Gascuel for the opportunity to present on this subject during the 2013 MCEB Mathematical and Computational Evolutionary Biology workshop and for organizing a corresponding special section of \textit{Systematic Biology}.
 I am grateful to Aaron Darling, David Fredricks, Noah Hoffman, Steven Kembel, Connor McCoy, Martin Morgan, and Sujatha Srinivasan for interesting discussions that informed this review, thank Bastien Boussau, Noah Hoffman, Christopher Small and Bj\"orn Winckler for providing feedback on the manuscript, and thank the NIH (R01 HG005966-01) and NSF (1223057) for financial support.
 
 
