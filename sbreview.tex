@@ -9,32 +9,32 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[round]{natbib}
 \usepackage[labelfont=bf,labelsep=period,font=small]{caption} % bold the 'Figure #' in the caption and separate it with a period
-\newcommand{\forarxiv}[1]{#1}
-\newcommand{\notforarxiv}[1]{}
+\newcommand{\forarxiv}[1]{}
+\newcommand{\notforarxiv}[1]{#1}
 
-% % for SB submission
-% \renewcommand{\section}[1]{%
-% \bigskip
-% \begin{center}
-% \begin{Large}
-% \normalfont\scshape #1
-% \medskip
-% \end{Large}
-% \end{center}}
-% \renewcommand{\subsection}[1]{%
-% \bigskip
-% \begin{center}
-% \begin{large}
-% \normalfont\itshape #1
-% \end{large}
-% \end{center}}
-% \renewcommand{\subsubsection}[1]{%
-% \vspace{2ex}
-% \noindent
-% \textit{#1.}---}
-% \renewcommand{\tableofcontents}{}
-% \bibpunct{(}{)}{;}{a}{}{,}  % this is a citation format command for natbib
-% \linespread{1.6}
+% for SB submission
+\renewcommand{\section}[1]{%
+\bigskip
+\begin{center}
+\begin{Large}
+\normalfont\scshape #1
+\medskip
+\end{Large}
+\end{center}}
+\renewcommand{\subsection}[1]{%
+\bigskip
+\begin{center}
+\begin{large}
+\normalfont\itshape #1
+\end{large}
+\end{center}}
+\renewcommand{\subsubsection}[1]{%
+\vspace{2ex}
+\noindent
+\textit{#1.}---}
+\renewcommand{\tableofcontents}{}
+\bibpunct{(}{)}{;}{a}{}{,}  % this is a citation format command for natbib
+\linespread{1.6}
 
 
 % show keys for eqs, etc.
