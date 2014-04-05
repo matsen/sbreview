@@ -26,6 +26,6 @@ cont_build = env.Command('.continuous', ['sbreview.bib', 'sbreview.tex', 'sysbio
 Alias('continuous', cont_build)
 
 
-#env.Latexdiff(target='diff.tex',source=['stored_sbreview.tex','sbreview.tex'])
-#diff = env.PDF(target='diff.pdf',source='diff.tex')
-#Depends(sbreview, sbreview_supp)
+env.Latexdiff(target='diff.tex',source=['stored_sbreview.tex','sbreview.tex'])
+diff = env.PDF(target='diff.pdf',source='diff.tex')
+Alias('diff', diff.pdf)
