@@ -277,7 +277,6 @@ For the most part, this literature adapts methods from the classical ecological 
 % \citep{hill1973diversity} Diversity and evenness: a unifying notation and its consequences
 However, phylogenetic diversity metrics are also used and here we will focus on their applications and methods.
 
-Despite the enthusiasm with which microbial ecologists have accepted between-community comparison using phylogenetics (next section), phylogenetic alpha diversity seems under-developed.
 Phylogenetic diversity (PD) measures use the structure and branch lengths of a phylogenetic tree to measure the diversity of a sample (Fig.~1).
 The original (unweighted) PD of a set of taxa is simply the total of the lengths of the branches connecting taxa in the set \citet{faith1992conservation}.
 It quantifies the ``amount of evolution'' contained in the evolutionary history of those taxa.
@@ -301,7 +300,7 @@ Whereas just about every 16S survey investigation involves an OTU-based alpha di
 \end{wrapfigure}
 }
 
-Although abundance weighted non-phylogenetic diversity measures such as \citet{simpson1949measurement} and \citet{shannon1948mathematical} are among the most common, abundance weighted phylogenetic diversity measures are not used in human microbiome studies.
+Although abundance weighted non-phylogenetic diversity measures such as \citet{simpson1949measurement} and \citet{shannon1948mathematical} are commonly used in human microbiome studies, abundance weighted phylogenetic diversity measures are not.
 Abundance-weighted measures take a sum of branch lengths weighted by abundance, such that branches that connect abundant taxa get a higher weight than ones that do not (Fig.~\ref{fig:pd}).
 Thus rare taxa and artifactual sequences are down-weighted compared to abundant taxa.
 Such measures do exist \citep{rao1982diversity,barker2002phylogenetic,allen2009new,chao2010phylogenetic,vellend2011measuring}.
@@ -323,12 +322,7 @@ These dissimilarity measures have hundreds of citations.
 \citet{evans2012phylogenetic} showed that weighted UniFrac is in fact a specific case of the earth-movers distance and that the commonly-used randomization procedure for significance estimation has a central limit theorem approximation.
 The earth-movers distance in this case can be defined as the minimum amount of work required to move piles of dirt in one configuration to another along the tree; in this case the size of the dirt piles is proportional to the number of reads mapping to that location in the tree (Fig.~\ref{fig:dirtpiles}).
 \citet{chen2012associating} have shown that a partially abundance-weighted variant of UniFrac may have greater power to resolve community differences than either unweighted or weighted UniFrac.
-
-
-Faith2009-gs
-
-
-
+There are clear connections between UniFrac and phylogenetic diversity explored by \cite{Faith2009-gs}, who point out related measures in Faith's earlier work.
 
 \newcommand{\unifracLegend}{
     The UniFrac divergence measure \citep[figure adapted from][]{LozuponeKnightUniFrac05}.

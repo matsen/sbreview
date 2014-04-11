@@ -288,14 +288,22 @@ Nice catch!
 > genes (Kembel et al. 2011) - This is an odd pair of sentences: is the
 > L&K the only study that used unweighted PD? If so, in what context?
 
+I can't quite understand this suggestion. All three papers listed used
+unweighted PD.
+
 > 14-46. Check this sentence - perhaps start with "While are commonly
 > used, abundance weighted PD measures are not.
+
+I have updated this sentence based on your suggestion, thanks.
 
 > 15-30. Perhaps "In contrast to measures of alpha diversity, measures
 > of beta diversity do make use of phylogenetics"  This is actually an
 > interesting contrast. Is this just historical contingency, or is there
 > a logical reason why the two areas disagree on the use of phylogenetic
 > information?
+
+I think that this refers to 14-30, and I've simply removed the sentence.
+With regards to your question, I don't know. It seems surprising to me.
 
 > 15-xx. This seems a strong point of contact between metazoan
 > phylogenetics and the microbiome folks. UniFrac is clearly described
@@ -306,8 +314,13 @@ Nice catch!
 > beta-diversity in the community-phylogenetics literature? What is the
 > closest analogue?
 
+I don't follow your "with the fraction of edges connecting samples that are common to two samples" correction.
+There is some overlap with the PD literature as now described and cited.
+
 > 15-4955. The description of Evans and Matsen seems a bit detailed in
 > the context -
+
+I've shortened and simplified, thanks.
 
 > 16-16. This requires another sentence of explanation. From this
 > reading, the Unifrac method offers a single distance between a pair of
