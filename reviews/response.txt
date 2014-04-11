@@ -313,26 +313,48 @@ Nice catch!
 > reading, the Unifrac method offers a single distance between a pair of
 > samples (a ratio of two numbers of edges), rather than a matrix.
 
+I have rephrased so that it's clear that the matrix comes from applying
+the measure to all pairs of sequences in a sample.
+
 > 16-42..51. This is a short paragraph that would seem to explicitly
 > link HMR and SB. Why is it so telegraphic?
+
+I have added a clarifying phrase, but I'm not sure what more is needed.
+The two communities have both identified a given technique (although
+neither has really gotten much traction).
 
 > 17-45. This seems an odd heading for this section, which seems to be
 > about horizontal gene transfer. Given the amount of technical detail
 > elsewhere, why are we not told how horizontal gene transfer is
 > inferred in these HMR studies?
 
+Explained now, thanks.
+
 > Phylogenetic inference. I found this survey very useful. Is there a
 > reason this is not an earlier section of the paper, given these are
 > the trees upon which many of the comparisons referred to in previous
 > sections are based?
 
+I suppose I wanted to talk about all of the interesting things that
+microbiome researchers are doing with trees before
+borderline-criticizing the ways that they make them! The readers of SB
+know what it means to infer a tree, so I don't think that this section
+is a prerequisite for the previous ones.
+
 > 19-24. "which has ported in the" Is this the correct structure?
+
+That was what was intended, but I've updated it to use less
+programmer-speak.
 
 > 20-50. "different parameter regimes" - this phrase is used several
 > times in this review. What does it mean here? When would we prefer to
 > add sequences to a fixed tree rather than re-infer the totality? Is
 > there an analogous situation in SB - i.e. is there something SB can
 > learn from HMR here?
+
+I've simply removed the sentence. The idea of this paragraph is to
+motivate updating of phylogenetic trees with new sequences, and I've
+more fully explained that and added a reference.
 
 > I found the challenges section to be rich and well-written, with
 > questions that will resonate with the SB community - e.g. the
@@ -342,14 +364,24 @@ Nice catch!
 > but perhaps it could be given more prominence there, given its
 > prominence here. This is a general problem.
 
+I have added a sentence emphasizing that this assumption underlies the
+way researchers interpret UniFrac.
+
 > 22-10. "Microbial ecology" Perhaps "and explicitly for human microbial
 > ecology" to remind us that HMR is the focus here?
+
+Added, thanks.
 
 > 23-23. "Whole organism approach"  Will this approach be known to SB
 > readers? I cannot imagine what is being done here.
 
+You are right that this was not explained properly. I have simply
+removed the paragraph.
+
 > 25-31. "At least for the next several years we can expect more related
 > work." What does this mean? Related to what has been reported above?
+
+I have made this more specific.
 
 > 25-32. The future
 
@@ -357,9 +389,19 @@ Nice catch!
 > this manuscript, I could not say exactly where the intersection of SB
 > and HMR will be most fruitful for HMR, nor what in HMR might be
 > fruitful for SB. The conclusion seems to suggest that phylogenetics
-> would not be used in diagnostics, for example. Will it be important in
-> primary research then? In constructing the taxonomies the diagnostics
-> may require? Finally, the abstract says the review ends by describing
+> would not be used in diagnostics, for example.
+
+I have clarified this sentence now to clarify that some applications
+will go but many new ones will be needed.
+
+> Will it be important in primary research then? In constructing the
+> taxonomies the diagnostics may require?
+
+The rest of the paper is about how phylogenetics has impacted HMR, and
+these applications will continue into the future. I'm not sure how to
+make this more clear.
+
+> Finally, the abstract says the review ends by describing
 > "the current challenges to phylogenetics coming from this type of
 > work."  My reading of the relevant sections is that there is more
 > discussion of challenges to phylogenetic HMR research (sampling
@@ -367,6 +409,7 @@ Nice catch!
 > to phylogenetics per se. The discussion of how to update known trees
 > with new sequences is an exception.
 
+I suppose I don't differentiate between the two.
 
 
 > Reviewer 3, Frederic Delsuc
@@ -405,35 +448,53 @@ Nice catch!
 > method (vaginal birth vs. cesarean delivery) on future health of
 > newborns.
 
+Added.
+
 > 3. On page 6, lines 26-27, it might be worth citing also the recent
 > paper by Findley et al. (doi:10.1038/nature12171) on the topography of
 > fungal and bacterial on human skin.
+
+Thanks.
 
 > 4. On page 6, line 56, maybe also specify that "survey" is the
 > equivalent of barcoding, a term with which the Systematic Biology's
 > community is more familiar.
 
+Added, thanks.
+
 > 5. On page 14, lines 14-19, maybe mention the widespread use of
 > "rarefaction curves" to enable the comparison between samples of
 > different sequencing depth or methods (e.g. 454 vs. Illumina).
+
+I do describe strategies for read count normalization in the next paragraph, but have added the "rarefaction curve" terminology.
 
 > 6. On page 17, lines 54-55, please add some recent references on the
 > current debate around the rooting of the placental tree. I don't think
 > that most readers of Syst. Biol. will be familiar with this
 > discussion.
 
+Good point. I've put in the two 2013 MBE papers. If there is something else I should cite let me know.
+
 > 7. On page 18, lines 26-27, RAxML is also implemented in QIIME.
+
+Added.
 
 > 8. On page 20, I think that this might be the place to discuss the
 > potential use of phylogenetic networks in microbiome research (see
 > Parks and Beiko 2012 Mol Biol Evol).
 
+Thank you for pointing me to this reference.
+
 > 9. On page 24, when citing uBiome, it might also be fair to refer the
 > similar crowd-funded American Gut Project.
 
+Thanks.
 
 > Typos:
 > P3, L40: I would rather use "species delimitation" instead of "species definition".
+
+Thanks.
+
 > P4, L9: "These techniques and could be used"
 
 Fixed.
@@ -448,7 +509,7 @@ Thanks.
 
 > P18, L32: "a long history as a means to sequentially build"
 
-
+Reworded, thanks.
 
 > P19, L16: "GreenGenes 13_5 alignment has is almost 80% gaps"
 
