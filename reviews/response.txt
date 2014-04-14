@@ -281,6 +281,10 @@ Nice catch!
 > divisions found in taxonomies? This is an area where more would be
 > helpful - and where a shorter introduction might offer space.
 
+These are excellent questions, and the landscape is a little complex. I
+have expanded this section to explain what it is that these methods
+would like to achieve.
+
 > 14-40. Whereas just about every 16S survey investigation involves an
 > OTU-based alpha diversity estimate, only a few involve PD: unweighted
 > PD has been applied to some 16S survey data (Lozupone and Knight 2007;

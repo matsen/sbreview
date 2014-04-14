@@ -257,15 +257,20 @@ It is common for trees to be built on sequence representatives from these OTUs, 
 I briefly describe the mini-industry of OTU clustering techniques to contrast with the phylogenetic literature on species delimitation \citep{pons2006sequence,yang2010bayesian}.
 I will use the term \emph{OTU inference} despite the fact that there is no clear definition of the OTU concept.
 
-There are many OTU inference methods with various speeds and strategies.
-Of the fixed-cutoff methods, the traditional choice has been CD-HIT \citep{li2006cdhit}, which seems to have been supplanted by clustering features of USEARCH \citep{edgar2010usearch} and perhaps now its descendant UPARSE \citep{edgar2013uparse}.
-These methods are very fast and are heuristic in that they are described as an algorithm rather than as global optimization of some notion of goodness of clustering.
-\citet{white2010alignment} show that different ways of doing this heuristic clustering can result in very different results.
-\citet{navlakha2009finding} and \citet{WYS13} develop methods that try to come up with sequence groupings that more closely reflect the type of species divisions found in taxonomies,
-\citet{hao2011clustering} use a Gaussian mixture model formulation for clustering to avoid fixed cutoff values,
-and \cite{CWC12} use a two step process, first with a Dirichlet multinomial mixtures on 3-mer profiles, and then a minimum description length criterion.
+In phylogenetics we would like to compare reconstructions to an object that is generally not knowable---the ``true'' historical phylogenetic tree---OTU inference has a variety of desirable outcomes, only some of which are knowable.
+\cite{Wang2013-ol} divide performance measures into \textit{external} measures, which compare an inferred clustering to some defined outcome, and \textit{internal} measures, which give overall descriptive statistics on inferred clustering.
+External measures applied to observed or simulated data include obtaining the same number of OTUs as taxonomic groups at some level \citep[e.g.][]{edgar2013uparse}, scoring deviation from a decomposition of a phylogenetic tree \citep[e.g.][]{navlakha2009finding}, or a given set of taxonomic classifications \citep[e.g.][]{Cai2011-bi}.
+Internal measures evaluate the clustering in various ways without reference to a ``true'' clustering, with the general idea that within-cluster distances should be small compared to between-cluster distances.
 
-The centrality of the OTU concept can be seen by the fact that the contingency table of OTU observations is considered to be the fundamental data type for 16S studies \citep{mcdonald2012biological}, or that methods have been devised to find OTUs from non-overlapping sequences \citep{sharpton2011phylotu}.
+There are many OTU inference methods with various speeds and strategies.
+Some methods proceed through a list of sequences and progressively add each either to an existing cluster or start a new cluster with that sequence, such as CD-HIT \citep{li2006cdhit} and USEARCH \citep{edgar2010usearch}, while UPARSE \citep{edgar2013uparse} uses a similar strategy while also attempting to correct for sequencing error.
+\citet{white2010alignment} show that different ways of doing this genre of heuristic clustering can result in very different results.
+\citet{Cai2011-bi} perform highly efficient clustering using a pseudometric based partition tree, which can be thought of as a hierarchical clustering tree with a fixed set of internal node heights.
+\citet{navlakha2009finding} take a semi-supervised approach in that input includes sequences along with a subset of sequences that are equipped with taxonomic classifications; the algorithm then groups all sequences (many in novel clusters) into clusters that have similar properties as the example taxonomic clusters.
+\citet{Wang2013-ol} optimize a criterion of cluster modularity.
+\citet{hao2011clustering} use a Gaussian mixture model formulation for clustering to avoid fixed cutoff values, and \cite{CWC12} use a two step process, first with a Dirichlet multinomial mixtures on 3-mer profiles, and then a minimum description length criterion.
+
+The centrality of the OTU concept can be seen by the fact that the by-sample table of OTU observations (i.e.\ the matrix of counts with rows representing samples and columns representing OTUs) is considered to be the fundamental data type for 16S studies \citep{mcdonald2012biological}, or that methods have been devised to find OTUs from non-overlapping sequences \citep{sharpton2011phylotu}.
 A significant amount of effort has been made to distinguish sequencing error in environmental samples from true rare variants; much of this work has played out in the OTU inference literature \citep{quince2009accurate,quince2011removing,bragg2012fast,edgar2013uparse} as such errors are especially problematic there.
 With the exception of \citet{sharpton2011phylotu}, OTU inference is not considered to be a phylogenetic problem but rather something to be performed before phylogenetic inference begins.
 
