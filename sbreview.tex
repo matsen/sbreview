@@ -205,9 +205,10 @@ Because metagenomes do not proceed through an amplification step, it does not ha
 
 It is possible to use metagenomic data as an expanded set of marker genes.
 That is, one can use 16S reads that appear in the metagenome as well as reads from other ``core" genes that are expected to follow the same evolutionary path and are present in a large proportion of micro-organisms.
-This is proven to be a useful strategy \citep{von2007quantitative,wu2008amphora,stark2010mltreemap,kembel2011phylogenetic}, however, because of the variability of gene repertoire in microbes, this core gene set may be relatively small.
-Indeed, even the largest collection of genes in these databases only recruits around 1 percent of a metagenome.
-At least some portion of the rest of the data can be taxonomically classified \citep[methods reviewed by][]{mande2012classification}; \citet{treangen2013metamos} report speedups and much higher accuracy when reads are assembled before they are classified.
+This is proven to be a useful strategy, and several groups have built databases of core gene families and provide programs and/or web tools to subset a metagenome to that core set of genes \citep{von2007quantitative,wu2008amphora,stark2010mltreemap,kembel2011phylogenetic,Darling2014-ux}.
+However, because of the variability of gene repertoire in microbes, this core gene set may be relatively small: even the largest collection of genes in these databases only recruits around 1 percent of a metagenome.
+At least some portion of the rest of the other approximately 99 percent of the metagenome can be taxonomically classified using methods reviewed by \citep{mande2012classification}.
+\citet{treangen2013metamos} report shorter run times and much higher accuracy (for taxonomic classification using reads simulated from full genomes) for such metagenomic classification when reads are assembled before they are classified.
 
 Metagenomic data sets are often used to infer information about metabolism rather than phylogenetic nature \citep{greenblum2012metagenomic,abubucker2012metabolic}.
 Discussing these methods is beyond the scope of this paper, as is ``metatranscriptomics": the sequencing of mRNA in bulk.
@@ -235,17 +236,18 @@ These attempts are less ambitious than the PhyloCode project \citep[to develop a
 % to preserve information associated with taxonomic classifications.
 Bergey's Manual of Systematic Bacteriology has officially adopted 16S as the basis for their taxonomy, although the actual revision process appears opaque \citep{kreig1984bergey}.
 The GreenGenes group \citep{desantis2006greengenes} has been very active in updating their taxonomy according to 16S, first with their GRUNT tool \citep{dalevi2007automated} and more recently with their tax2tree tool \citep{mcdonald2011improved}.
-Tax2tree uses a heuristic algorithm to optimize the $F$-measure of precision and recall for its taxonomic assignments.
+Tax2tree uses a heuristic algorithm to optimize the $F$-measure (the harmonic mean of precision and recall) for its taxonomic assignments.
 Interestingly, tax2tree allows for polyphyletic taxonomic groups as allowance for either phylogenetic error, lack of resolution of the 16S gene or taxonomic groups with no evolutionary basis; the method does not attempt to signal the cause of such polyphyletic groups.
 \citet{matsen2012reconciling} developed algorithms to quantify discordance between phylogeny and taxonomy based on a coloring problem previously described in the computer science literature \citep{moran2008convex}.
 Although it is wonderful that several groups are actively working on taxonomic revision, it can be frustrating to have multiple different taxonomies with no easy way to translate between them or to the taxonomic names provided in the NCBI sequence database.
 
 An obvious application of phylogenetics is to perform taxonomic classification, as the taxonomy is at least in part defined by phylogeny.
-However, comparisons of taxonomic classification programs \citep{liu2008accurate,bazinet2012comparative} have indicated that current implementations of phylogenetic methods do not perform as well as simple classifiers based on $k$-mer composition \citep{wang2007naive,rosen2008metagenome}.
+However, comparisons of taxonomic classification programs \citep{liu2008accurate,bazinet2012comparative} have indicated that current implementations of phylogenetic methods do not perform as well as simple classifiers based on counts of DNA substrings of a given length, which are often called $k$-mer classifiers \citep{wang2007naive,rosen2008metagenome}.
+For those studies and others, the conventional metrics of classification performance such as precision and recall are applied to data simulated from known and taxonomically classified genomes.
 \citet{srinivasan2012bacterial} find that phylogenetic methods to do taxonomic classification can outperform composition-based techniques at least for certain taxonomic groups.
 % \citep{werner2011impact} Impact of training sets on classification of high-throughput bacterial 16s rRNA gene surveys
 Some authors report that a combination of composition-based and homology-based classifiers work best \citep{brady2009phymm,parks2011classifying}.
-The MEGAN program \citep{huson2007megan,huson2011integrative} BLASTs an unknown sequence onto a database of sequences with taxonomic labels and assigns the sequence the lowest (i.e.\ narrowest) taxonomic group shared by all of the high-quality hits.
+The MEGAN program \citep{huson2007megan,huson2011integrative} BLASTs an unknown sequence onto a database of sequences with taxonomic labels and assigns the sequence the lowest (i.e.\ narrowest) taxonomic group shared by all of the high-quality hits; as such it is somewhat phylogenetic in that it uses the structure of the phylogenetic tree.
 \citet{munch2008statistical,munch2008fast} infer taxonomic assignment by automatically retrieving sequences equipped with taxonomic information and building a tree on them along with an unknown sequence.
 \citet{segata2012metagenomic} propose a clever approach to inferring organisms present in a metagenomic sample by compiling a database of clade-specific genes, then classifying a given read as being from the only clade that has the corresponding gene.
 They show that this has good sensitivity and specificity, however, this method can only be used to identify the presence of organisms whose genome has been sequenced.

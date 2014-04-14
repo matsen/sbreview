@@ -221,6 +221,8 @@ Thanks, I've rearranged here.
 
 > 4-45 additional to
 
+I'm afraid I can't find to what you refer.
+
 > 5-8 delete and
 
 Fixed.
@@ -238,15 +240,27 @@ Nice catch!
 > sticking to eubacteria and a non-molecular biology approach do seem
 > germane.
 
+The editors have stated that they are not concerned with this becoming
+too long, and I've been surprised that what seems like an absurdly big
+amount of media hype to me doesn't reach everyone. So I'm leaving it in
+unless the editors say otherwise.
+
 > 8-12. these data (I guess we will eventually decide that data is
 > singular - up to the editors)
+
+I have fixed all these.
 
 > 8-37++ Whereas Woese ++ This is a bit wordy and unnecessary - we know
 > that Woese didn't have PCR
 
+Er, perhaps this is a generational thing? I had no idea how they used to
+infer molecular sequences before Pace's phyloseminar.
+
 > 10-30 Which "databases" ? - this has been written so far as if it were
 > being applied to samples, not databases. I am not clear what the unit
 > of observation is here.
+
+I have clarified with a slightly expanded explanation, thanks.
 
 > 10-32 We quickly switch here from easy background (nonPCR random
 > sequencing) to something brand new (at least to me). "At least some
@@ -257,20 +271,30 @@ Nice catch!
 > "Rest of data" refers to what - reads found in a database, or reads
 > from a sample? "Accuracy" refers to what? "Speed-ups" refer to what?
 
+Thanks for reporting this. I'm now more specific.
+
 > 11-53. Here is the first real point of contact between phylogenetics
 > and HMR. But what is an "F-measure of precision and recall" - there is
 > no citation.
 
+I've added a mini-definition.
+
 > 12-28 and 12-32. What is the measure of performance that this refers
 > to? How do we decide if a method performs well?
 
+Clarified, thanks.
+
 > 12-29. Do readers of SB now what "k-mer composition" is? Is it k-means
 > clustering?
+
+I've added in a definition.
 
 > 12-37++. Is the MEGAN approach compositional or phylogenetic? I
 > believe it is meant to be a hybrid approach (BLAST being
 > compositional, but the taxonomic labeling considered phylogenetic),
 > but this could be clarified.
+
+I've added in a clarification, thanks.
 
 > 13-29. It is not clear what heuristics are required for a cut-off
 > method. The author says that he is going to describe the OTU inference
