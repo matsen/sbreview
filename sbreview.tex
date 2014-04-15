@@ -274,7 +274,8 @@ Some methods proceed through a list of sequences and progressively add each eith
 
 The centrality of the OTU concept can be seen by the fact that the by-sample table of OTU observations (i.e.\ the matrix of counts with rows representing samples and columns representing OTUs) is considered to be the fundamental data type for 16S studies \citep{mcdonald2012biological}, or that methods have been devised to find OTUs from non-overlapping sequences \citep{sharpton2011phylotu}.
 A significant amount of effort has been made to distinguish sequencing error in environmental samples from true rare variants; much of this work has played out in the OTU inference literature \citep{quince2009accurate,quince2011removing,bragg2012fast,edgar2013uparse} as such errors are especially problematic there.
-With the exception of \citet{sharpton2011phylotu}, OTU inference is not considered to be a phylogenetic problem but rather something to be performed before phylogenetic inference begins.
+\citet{Zhang2013-wh} have developed a phylogenetic means to do species delimitation that scales to a large number of sequencing reads and so can be used as an OTU clustering method.
+With the exception of the work of \citet{sharpton2011phylotu,Zhang2013-wh}, OTU inference is not considered to be a phylogenetic problem but rather something to be performed before phylogenetic inference begins.
 
 \subsection{Diversity estimates using phylogenetics}
 
