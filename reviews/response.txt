@@ -124,7 +124,10 @@ describing terminology and the goal.
 > discussing the details or the broad lines? Provide a few illustrative
 > examples.
 
-A great suggestion. I have added material at the beginning of the "Tree-thinking in human microbiome research" section. I don't think that examples are too productive here because people haven't gotten to that level of detail yet.
+A great suggestion. I have added material at the beginning of the
+"Tree-thinking in human microbiome research" section. I don't think that
+examples are too productive here because people haven't gotten to that
+level of detail yet.
 
 > P13 	"There are many OTU inference methods with various speeds and
 > strategies" and the two following paragraphs. Describe in a simple way
@@ -184,7 +187,8 @@ I like this sentence.
 > P26 "during the 2013 LIRMM Mathematical and Computational Evolutionary
 > Biology workshop", change LIRMM into MCEB
 
-I have done so, so that the sentence reads "... 2013 MCEB Mathematical and Computational Evolutionary Biology workshop ..." is that right?
+I have done so, so that the sentence reads "... 2013 MCEB Mathematical
+and Computational Evolutionary Biology workshop ..." is that right?
 
 > Fig 2. It took time to me to understand and check on the Web that the
 > tree must be rooted, to compute the unifrac distance. This is one
@@ -225,9 +229,17 @@ It's cited now.
 > (http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0049334)
 > at the genus and family level.
 
+Given that taxonomic classification is not always a phylogenetic
+problem, I don't think that it merits its own section. I have cited your
+suggestion and other recent progress in this field for readers who want
+to dig deeper.
+
 > I would also appreciate if you could explicitly mention the Gartner
 > hype curve in the discussion part and provide an estimate as to where
 > we are on this curve at present.
+
+I don't see how this would contribute to the scientific goals of the
+paper.
 
 > Some typos:
 
@@ -394,8 +406,9 @@ With regards to your question, I don't know. It seems surprising to me.
 > beta-diversity in the community-phylogenetics literature? What is the
 > closest analogue?
 
-I don't follow your "with the fraction of edges connecting samples that are common to two samples" correction.
-There is some overlap with the PD literature as now described and cited.
+I don't follow your "with the fraction of edges connecting samples that
+are common to two samples" correction. There is some overlap with the PD
+literature as now described and cited.
 
 > 15-4955. The description of Evans and Matsen seems a bit detailed in
 > the context -
@@ -559,14 +572,16 @@ Added, thanks.
 > "rarefaction curves" to enable the comparison between samples of
 > different sequencing depth or methods (e.g. 454 vs. Illumina).
 
-I do describe strategies for read count normalization in the next paragraph, but have added the "rarefaction curve" terminology.
+I do describe strategies for read count normalization in the next
+paragraph, but have added the "rarefaction curve" terminology.
 
 > 6. On page 17, lines 54-55, please add some recent references on the
 > current debate around the rooting of the placental tree. I don't think
 > that most readers of Syst. Biol. will be familiar with this
 > discussion.
 
-Good point. I've put in the two 2013 MBE papers. If there is something else I should cite let me know.
+Good point. I've put in the two 2013 MBE papers. If there is something
+else I should cite let me know.
 
 > 7. On page 18, lines 26-27, RAxML is also implemented in QIIME.
 
@@ -584,7 +599,8 @@ Thank you for pointing me to this reference.
 Thanks.
 
 > Typos:
-> P3, L40: I would rather use "species delimitation" instead of "species definition".
+> P3, L40: I would rather use "species delimitation" instead of "species
+> definition".
 
 Thanks.
 

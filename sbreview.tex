@@ -210,8 +210,7 @@ It is possible to use metagenomic data as an expanded set of marker genes.
 That is, one can use 16S reads that appear in the metagenome as well as reads from other ``core" genes that are expected to follow the same evolutionary path and are present in a large proportion of micro-organisms.
 This is proven to be a useful strategy, and several groups have built databases of core gene families and provide programs and/or web tools to subset a metagenome to that core set of genes \citep{von2007quantitative,wu2008amphora,stark2010mltreemap,kembel2011phylogenetic,Darling2014-ux}.
 However, because of the variability of gene repertoire in microbes, this core gene set may be relatively small: even the largest collection of genes in these databases only recruits around 1 percent of a metagenome.
-At least some portion of the rest of the other approximately 99 percent of the metagenome can be taxonomically classified using methods reviewed by \citep{mande2012classification}.
-\citet{treangen2013metamos} report shorter run times and much higher accuracy (for taxonomic classification using reads simulated from full genomes) for such metagenomic classification when reads are assembled before they are classified.
+At least some portion of the rest of the other approximately 99 percent of the metagenome can be taxonomically classified using a diversity of methods described below.
 
 Metagenomic data sets are often used to infer information about metabolism rather than phylogenetic nature \citep{greenblum2012metagenomic,abubucker2012metabolic}.
 Discussing these methods is beyond the scope of this paper, as is ``metatranscriptomics": the sequencing of mRNA in bulk.
@@ -259,6 +258,9 @@ The MEGAN program \citep{huson2007megan,huson2011integrative} BLASTs an unknown 
 \citet{munch2008statistical,munch2008fast} infer taxonomic assignment by automatically retrieving sequences equipped with taxonomic information and building a tree on them along with an unknown sequence.
 \citet{segata2012metagenomic} propose a clever approach to inferring organisms present in a metagenomic sample by compiling a database of clade-specific genes, then classifying a given read as being from the only clade that has the corresponding gene.
 They show that this has good sensitivity and specificity, however, this method can only be used to identify the presence of organisms whose genome has been sequenced.
+Other metagenomic classification techniques have been reviewed by \citet{mande2012classification}; interesting recent progress has been made by \citet{Lanzen2012-ul}, \cite{Koslicki2013-mc}, and \cite{Droge2014-lj}.
+\citet{treangen2013metamos} report shorter run times and much higher accuracy (for taxonomic classification using reads simulated from full genomes) for such metagenomic classification when reads are assembled before they are classified.
+
 
 \subsection{The role of Operational Taxonomic Units (OTUs)}
 Although there continues to be a lively debate on if there is a meaningful concept of species for microbes \citep{bapteste2009prokaryotic,caro2012bacterial}, a substantial part of human microbiome research has replaced any traditional species concept with the notion of Operational Taxonomic Units (OTUs).
