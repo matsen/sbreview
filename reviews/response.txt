@@ -126,17 +126,23 @@ Thanks!
 > here, as it is said just above that they have derived a
 > "phylogeny-driven genomic encyclopedia of Bacteria and Archaea".
 
+I've made that more specific now.
+
 > P23-24 Paragraph "In the same vein This would be a false positive." is
 > unclear to me.
+
+I've made the false positive part more specific.
 
 > P24 Check "The presently used approach is rarefaction, which means
 > uniform sub-sampling, typically without replacement to the number of
 > reads in the lowest abundance sample"
 
+Simplified, thanks.
+
 > P25 Check "Comparative studies will continue to investigate what
 > shapes and is shaped by the microbiome"
 
-
+I like this sentence.
 
 > P26 "during the 2013 LIRMM Mathematical and Computational Evolutionary
 > Biology workshop", change LIRMM into MCEB

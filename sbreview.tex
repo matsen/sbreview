@@ -391,7 +391,7 @@ This ``proxy'' approach has recently been taken to its logical conclusion by \ci
 
 Similar logic has been applied to prioritize microbes for sequencing.
 \citet{wu2009phylogeny} have derived a ``phylogeny-driven genomic encyclopaedia of Bacteria and Archaea'' by selecting organisms for sequencing that are divergent from sequenced organisms.
-By doing so they have recovered more novel protein families than they would have using methods organized by taxonomy.
+They have recovered more novel protein families using these phylogeny-based approaches than they would have using methods organized by selecting microbes to sequence based on their taxonomic labels.
 In a similar effort for the human microbiome \citep{fodor2012most}, phylogenetic results were not shown although the authors state that phylogenetic methods did give similar results to their analysis.
 % http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0041294
 
@@ -521,12 +521,12 @@ Such non-independence can lead to incorrect rejection of the null hypothesis.
 Imagine, for example, that we have a random observation process on the tree equipped with some collection of ``base observations'' at the leaves.
 Each sample from the process takes a random subset of those base observations and then throws down some number of reads for each observation in that set, the number of which has mean significantly greater than 1.
 If the set of base observations is large compared to the number of sample observations, then two draws will always appear significantly different even though they are from the same underlying process.
-This would be a false positive.
+This observed significant difference would thus be a false positive.
 Even basic definitions pose a challenge here: the question of whether two communities are the ``same'' and ``different'' probably needs to be approached from the perspective of ecosystem modeling.
 
 For both alpha and beta diversity studies, read count normalization has not received nearly the attention that it has in other applications of high throughput sequencing \citep[such as RNA-Seq, e.g.][]{anders2010differential,robinson2010edger}.
 One type of normalization handles differential depths of sequencing across samples.
-The presently used approach is \textit{rarefaction}, which means uniform sub-sampling, typically without replacement to the number of reads in the lowest abundance sample \citep{caporaso2010qiime,schloss2009introducing}.
+The presently used approach is \textit{rarefaction}, which means uniform sub-sampling to the number of reads in the lowest abundance sample \citep{caporaso2010qiime,schloss2009introducing}.
 In addition to throwing away data, this normalization implicitly assumes a model whereby reads are sequenced independently of one another, which is not the case.
 An alternative is provided by \citet{o2012phylogenetic}, who provide a ``UniFrac score normalization curve'' based on a sampling model of community assembly.
 This is a good start, but more work should be done exploring results under deviation from that model.
