@@ -89,11 +89,22 @@ Thanks!
 > P8	(Kuczynski et al. 2010). However, for more subtle information
 > P8	"for more subtle information deeper sequencing is required" :
 > what do you have in mind here?
+
+I made this more specific.
+
 > Indeed "distinguish between two rather different samples" is a modest
-> goal Actually, it's not clear in this subsection what is meant by
+> goal
+
+Indeed, but it's not immediately obvious what level of sequencing depth
+is needed even in that situation.
+
+> Actually, it's not clear in this subsection what is meant by
 > "Microbial community estimation" (title of the subsection). What is
 > the goal here? Identify and classify microbes? Measure their
 > abundance? Etc.? A few lines and explanations should suffice.
+
+I have revised the heading as well as separated out a paragraph
+describing terminology and the goal.
 
 > P11	What is the level of uncertainty in current bacterial
 > phylogenies? For example, one commonly considers that only a few
@@ -101,25 +112,39 @@ Thanks!
 > discussing the details or the broad lines? Provide a few illustrative
 > examples.
 
+A great suggestion. I have added material at the beginning of the "Tree-thinking in human microbiome research" section. I don't think that examples are too productive here because people haven't gotten to that level of detail yet.
+
 > P13 	"There are many OTU inference methods with various speeds and
 > strategies" and the two following paragraphs. Describe in a simple way
 > the basic principles of these methods, before discussing their
 > relative merits (this remark may apply in other places).
 
+Given the diversity of OTU methodologies, it's not easy to generalize
+about their operation. However, I have added a paragraph explaining what
+it is that OTU inference methods are trying to do. I hope that helps.
+
 > P14 	You describe PD and suggests that it should be used more often.
 > But what are the standard alpha diversity measures, and their
 > limitations?
+
+Thank you for this excellent suggestion.
 
 > P15 	Are "partially abundance weighted diversity measures" using some
 > phylogenetic approaches? Be a bit more specific when describing and
 > discussing methods. Here and in many other places (e.g. UniFrac,
 > weighted PD, weighted UniFrac, etc.).
 
+You are right. I hope my edits make this more clear.
+
 > P15 	"Evans and Matsen (2012) showed that weighted UniFrac" check
 > sentence.
 
+I've shortened and simplified this sentence.
+
 > P16 	explanations and Fig. 3 on earth-movers distance are unclear to
 > me.
+
+I have expanded the (previously insufficient) descriptions.
 
 > P17 	"By doing so they have recovered more novel protein families
 > than they would have using methods organized by taxonomy". I'm lost

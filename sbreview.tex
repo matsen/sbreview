@@ -173,18 +173,21 @@ We will consistently refer to the former as a \textit{survey} and the second a \
 The Human Microbiome Project \citep{methe2012framework} generated lots of survey, metagenome, and whole-genome sequencing data and these data are available on a dedicated website\footnote{\url{http://www.hmpdacc.org/}}.
 The MetaHIT study \citep{qin2010human} also generated lots of data but it is not available to outside researchers.
 
-\subsection{Microbial community estimation using marker gene surveys}
+\subsection{Inferring microbial community composition using marker gene surveys}
 Our modern knowledge of the microbial world is in a large part derived from the methods of Carl Woese and colleagues who pioneered the use of marker genes as a way to distinguish between microbial lineages \citep{fox1977comparative}.
 Their work, and the scientists who followed them, focused on the 16S ribosomal gene (henceforth simply ``16S'') as a genetic marker.
 This gene was chosen because it has regions of high and low diversity, which enable resolution on a variety of evolutionary time scales.
 Regions of low diversity in 16S also enabled the development of the first ``universal'' 16S PCR primers \citep{lane1985rapid} which enabled detection of almost all bacteria and archaea regardless of whether they can be cultured.
-In microbial ecology, the census of bacteria in a given environment using marker gene amplification and sequencing are generally called ``marker gene surveys,'' which is equivalent to the ``barcoding'' terminology more commonly used for eukaryotes.
+
+In microbial ecology, the census of bacteria in a given environment using marker gene amplification and sequencing are generally called ``marker gene surveys.''
+This terminology is equivalent to the ``barcoding'' terminology more commonly used for eukaryotes.
+Such surveys would ideally return a census of all of the microbes in a sample along with their abundances.
 
 Where Woese and colleagues labored over digestion and gel electrophoresis to infer sequences, modern researchers have the luxury of high throughput sequencing.
 This can be done with a high level of multiplexing, making an explicit trade-off between depth of sequencing for each specimen and the number of specimens able to be put on the sequencer at the same time.
 This has led to extensive parallelization, most recently by sequencing dozens of samples at a time on the Illumina instrument \citep{degnan2011illumina,caporaso2012ultra}.
 This brings up the question of how many sequences are needed to characterize the microbial diversity of a given environment.
-To distinguish between two rather different samples, relatively few sequences per sample are required \citep{kuczynski2010microbial} however for more subtle information deeper sequencing is required.
+To distinguish between two rather different samples, relatively few sequences per sample are required \citep{kuczynski2010microbial} however to compare more similar samples deeper sequencing is required.
 In addition to sequencing samples across individuals, this parallelization has also enabled sampling through time \citep[e.g.][]{caporaso2011moving}.
 
 Despite the high throughput and low cost of modern sequencing, inherent challenges remain for applications of marker gene sequencing to take a census of microbes.
@@ -226,6 +229,10 @@ The assembly of complete genomes from metagenomes, once limited to samples with 
 In this section I consider the ways in which phylogenetic methodology has impacted human microbiome research.
 What may be most interesting for the \textit{Systematic Biology} audience is the way in which phylogenetic trees are being used to actively revise taxonomy as well as being used as a structure on which to perform sample comparison.
 
+Before proceeding, we note that phylogenetics for microbes differs in some important respects from, say, mammal phylogenetics.
+Where the phylogenetics researchers for mammals are converging on one or two possible basic structures for the evolution of mammals, much of the deep history of microbes remains obscure.
+Inference of this history is complicated by the fact that any tree-like signal in the overall evolution of bacteria is restricted to a small set of so-called ``core'' genes \citep{bapteste2009prokaryotic,Leigh2011-zu,Lang2013-zt}.
+
 \subsection{Phylogenetics and taxonomy}
 
 Phylogenetic inference has had a substantial impact on microbial ecology research by changing our view of the taxonomic relationships between microorganisms.
@@ -259,6 +266,7 @@ It is common for trees to be built on sequence representatives from these OTUs, 
 I briefly describe the mini-industry of OTU clustering techniques to contrast with the phylogenetic literature on species delimitation \citep{pons2006sequence,yang2010bayesian}.
 I will use the term \emph{OTU inference} despite the fact that there is no clear definition of the OTU concept.
 
+It is not straightforward to define a clear notion of optimality for OTU inference.
 In phylogenetics we would like to compare reconstructions to an object that is generally not knowable---the ``true'' historical phylogenetic tree---OTU inference has a variety of desirable outcomes, only some of which are knowable.
 \cite{Wang2013-ol} divide performance measures into \textit{external} measures, which compare an inferred clustering to some defined outcome, and \textit{internal} measures, which give overall descriptive statistics on inferred clustering.
 External measures applied to observed or simulated data include obtaining the same number of OTUs as taxonomic groups at some level \citep[e.g.][]{edgar2013uparse}, scoring deviation from a decomposition of a phylogenetic tree \citep[e.g.][]{navlakha2009finding}, or a given set of taxonomic classifications \citep[e.g.][]{Cai2011-bi}.
@@ -281,9 +289,10 @@ With the exception of the work of \citet{sharpton2011phylotu,Zhang2013-wh}, OTU 
 
 Because 16S surveys are inherently complex and noisy data, summary statistics are often used; summaries of the diversity of a single sample are often called \emph{alpha diversity}.
 For the most part, this literature adapts methods from the classical ecological literature by substituting OTUs for taxonomic groups.
-%The most common diversity indices are Simpson and Shannon.
+For example, the most commonly used index is the Simpson index \cite{simpson1949measurement}, which is simply the sum of the squared frequencies across OTUs.
+The drawback of applying such a diversity metric to a collection of OTUs is that the overall structure of the diversity is lost, in that two closely related OTUs contribute as much to the diversity measure as two distant ones.
 % \citep{hill1973diversity} Diversity and evenness: a unifying notation and its consequences
-However, phylogenetic diversity metrics are also used and here we will focus on their applications and methods.
+Phylogenetic diversity metrics, which do take this overall diversity structure into account, are also used and here we will focus on their applications and methods.
 
 Phylogenetic diversity (PD) measures use the structure and branch lengths of a phylogenetic tree to measure the diversity of a sample (Fig.~1).
 The original (unweighted) PD of a set of taxa is simply the total of the lengths of the branches connecting taxa in the set \citet{faith1992conservation}.
@@ -312,7 +321,8 @@ Although abundance weighted non-phylogenetic diversity measures such as \citet{s
 Abundance-weighted measures take a sum of branch lengths weighted by abundance, such that branches that connect abundant taxa get a higher weight than ones that do not (Fig.~\ref{fig:pd}).
 Thus rare taxa and artifactual sequences are down-weighted compared to abundant taxa.
 Such measures do exist \citep{rao1982diversity,barker2002phylogenetic,allen2009new,chao2010phylogenetic,vellend2011measuring}.
-\citet{mccoy2013abundance} have recently shown that partially abundance weighted diversity measures do a good job of distinguishing between dysbiotic and ``normal" states of the human microbiome; in particular that they do a better job than the commonly-used OTU-based measures.
+Abundance-weighted measures commonly weight edges in proportion to abundance, but one can also construct ``partially abundance weighted'' measures by weighting edges by abundances transformed by a less than linear function.
+\citet{mccoy2013abundance} have recently shown that such partially abundance weighted diversity measures do a good job of distinguishing between dysbiotic and ``normal" states of the human microbiome; in particular that they do a better job than the commonly-used OTU-based measures.
 \citet{nipperess2013mean} have also determined formulas for the expectation and variance of PD under random sub-sampling, which is often applied to enable comparison between samples of different sequencing depths and called ``rarefaction curves.''
 
 
@@ -327,8 +337,9 @@ They are generally variants of the ``UniFrac'' phylogenetic dissimilarity measur
 The name UniFrac is a contraction of ``Unique Fraction,'' which refers to the fact that the original UniFrac definition compares the fraction of edges that connect only tips from one sample via the shortest path rather than edges that connect between samples \citep[Fig.~\ref{fig:unifrac};][]{LozuponeKnightUniFrac05}.
 Weighted UniFrac is an abundance weighted version \citep{LozuponeEaWeightedUnifrac07}.
 These dissimilarity measures have hundreds of citations.
-\citet{evans2012phylogenetic} showed that weighted UniFrac is in fact a specific case of the earth-movers distance and that the commonly-used randomization procedure for significance estimation has a central limit theorem approximation.
-The earth-movers distance in this case can be defined as the minimum amount of work required to move piles of dirt in one configuration to another along the tree; in this case the size of the dirt piles is proportional to the number of reads mapping to that location in the tree (Fig.~\ref{fig:dirtpiles}).
+\citet{evans2012phylogenetic} showed that weighted UniFrac is in fact a specific case of the earth-movers distance, and that the commonly-used randomization procedure for significance estimation has a central limit theorem approximation.
+The earth-movers distance between two probability distributions in this case can be defined using a physical analogy as the minimum amount of ``work'' required to move piles of dirt (each dirt pile configuration sized in proportion to one probability distribution) in one configuration to another along the tree, where work is defined as mass times distance.
+In this case the size of the dirt piles is proportional to the number of reads mapping to that location in the tree (Fig.~\ref{fig:dirtpiles}).
 \citet{chen2012associating} have shown that a partially abundance-weighted variant of UniFrac may have greater power to resolve community differences than either unweighted or weighted UniFrac.
 There are clear connections between UniFrac and phylogenetic diversity explored by \cite{Faith2009-gs}, who point out related measures in Faith's earlier work.
 
@@ -354,7 +365,8 @@ Indeed, the separation of two communities in a principal components plot is ofte
 \citep[e.g.][]{lozupone2007global,costello2009bacterial,yatsunenko2012human}, while the lack of such a difference is interpreted as showing that the communities are not different overall.
 
 \newcommand{\dirtpilesLegend}{
-    Part of a minimal mass movement to calculate the earth-mover's distance on a phylogenetic tree.
+    Part of a minimal mass movement to calculate the earth-mover's distance between two probability distributions on a phylogenetic tree.
+    For this, each probability distribution is considered as a configuration of dirt piles on the tree, and the distance between two such dirt pile configurations is defined to be the minimum amount of physical ``work'' required to move the dirt in one configuration to the other.
 }
 \forarxiv{
 \begin{wrapfigure}[14]{l}{1.2in}
