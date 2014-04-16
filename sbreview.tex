@@ -243,7 +243,8 @@ These attempts are less ambitious than the PhyloCode project \citep[to develop a
 % to preserve information associated with taxonomic classifications.
 Bergey's Manual of Systematic Bacteriology has officially adopted 16S as the basis for their taxonomy, although the actual revision process appears opaque \citep{kreig1984bergey}.
 The GreenGenes group \citep{desantis2006greengenes} has been very active in updating their taxonomy according to 16S, first with their GRUNT tool \citep{dalevi2007automated} and more recently with their tax2tree tool \citep{mcdonald2011improved}.
-Tax2tree uses a heuristic algorithm to optimize the $F$-measure (the harmonic mean of precision and recall) for its taxonomic assignments.
+Tax2tree uses a heuristic algorithm to reassign sequence taxonomic labels so that they are concordant with a given rooted phylogenetic tree as follows.
+The first step is to label the internal nodes of the tree to optimize the $F$-measure (the harmonic mean of precision and recall) across clades where the taxonomic label of a clade is thought of as a prediction for the descendant sequence taxonomic labels; the second step reassigns sequence taxonomic labels based on these clade taxonomic labels.
 Interestingly, tax2tree allows for polyphyletic taxonomic groups as allowance for either phylogenetic error, lack of resolution of the 16S gene or taxonomic groups with no evolutionary basis; the method does not attempt to signal the cause of such polyphyletic groups.
 \citet{matsen2012reconciling} developed algorithms to quantify discordance between phylogeny and taxonomy based on a coloring problem previously described in the computer science literature \citep{moran2008convex}.
 Although it is wonderful that several groups are actively working on taxonomic revision, it can be frustrating to have multiple different taxonomies with no easy way to translate between them or to the taxonomic names provided in the NCBI sequence database.
@@ -301,8 +302,8 @@ Whereas just about every 16S survey investigation involves an OTU-based alpha di
 
 \newcommand{\pdLegend}{
     Unweighted phylogenetic diversity (PD, left) and an abundance-weighted PD measure (right), where taxa present in a sample are shown as blue circles and abundances are shown as the size of the circles.
-    Unweighted PD takes the sum of the branch lengths connecting samples.
-    Abundance-weighted measures take a weighted sum of branch lengths where weight is determined in some way by the abundance of the taxa on either side of the branch: if we give edges width according to their weight, the abundance-weighted measure can be thought of as the sum of the areas of the edges.
+    Unweighted PD takes the sum of the branch lengths $\ell$ connecting samples.
+    Abundance-weighted measures take a weighted sum of branch lengths where weight is determined in some way by the abundance of the taxa on either side of the branch: if we give edges width according to their weight, the abundance-weighted measure can be thought of as the sum of the areas $A$ of edges.
 }
 \forarxiv{
 \begin{wrapfigure}[25]{r}{2.2in}
@@ -345,7 +346,10 @@ There are clear connections between UniFrac and phylogenetic diversity explored 
 
 \newcommand{\unifracLegend}{
     The UniFrac divergence measure \citep[figure adapted from][]{LozuponeKnightUniFrac05}.
+    Assume that the sequence data to build the phylogenetic tree is divided into two samples, the green sample and the blue sample, which might represent samples from two locations.
     When samples are interspersed across the tree (left tree), they have a smaller \textit{fraction} of branch lengths that can be \textit{uniquely} assigned to one sample or another compared to when they are separate (right tree).
+    Bottom pictorial equation shows the ratios of interest for UniFrac: the branch length unique to one sample (green or blue, but not brown) divided by the total branch length.
+    The ratio is smaller when the samples are interspersed (left) than they are when separate (right tree).
 }
 \forarxiv{
 \begin{wrapfigure}[23]{r}{2.2in}
@@ -530,11 +534,10 @@ As described above, abundances are commonly used as part of community comparison
 In a similar vein, assessing the significance level of an observed difference between communities is not straightforward and poses difficult problems.
 The randomization of group membership commonly used in combination with UniFrac to determine significance does not have appropriate properties when in the regime of incomplete sampling with non-independent observations, which is certainly the correct regime for surveys and metagenomes.
 Such non-independence can lead to incorrect rejection of the null hypothesis.
-Imagine, for example, that we have a random observation process on the tree equipped with some collection of ``base observations'' at the leaves.
-Each sample from the process takes a random subset of those base observations and then throws down some number of reads for each observation in that set, the number of which has mean significantly greater than 1.
-If the set of base observations is large compared to the number of sample observations, then two draws will always appear significantly different even though they are from the same underlying process.
-This observed significant difference would thus be a false positive.
-Even basic definitions pose a challenge here: the question of whether two communities are the ``same'' and ``different'' probably needs to be approached from the perspective of ecosystem modeling.
+Imagine, for example, that we have a random observation process on the tree equipped with some collection $B$ of observations at the leaves.
+Each sample from the process takes a random subset from $B$ and then throws down some number of reads for each observation in that set, the number of which has mean significantly greater than 1.
+If the size of $B$ is large compared to the number of sample observations, then two draws will always appear significantly different even though they are from the same underlying process.
+In trying to remedy such false-positive identification of differences, it becomes clear that even basic definitions pose a challenge: the question of whether two communities are the ``same'' and ``different'' probably needs to be approached from the perspective of ecosystem modeling.
 
 For both alpha and beta diversity studies, read count normalization has not received nearly the attention that it has in other applications of high throughput sequencing \citep[such as RNA-Seq, e.g.][]{anders2010differential,robinson2010edger}.
 One type of normalization handles differential depths of sequencing across samples.

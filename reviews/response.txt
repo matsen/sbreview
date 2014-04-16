@@ -39,13 +39,23 @@ Searched and replaced. Thanks!
 > 3) Pg. 10: I don't really understand what "tax2tree" does, based on
 > the description here. Does that matter?
 
+I have improved the description, with an overview sentence for those who
+want to skip the details.
+
 > 4) Pg. 14-15: I also don't really understand what UniFrac is or how it
 > works, even after looking at Figure 2 (Olivier made a similar
 > comment). Could we get some help here?
 
+I have much improved the caption for Figure 2. I think it should be
+clear now.
+
 > 5) The figures need a bit of work. There seems to be some sort of
 > equation at the bottom of Figure 1, but I can't decipher it. What do
 > the colors mean in Figure 2? I don't find this to be very clear.
+
+I have made a connection between the figure and the caption via the
+mathematical notation used. For Figure 2, I have greatly expanded the
+caption to describe colors.
 
 > 6) Pg. 20: "How to formulate a useful notion of independent contrasts
 > (Felsenstein 1985) on such an object?" - Awkward wording.
@@ -56,6 +66,8 @@ that's better.
 
 > 7) Pg. 23: I don't understand the distinction between "base
 > observations" and sample observations here. Can this be clarified?
+
+I have rewritten this with a little notation, thanks.
 
 > 8) Pg. 24: "Future will continue to bring deeper sequencing on more
 > samples" - I guess this should be "The future will continue"?
