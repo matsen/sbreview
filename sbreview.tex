@@ -344,7 +344,7 @@ These dissimilarity measures have hundreds of citations.
 The earth-movers distance between two probability distributions in this case can be defined using a physical analogy as the minimum amount of ``work'' required to move piles of dirt (each dirt pile configuration sized in proportion to one probability distribution) in one configuration to another along the tree, where work is defined as mass times distance.
 In this case the size of the dirt piles is proportional to the number of reads mapping to that location in the tree (Fig.~\ref{fig:dirtpiles}).
 \citet{chen2012associating} have shown that a partially abundance-weighted variant of UniFrac may have greater power to resolve community differences than either unweighted or weighted UniFrac.
-There are clear connections between UniFrac and phylogenetic diversity explored by \cite{Faith2009-gs}, who point out related measures in Faith's earlier work.
+There are clear connections between UniFrac and phylogenetic diversity explored by \cite{faith2009cladistic}, who point out related measures in Faith's earlier work.
 
 \newcommand{\unifracLegend}{
     The UniFrac divergence measure \citep[figure adapted from][]{LozuponeKnightUniFrac05}.
@@ -453,7 +453,8 @@ There are also other methods with the less ambitious goal of mapping sequences o
 These programs \citep{wu2008simple,monierEaLargeViruses08,vonMeringEaQuantitative08,stark2010mltreemap,matsen2010pplacer,berger2011performance} have various speeds and features.
 This work has also spurred development of specialized alignment tools for this mapping process.
 \citet{berger2011aligning} focus on the problem of inferring the optimal alignment and insertion of sequences into a tree.
-\citet{mirarabsepp} use data set partitioning to improve alignments on subsets of taxa specifically for this application.
+\citet{Mirarab2012-pk} use data set partitioning to improve alignments on subsets of taxa specifically for this application.
+\citet{Brown2013-ia} use locality-sensitive hashing to obtain placement more than two orders of magnitude faster than the \textit{pplacer} program of \cite{matsen2010pplacer}.
 
 Considerable effort goes to the creation of large curated alignments and phylogenetic trees on 16S.
 There are two major projects to do so: one is the SILVA database \citep{pruesse2007silva,quast2013silva}, and the other is the GreenGenes database \citep{desantis2006greengenes,mcdonald2011improved}.
@@ -593,14 +594,22 @@ I am grateful to Aaron Darling, David Fredricks, Noah Hoffman, Steven Kembel, Co
 \section{Figure Legends}
 
 \noindent
-Figure 1: \pdLegend
+\begin{figure}[ht]
+  \caption{\pdLegend}
+  \label{fig:pd}
+\end{figure}
 
 \noindent
-Figure 2: \unifracLegend
+\begin{figure}[ht]
+  \caption{\unifracLegend}
+  \label{fig:unifrac}
+\end{figure}
 
 \noindent
-Figure 3: \dirtpilesLegend
-
+\begin{figure}[ht]
+  \caption{\dirtpilesLegend}
+  \label{fig:dirtpiles}
+\end{figure}
 
 \newpage
 }
