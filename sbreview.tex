@@ -299,11 +299,6 @@ The drawback of applying such a diversity metric to a collection of OTUs is that
 % \citep{hill1973diversity} Diversity and evenness: a unifying notation and its consequences
 Phylogenetic diversity metrics, which do take this overall diversity structure into account, are also used and here we describe their application.
 
-Phylogenetic diversity (PD) measures use the structure and branch lengths of a phylogenetic tree to measure the diversity of a sample (Fig.~1).
-The original (unweighted) PD of a set of taxa is simply the total of the lengths of the branches connecting taxa in the set \citet{faith1992conservation}.
-It quantifies the ``amount of evolution'' contained in the evolutionary history of those taxa.
-Whereas just about every of the hundreds or thousands of 16S surveys applies an OTU-based alpha diversity estimate, only a few involve PD: unweighted PD has been applied to some 16S survey data \citep{lozupone2007global,costello2009bacterial} and to metagenomic reads in a set of marker genes \citep{kembel2011phylogenetic}.
-
 \newcommand{\pdLegend}{
     Unweighted phylogenetic diversity (PD, left) and an abundance-weighted PD measure (right), where taxa present in a sample are shown as blue circles and abundances are shown as the size of the circles.
     Unweighted PD takes the sum of the branch lengths $\ell$ connecting samples.
@@ -322,6 +317,11 @@ Whereas just about every of the hundreds or thousands of 16S surveys applies an 
 \end{wrapfigure}
 }
 
+Phylogenetic diversity (PD) measures use the structure and branch lengths of a phylogenetic tree to measure the diversity of a sample (Fig.~1).
+The original (unweighted) PD of a set of taxa is simply the total of the lengths of the branches connecting taxa in the set \citet{faith1992conservation}.
+It quantifies the ``amount of evolution'' contained in the evolutionary history of those taxa.
+Whereas just about every of the hundreds or thousands of 16S surveys applies an OTU-based alpha diversity estimate, only a few involve PD: unweighted PD has been applied to some 16S survey data \citep{lozupone2007global,costello2009bacterial} and to metagenomic reads in a set of marker genes \citep{kembel2011phylogenetic}.
+
 Although abundance weighted non-phylogenetic diversity measures such as \citet{simpson1949measurement} and \citet{shannon1948mathematical} are commonly used in human microbiome studies, abundance weighted phylogenetic diversity measures are not.
 Abundance-weighted measures take a sum of branch lengths weighted by abundance, such that branches that connect abundant taxa get a higher weight than ones that do not (Fig.~\ref{fig:pd}).
 Thus rare taxa and artifactual sequences are down-weighted compared to abundant taxa.
@@ -339,15 +339,6 @@ They are generally variants of the ``UniFrac'' phylogenetic dissimilarity measur
 \citet{kuczynski2010microbial} claim that the UniFrac framework is superior to other methods for community comparison via real data and simulations \citep[for a contrary viewpoint using simulations see][]{schloss2008evaluating}.
 % It recovers gradients. \citep{nemergut2011global}
 
-The name UniFrac is a contraction of ``Unique Fraction,'' which refers to the fact that the original UniFrac definition compares the fraction of edges that connect only tips from one sample via the shortest path rather than edges that connect between samples \citep[Fig.~\ref{fig:unifrac};][]{LozuponeKnightUniFrac05}.
-Weighted UniFrac is an abundance weighted version \citep{LozuponeEaWeightedUnifrac07}.
-These dissimilarity measures have hundreds of citations.
-\citet{evans2012phylogenetic} showed that weighted UniFrac is in fact a specific case of the earth-movers distance, and that the commonly-used randomization procedure for significance estimation has a central limit theorem approximation.
-The earth-movers distance between two probability distributions in this case can be defined using a physical analogy as the minimum amount of ``work'' required to move piles of dirt (each dirt pile configuration sized in proportion to one probability distribution) in one configuration to another along the tree, where work is defined as mass times distance.
-In this case the size of the dirt piles is proportional to the number of reads mapping to that location in the tree (Fig.~\ref{fig:dirtpiles}).
-\citet{chen2012associating} have shown that a partially abundance-weighted variant of UniFrac may have greater power to resolve community differences than either unweighted or weighted UniFrac.
-There are clear connections between UniFrac and phylogenetic diversity explored by \citet{faith2009cladistic}, who point out related measures in Faith's earlier work.
-
 \newcommand{\unifracLegend}{
     The UniFrac divergence measure \citep[figure adapted from][]{LozuponeKnightUniFrac05}.
     Assume that the sequence data to build the phylogenetic tree is divided into two samples, the green sample and the blue sample, which might represent samples from two locations.
@@ -356,7 +347,7 @@ There are clear connections between UniFrac and phylogenetic diversity explored 
     The ratio is smaller when the samples are interspersed (left) than they are when separate (right tree).
 }
 \forarxiv{
-\begin{wrapfigure}[23]{r}{2.2in}
+\begin{wrapfigure}[32]{r}{2.2in}
   % \capstart
   \vspace{-26pt}
   \begin{center}
@@ -368,6 +359,15 @@ There are clear connections between UniFrac and phylogenetic diversity explored 
 \end{wrapfigure}
 }
 
+The name UniFrac is a contraction of ``Unique Fraction,'' which refers to the fact that the original UniFrac definition compares the fraction of edges that connect only tips from one sample via the shortest path rather than edges that connect between samples \citep[Fig.~\ref{fig:unifrac};][]{LozuponeKnightUniFrac05}.
+Weighted UniFrac is an abundance weighted version \citep{LozuponeEaWeightedUnifrac07}.
+These dissimilarity measures have hundreds of citations.
+\citet{evans2012phylogenetic} showed that weighted UniFrac is in fact a specific case of the earth-movers distance, and that the commonly-used randomization procedure for significance estimation has a central limit theorem approximation.
+The earth-movers distance between two probability distributions in this case can be defined using a physical analogy as the minimum amount of ``work'' required to move piles of dirt (each dirt pile configuration sized in proportion to one probability distribution) in one configuration to another along the tree, where work is defined as mass times distance.
+In this case the size of the dirt piles is proportional to the number of reads mapping to that location in the tree (Fig.~\ref{fig:dirtpiles}).
+\citet{chen2012associating} have shown that a partially abundance-weighted variant of UniFrac may have greater power to resolve community differences than either unweighted or weighted UniFrac.
+There are clear connections between UniFrac and phylogenetic diversity explored by \citet{faith2009cladistic}, who point out related measures in Faith's earlier work.
+
 The most common way to use a distance matrix obtained from applying UniFrac to all pairs of samples is to apply an ordination method such as principal coordinates analysis.
 Indeed, the separation of two communities in a principal components plot is often used as \emph{prima facie} evidence of a difference between them
 \citep[e.g.][]{lozupone2007global,costello2009bacterial,yatsunenko2012human}, while the lack of such a difference is interpreted as showing that the communities are not different overall.
@@ -377,7 +377,7 @@ Indeed, the separation of two communities in a principal components plot is ofte
     For this, each probability distribution is considered as a configuration of dirt piles on the tree, and the distance between two such dirt pile configurations is defined to be the minimum amount of physical ``work'' required to move the dirt in one configuration to the other.
 }
 \forarxiv{
-\begin{wrapfigure}[14]{l}{1.2in}
+\begin{wrapfigure}[24]{l}{1.5in}
   % \capstart
   \vspace{-17pt}
   \begin{center}
