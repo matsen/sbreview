@@ -107,7 +107,7 @@ I made this more specific.
 > Indeed "distinguish between two rather different samples" is a modest
 > goal
 
-Indeed, but it's not immediately obvious what level of sequencing depth
+Agreed, but it's not immediately obvious what level of sequencing depth
 is needed even in that situation.
 
 > Actually, it's not clear in this subsection what is meant by
@@ -544,6 +544,9 @@ I suppose I don't differentiate between the two.
 > human microbiome is the collection of microbial organisms that live
 > inside of and on the surface of humans.") does not seem to be
 > accurate. Please clarify.
+
+I have changed the definitions along the lines you suggest and have
+provided an introduction to the terminology.
 
 > 2. In the section introducing the human microbiome, I think that a
 > paragraph on the origin and the way in which the microbiome is
