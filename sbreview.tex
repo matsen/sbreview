@@ -118,7 +118,7 @@ Although there is some overlap with previous literature, these techniques could 
 
 The human-associated microbial assemblage is specifically interesting because questions of microbial genomics, translated into questions of function, have important consequences for human health.
 Additionally, due to more than a century of hospital laboratory work, our knowledge about human-associated microbes is relatively rich.
-This collection of microbes living inside and on top of us is called the \textit{human microbiota}, and the ensemble of genes in those microbes is called the \textit{human microbiome}, although usage of these terms varies \citep{Boon2013-mc}.
+This collection of microbes living inside and on our surfaces is called the \textit{human microbiota}, and the ensemble of genetic information in those microbes is called the \textit{human microbiome}, although usage of these terms varies \citep{Boon2013-mc}.
 
 In this review I will describe phylogenetics-related research happening in microbial ecology and contrast approaches between microbial researchers and what I think of as the typical \emph{Systematic Biology} audience.
 Despite an obvious oversimplification, I will use \textit{eukaryotic phylogenetics} to indicate what I think of as the mainstream of SB readership, and \textit{microbial phylogenetics} to denote the other.
@@ -133,7 +133,7 @@ The human microbiota is the collection of microbial organisms that live inside o
 These organisms are populous: it has been estimated that there are ten times as many bacteria associated with each individual than there are human cells of that individual.
 The microbiota have remarkable metabolic potential, being an ensemble of genes estimated to be about 150 times larger than the human collection of genes \citep{qin2010human}.
 Much of our metabolic interaction with the outside world is mediated by our microbiota, as it has important roles in immune system development, nutrition, and drug metabolism \citep{kau2011human,maurice2013xenobiotics}; our food and drug intake in turn impacts the diversity of microbes present.
-Traditionally, our microbiota have been transmitted from mother to infant in the birth canal and by breastfeeding; immune dysfunction has been associated with the interruption of these practices \citep[reviewed in][]{funkhouser2013mom}.
+Traditionally, our microbiota have been transmitted from mother to infant in the birth canal and by breastfeeding; immune dysfunction has been associated with the disruption of these practices \citep[reviewed in][]{funkhouser2013mom}.
 In this section I will briefly review what is known about the human microbiota and its effect on our health.
 
 The human microbiota form an ecosystem.
@@ -210,7 +210,7 @@ It is possible to use metagenomic data as an expanded set of marker genes.
 That is, one can use 16S reads that appear in the metagenome as well as reads from other ``core" genes that are expected to follow the same evolutionary path and are present in a large proportion of micro-organisms.
 This is proven to be a useful strategy, and several groups have built databases of core gene families and provide programs and/or web tools to subset a metagenome to that core set of genes \citep{von2007quantitative,wu2008amphora,stark2010mltreemap,kembel2011phylogenetic,Darling2014-ux}.
 However, because of the variability of gene repertoire in microbes, this core gene set may be relatively small: even the largest collection of genes in these databases only recruits around 1 percent of a metagenome.
-At least some portion of the rest of the other approximately 99 percent of the metagenome can be taxonomically classified using a diversity of methods described below.
+At least some portion of the rest of the other approximately 99 percent of the metagenome can be taxonomically classified using one of the methods described below.
 
 Metagenomic data sets are often used to infer information about metabolism rather than phylogenetic nature \citep{greenblum2012metagenomic,abubucker2012metabolic}.
 Discussing these methods is beyond the scope of this paper, as is ``metatranscriptomics": the sequencing of mRNA in bulk.
@@ -228,8 +228,8 @@ The assembly of complete genomes from metagenomes, once limited to samples with 
 In this section I consider the ways in which phylogenetic methodology has impacted human microbiome research.
 What may be most interesting for the \textit{Systematic Biology} audience is the way in which phylogenetic trees are being used to actively revise taxonomy as well as being used as a structure on which to perform sample comparison.
 
-Before proceeding, we note that phylogenetics for microbes differs in some important respects from, say, mammal phylogenetics.
-Where the phylogenetics researchers for mammals are converging on one or two possible basic structures for the evolution of mammals, much of the deep history of microbes remains obscure.
+Before proceeding, we note that phylogenetics for microbes differs in some important respects from, say, mammalian phylogenetics.
+Where phylogenetic research on mammals is converging on one or two possible basic structures for their evolution, much of the deep history of microbes remains obscure.
 Inference of this history is complicated by the fact that any tree-like signal in the overall evolution of bacteria is restricted to a small set of so-called ``core'' genes \citep{bapteste2009prokaryotic,Leigh2011-zu,Lang2013-zt}.
 
 \subsection{Phylogenetics and taxonomy}
@@ -242,8 +242,10 @@ These attempts are less ambitious than the PhyloCode project \citep[to develop a
 % to preserve information associated with taxonomic classifications.
 Bergey's Manual of Systematic Bacteriology has officially adopted 16S as the basis for their taxonomy, although the actual revision process appears opaque \citep{kreig1984bergey}.
 The GreenGenes group \citep{desantis2006greengenes} has been very active in updating their taxonomy according to 16S, first with their GRUNT tool \citep{dalevi2007automated} and more recently with their tax2tree tool \citep{mcdonald2011improved}.
-Tax2tree uses a heuristic algorithm to reassign sequence taxonomic labels so that they are concordant with a given rooted phylogenetic tree as follows.
-The first step is to label the internal nodes of the tree to optimize the $F$-measure (the harmonic mean of precision and recall) across clades where the taxonomic label of a clade is thought of as a prediction for the descendant sequence taxonomic labels; the second step reassigns sequence taxonomic labels based on these clade taxonomic labels.
+Tax2tree uses a heuristic algorithm to reassign sequence taxonomic labels so that they are concordant with a given rooted phylogenetic tree which is annotated as follows.
+The first step is to label the internal nodes of the tree to optimize the $F$-measure (the harmonic mean of precision and recall) across clades.
+where the taxonomic label of a clade is thought of as a prediction for the descendant sequence taxonomic labels.
+The second step reassigns sequence taxonomic labels based on these clade taxonomic labels.
 Interestingly, tax2tree allows for polyphyletic taxonomic groups as allowance for either phylogenetic error, lack of resolution of the 16S gene or taxonomic groups with no evolutionary basis; the method does not attempt to signal the cause of such polyphyletic groups.
 \citet{matsen2012reconciling} developed algorithms to quantify discordance between phylogeny and taxonomy based on a coloring problem previously described in the computer science literature \citep{moran2008convex}.
 Although it is wonderful that several groups are actively working on taxonomic revision, it can be frustrating to have multiple different taxonomies with no easy way to translate between them or to the taxonomic names provided in the NCBI sequence database.
