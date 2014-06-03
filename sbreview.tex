@@ -188,7 +188,7 @@ Where Woese and colleagues labored over digestion and gel electrophoresis to inf
 This can be done with a high level of multiplexing, making an explicit trade-off between depth of sequencing for each specimen and the number of specimens able to be put on the sequencer at the same time.
 This has led to extensive parallelization, most recently by sequencing dozens of samples at a time on the Illumina instrument \citep{degnan2011illumina,caporaso2012ultra}.
 This brings up the question of how many sequences are needed to characterize the microbial diversity of a given environment.
-To distinguish between two rather different samples, relatively few sequences per sample are required \citep{kuczynski2010microbial} however to compare more similar samples deeper sequencing is required.
+To distinguish between two rather different samples, relatively few sequences per sample are required \citep{kuczynski2010microbial}, however, to compare more similar samples deeper sequencing is required.
 In addition to sequencing samples across individuals, this parallelization has also enabled sampling through time \citep[e.g.][]{caporaso2011moving}.
 
 Despite the high throughput and low cost of modern sequencing, inherent challenges remain for applications of marker gene sequencing to take a census of microbes.
@@ -283,7 +283,7 @@ Some methods proceed through a list of sequences and progressively add each eith
 \citet{Cai2011-bi} perform highly efficient clustering using a pseudometric based partition tree, which can be thought of as a hierarchical clustering tree with a fixed set of internal node heights.
 \citet{navlakha2009finding} take a semi-supervised approach in that input includes sequences along with a subset of sequences that are equipped with taxonomic classifications; the algorithm then groups all sequences (many in novel clusters) into clusters that have similar properties as the example taxonomic clusters.
 \citet{Wang2013-ol} optimize a criterion of cluster modularity.
-\citet{hao2011clustering} use a Gaussian mixture model formulation for clustering to avoid fixed cutoff values, and \citet{CWC12} use a two step process, first with a Dirichlet multinomial mixtures on 3-mer profiles, and then a minimum description length criterion.
+\citet{hao2011clustering} use a Gaussian mixture model formulation for clustering to avoid fixed cutoff values, and \citet{CWC12} use a two step process, first with a Dirichlet multinomial mixture on 4-mer profiles, and then a minimum description length criterion.
 \citet{Zhang2013-wh} have developed a phylogenetic means to do species delimitation that scales to a relatively large number of sequencing reads and so can be used as an OTU clustering method.
 
 The centrality of the OTU concept can be seen by the fact that the by-sample table of OTU observations (i.e.\ the matrix of counts with rows representing samples and columns representing OTUs) is considered to be the fundamental data type for 16S studies \citep{mcdonald2012biological}, or that methods have been devised to find OTUs from non-overlapping sequences \citep{sharpton2011phylotu}.
@@ -298,7 +298,7 @@ For example, the most commonly used index is the Simpson index \citep{simpson194
 The drawback of applying such a diversity metric to a collection of OTUs is that the large-scale structure of the diversity is lost, such that two closely related OTUs contribute as much to the diversity measure as two distant ones.
 % \citep{hill1973diversity} Diversity and evenness: a unifying notation and its consequences
 Phylogenetic diversity metrics, which do take this overall diversity structure into account, are also used.
-However, whereas just about every of the hundreds or thousands of 16S surveys applies an OTU-based alpha diversity estimate, only a few involve PD.
+However, whereas just about every one of the hundreds or thousands of 16S surveys applies an OTU-based alpha diversity estimate, only a few involve PD.
 
 \newcommand{\pdLegend}{
     Unweighted phylogenetic diversity (PD, left) and an abundance-weighted PD measure (right), where taxa present in a sample are shown as blue circles and abundances are shown as the size of the circles.
@@ -493,7 +493,7 @@ In this review I have devoted considerable space to the ways in which microbial 
 They have even shown that 16S distance recapitulates gene content divergence and used this correlation to predict gene functions.
 It is well known, however, that any single tree will not give a complete representation of the evolutionary history of a collection of microbes.
 
-The apparent success of 16S-tree-based comparisons begs the question of if a more complete representation of the evolutionary history of the microbes would yield better comparisons.
+The apparent success of 16S-tree-based comparisons raises the question of if a more complete representation of the evolutionary history of the microbes would yield better comparisons.
 This suggests a practical perspective on the theoretical issue of the tree of life: what is the representation of the genetic ancestry of a set of microbes that allows us to best perform proxy whole-genome comparison?
 This representation could be simple.
 For example, one of the results of \citet{zaneveld2010ribosomal} is that 16S correlates better with gene repertoire in some taxonomic groups than others.

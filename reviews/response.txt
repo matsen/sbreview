@@ -1,3 +1,5 @@
+Editor
+------
 
 > 1) Pg. 3: “It absolutely requires molecular methods because microbes are now primarily identified by their molecular sequences, which is much more straightforward to do in high throughput than morphological or phenotypic characterization” – This suggests that molecular sequences have traditionally been characterized via morphological or phenotypic means. I suppose that’s indirectly true, but I don’t think it is the best way to describe it.
 
@@ -5,11 +7,17 @@
 
 > 3) Pg. 14: “first with a Dirichlet multinomial mixtures on 3-mer profiles” – Should this just be “mixture”?
 
+Right! Thanks.
+
 > 4) Pg. 15: “However, whereas just about every of the hundreds or thousands of 16S surveys applies an OTU-based alpha diversity estimate” – This requires some modification.  Maybe add “one” after “every”.
+
+Done, thanks.
 
 > 5) Pg. 16: “PD under random sub-sampling, which is often applied to enable comparison be- tween samples of different sequencing depths and called “rarefaction curves.”” – Would it be preferable to write that the random subsamples are described (or depicted) with rarefaction curves?
 
 > 6) Pg. 23: “The apparent success of 16S-tree-based comparisons begs the question of if a more complete representation of the evolutionary history…” – “Begging the question” means something else in philosophical circles. You should probably just use “raises the question” here.
+
+I didn't know that! Thank you.
 
 Your revision must comply with our instructions to authors (in this letter, with additional instructions at http://www.oxfordjournals.org/our_journals/sysbio/for_authors). This applies even if your original submission deviated from Systematic Biology style and corrections were not included in the notes from the editors or reviewers. Therefore, READ AND APPLY OUR INSTRUCTIONS BEFORE SUBMITTING A REVISION. Failure to do so will result in significantly delayed processing of your paper. If anything remains unclear after reading the instructions, use recent issues of the journal to find examples. If necessary, feel free to contact the Managing Editor at sysbio.editorialoffice@oup.com for help.
 
@@ -47,6 +55,8 @@ AE
 > 3).
 
 > 9 (Kuczynski et al. 2010). However
+
+Thanks. I've added commas.
 
 > P12 “Several groups are continually revising taxonomy...” and P13 “An
 > obvious application of phylogenetics is to perform taxonomic
