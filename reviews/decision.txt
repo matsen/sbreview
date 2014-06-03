@@ -1,37 +1,26 @@
-
-
-28 January 2014
+1 June 2014
 
 Dear Dr. Matsen:
 
-Decision on USYB-2013-214, Phylogenetics and the human microbiome:
+Decision on USYB-2013-214.R1, Phylogenetics and the human microbiome:
 
-Accept pending major revisions.
+Accept pending minor revisions.
 
-Thank you for your Systematic Biology submission. It has been reviewed by Associate Editor Prof. Olivier Gascuel and three reviewers. Their comments are listed at the end of this letter. The reviewers and the AE provide some excellent constructive suggestions that I am sure you will appreciate.
+Thank you for the revision of your Systematic Biology submission. It has been reviewed by Associate Editor Prof. Olivier Gascuel and three reviewers. Their comments are listed at the end of this letter. The reviewers and the AE provide some excellent constructive suggestions that I am sure you will appreciate.
 
-I have little to add that wasnít covered by one or more reviewers or Olivier in their fine reviews. As an instructor who has almost given up on trying to convince microbiology graduate students that they can do better analyses than neighbor joining, I was already sensitive to some of these differences, but this review helped me appreciate the interface between the two disciplines. I agree with Mooers that the level of detail varies across the manuscript, but I mainly noticed when a topic was summarized quickly and I didnít really understand it (I note that Mooers and I both had a question about how tax2tree works).
+I have little to add to the comments of the AE and reviewers other than a few minor editorial issues. I think this is a nice review that will be of interest to both microbiome researchers and phylogeneticists who are curious about how microbiomes are being studied.
 
-I have a few comments and questions that may help clarify some of the writing. Altogether, I think the manuscript really requires only several minor revisions.
+1) Pg. 3: ‚ÄúIt absolutely requires molecular methods because microbes are now primarily identified by their molecular sequences, which is much more straightforward to do in high throughput than morphological or phenotypic characterization‚Äù ‚Äì This suggests that molecular sequences have traditionally been characterized via morphological or phenotypic means. I suppose that‚Äôs indirectly true, but I don‚Äôt think it is the best way to describe it.
 
-Like Olivier, I note that some of my comments may overlap those of the reviewers.
+2) Pg. 10: ‚ÄúInference of this history is complicated by the fact that any tree-like signal in the overall evolution of bacteria is restricted to a small set of so-called ‚Äúcore‚Äù genes‚Äù ‚Äì Would it be more accurate to write that tree-like signal regarding the deep relationships of bacteria is restricted to a small set of so-called ‚Äúcore‚Äù genes?  I suspect all genes carry some tree-like signal, even in microbes, though some have been subject to much more lateral gene transfer than others.
 
-1) Pg. 9: ìAs described above ìmetagenomeî means that data is sheared randomly across the genome rather than amplified from a specific location,î ñ I assume you mean DNA is sheared randomlyÖ?
+3) Pg. 14: ‚Äúfirst with a Dirichlet multinomial mixtures on 3-mer profiles‚Äù ‚Äì Should this just be ‚Äúmixture‚Äù?
 
-2) Remember, ìdataî still is a plural noun, at least under my watch! Check for ìthis dataî, ìdata isî, ìdata wasî, etcÖ
+4) Pg. 15: ‚ÄúHowever, whereas just about every of the hundreds or thousands of 16S surveys applies an OTU-based alpha diversity estimate‚Äù ‚Äì This requires some modification.  Maybe add ‚Äúone‚Äù after ‚Äúevery‚Äù.
 
-3) Pg. 10: I donít really understand what ìtax2treeî does, based on the description here. Does that matter?
+5) Pg. 16: ‚ÄúPD under random sub-sampling, which is often applied to enable comparison be- tween samples of different sequencing depths and called ‚Äúrarefaction curves.‚Äù‚Äù ‚Äì Would it be preferable to write that the random subsamples are described (or depicted) with rarefaction curves?
 
-4) Pg. 14-15: I also donít really understand what UniFrac is or how it works, even after looking at Figure 2 (Olivier made a similar comment). Could we get some help here?
-
-5) The figures need a bit of work. There seems to be some sort of equation at the bottom of Figure 1, but I canít decipher it. What do the colors mean in Figure 2? I donít find this to be very clear.
-
-6) Pg. 20: ìHow to formulate a useful notion of independent contrasts
-(Felsenstein 1985) on such an object?î ñ Awkward wording.
-
-7) Pg. 23: I donít understand the distinction between ìbase observationsî and sample observations here. Can this be clarified?
-
-8) Pg. 24: ìFuture will continue to bring deeper sequencing on more samplesî ñ I guess this should be ìThe future will continueÖî?
+6) Pg. 23: ‚ÄúThe apparent success of 16S-tree-based comparisons begs the question of if a more complete representation of the evolutionary history‚Ä¶‚Äù ‚Äì ‚ÄúBegging the question‚Äù means something else in philosophical circles. You should probably just use ‚Äúraises the question‚Äù here.
 
 Please acknowledge (by email to sysbio.editorialoffice@oup.com) receipt of the reviews and give a probable time frame for the return of your revised manuscript. Your revision should be submitted as soon as possible. Any revision not received in a timely manner may have to be considered a new submission.
 
@@ -51,7 +40,7 @@ DO NOT submit your revision in .pdf format. This applies to the main text, table
 In the specific case of papers written using LaTeX, in addition to the .tex (and associated style, bib, or etc. files) please include a .pdf generated from those files. Upload the .pdf in the Manuscript Central category called Related Files.
 Figures must be uploaded separately, with each file name including the figure number. No figures may be imbedded in or tied to the .pdf or .tex files.
 
-After you've uploaded your revision, carefully view the Manuscript Central version to verify that all figures and other files display correctly, and that youíve followed all of our author instructions.
+After you've uploaded your revision, carefully view the Manuscript Central version to verify that all figures and other files display correctly, and that you‚Äôve followed all of our author instructions.
 
 Figures: Each figure must be submitted as an individual file. Make the numbering and lettering as large and clear as possible, without overlapping text. No figures may be imbedded in the document. Captions should not be placed on the figures. Figure portions should be referred to in the text and figure captions using lowercase letters. On the figures themselves, portions should be labeled by a lowercase letter followed by a single parenthesis (e.g., "a)"), located in the upper left area of the figure portion. Line thickness (including graph axes) should be a minimum stroke weight of 0.5pts, and 1.0pts is recommended for most lines. We prefer vector rather than bitmap figure formats. If desired, see http://systbio.org/?q=node/138 for an explanation of the difference. If bitmapped figures are necessary, they should be created at a minimum of 300 dpi (assuming the figure is about 8 inches wide). We accept a wide variety of figure formats as long as the figures are of sufficiently high resolution.
 
@@ -84,91 +73,49 @@ I think that your paper will be a valuable contribution to Systematic Biology on
 
 Sincerely,
 
-Prof. Frank (Andy) Anderson
+Dr. Frank (Andy) Anderson
 Editor-in-Chief, Systematic Biology
 feander@siu.edu
 
 Associate Editor: Prof. Olivier Gascuel
 Comments to author
-Recommendation #1: Accept with major revisions
+Recommendation #1: Accept with minor or no revisions
+
+Recommendation #2:
 Associate Editor: Gascuel, Olivier
 Comments to the Author:
 Dear Erick,
 
-Thanks for submitting your review paper ìPhylogenetics and the human microbiomeî for publication in the special online issue of Systematic Biology, after MCEB 2013. It has been reviewed by Alexis Stamatakis, Arne Mooers and Frederic Delsuc. They all found your manuscript quite interesting and well written, and I concur with this opinion. I believe that it reaches its target, to show the interplay between phylogenetics and today large-scale microbial studies, and to describe the challenges for phylogenetics coming from this domain. Two reviewers recommend publication with minor changes, and one with major revisions. My recommendation is acceptance pending minor to major changes. Actually, no change asked by the reviewers and me (see below) requires major efforts, but we all come from different origins, with different points of view and expectations, and thus summing all these demands will require a bit of time and attention. Basically, we all ask for more details and comments here and there, to make the paper more precise, comprehensive and self-contained. I am confident that youíll find our suggestions useful. I donít believe that the paper should be shortened in some places (or very locally), as suggested by Arne Mooers. When submitting your revision, please prepare a cover letter containing all the comments by the referees and me, with your changes/responses.
+Thanks for submitting the revised version of your review paper ‚ÄúPhylogenetics and the human microbiome‚Äù to Systematic Biology (special online issue, after MCEB2013). It has been read by the same three referees as the original submission: Alexis Stamatakis, an anonymous referee (2), and Fr√©d√©ric Delsuc. All three recommend acceptance with minor or no change. Actually, both of them (Alexis and Fred) recommend to publish the paper as is, and referee 2 has only minor comments on figure 2. I read the paper and reach the same conclusion. My (minor) comments are provided below. I believe that you have done a great job in putting all of these works and references together, in a very comprehensive way, with highly motivating perspectives for future research in phylogenetics. I‚Äôm thus happy to recommend acceptance with quite minor changes (mostly in figures 2 and 3).
 
-Thanks again, best wishes,
+Thanks again for your contribution, best wishes,
+
 Olivier
 
+Minor points:
 
-Specific comments, possibly redundant with those from the reviewers, using Systematic Biology page numbering:
+P9 (Kuczynski et al. 2010). However
 
-P4	these techniques AND could
+P12 ‚ÄúSeveral groups are continually revising taxonomy...‚Äù and P13 ‚ÄúAn obvious application of phylogenetics is to perform taxonomic classification...‚Äù We have here two long and technical paragraphs (e.g. F-measure, precision and recall, but what is classified and how?). You should check this again for clarity and to ensure self-contentedness.
 
-P8	(Kuczynski et al. 2010). However, for more subtle information
+P16 connecting taxa in the set (Faith 1992).
 
-P8	ìfor more subtle information deeper sequencing is requiredî : what do you have in mind here?
-Indeed ìdistinguish between two rather different samplesî is a modest goalÖ Actually, itís not clear in this subsection what is meant by ìMicrobial community estimationî (title of the subsection). What is the goal here? Identify and classify microbes? Measure their abundance? Etc.? A few lines and explanations should suffice.
+Fig 1 The "graphical formulae" [l(segments) A(segments)] at the bottom of the figure do not help. This can be better described by checking-improving the figure legend, notably "the abundance of the taxa on either side of the branch" (how is it computed? give an example if there are several options)
 
-P11	What is the level of uncertainty in current bacterial phylogenies? For example, one commonly considers that only a few unknowns remain in mammals phylogeny; what about bacteria? Are people discussing the details or the broad lines? Provide a few illustrative examples.
+Fig 2 Your two cases are extreme. Having one (or a few) shared (brown) edges in the right tree, and one unshared (blue or green branch) edge in the left tree would help. See also comments of referee 2.
 
-P13 	ìThere are many OTU inference methods with various speeds and strategiesî and the two following paragraphs. Describe in a simple way the basic principles of these methods, before discussing their relative merits (this remark may apply in other places).
-
-P14 	You describe PD and suggests that it should be used more often. But what are the standard alpha diversity measures, and their limitations?
-
-P15 	Are ìpartially abundance weighted diversity measuresî using some phylogenetic approaches? Be a bit more specific when describing and discussing methods. Here and in many other places (e.g. UniFrac, weighted PD, weighted UniFrac, etc.).
-
-P15 	ìEvans and Matsen (2012) showed that weighted UniFracÖî check sentence.
-
-P16 	explanations and Fig. 3 on earth-movers distance are unclear to me.
-
-P17 	ìBy doing so they have recovered more novel protein families than they would have using methods organized by taxonomyî. Iím lost here, as it is said just above that they have derived a ìphylogeny-driven genomic encyclopedia of Bacteria and Archaeaî.
-
-P23-24 Paragraph ìIn the same veinÖ This would be a false positive.î is unclear to me.
-
-P24 Check ìThe presently used approach is rarefaction, which means uniform sub-sampling, typically without replacement to the number of reads in the lowest abundance sampleî
-
-P25 Check ìComparative studies will continue to investigate what shapes and is shaped by the microbiomeî
-
-P26 ìduring the 2013 LIRMM Mathematical and Computational Evolutionary Biology workshopî, change LIRMM into MCEB 
-
-Fig 2. It took time to me to understand and check on the Web that the tree must be rooted, to compute the unifrac distance. This is one example, among others, that more details are required when describing methods, criteria, measures, etc. Some more figures could help, or one appendix with formal definitions of the main concepts and tools. At least, details and explanations have to be added in the main text.
-
-Your reference list is extremely long, mostly due to the fact that you are citing papers with a lot of authors. Check Syst Biol recommendation to authors (I assume that our editorial office will answer and help).
+Fig 3 and its legend, as well as the corresponding text P17-18 are quite unclear to me.... It would be interesting to have more explanations, both on the math side and on the application to sequence reads.
 
 Reviewer(s)' comments to author:
+
 Reviewer: 1
 
 Recommendation: Accept with minor or no revisions
 
 Comments:
-This is a well written and in depth review on the usage of phylogenetics in human microbiome research, which I enjoyed reading. 
+The author has addressed all of my minor suggestions for revision and has also fully addressed the suggestions made by the other reviewers.
 
-I only have a few minor remarks:
-
-It might be a consideration to cite our recent paper:
-
-J. Zhang, P. Kapli, P. Pavlidis, A. Stamatakis: "A General Species Delimitation Method with Applications to Phylogenetic Placements". In Bioinformatics (2013), 29 (22): 2869-2876.
-
-It would fit will into section "The role of OTUs".
-
-Apart from that, I believe that a more critical and slightly extended discussion of taxonomic classifiers in the very last part of the paper should be included. From my point of view, this is still a mostly unresolved problem and the currently best classifier, which you may also want to cite,  still shows pretty horrible accuracy (http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0049334) at the genus and family level.
-
-I would also appreciate if you could explicitly mention the Gartner hype curve in the discussion part and provide an estimate as to where we are on this curve at present.
-
-Some typos: 
-
-page 5 lines 7-8 "these techniques and could be used" there seems to be a verb missing.
-
-page 14 lines 12 Here you may add our recent work on PTP, since it strives to conduct OTU clustering and phylogenetic inference in one single step/pipeline. 
-
-page 15 l 50: in "distance, is special" seems that it should read "distance, it is special" 
-
-page 20: lines 51-56: In fact we are currently developing a tool for automatic tree extension as described here. While not published yet, it is already available as open-source code at: http://sco.h-its.org/exelixis/web/software/put/index.html
-
-Hope this helps.
-
-Alexis
+Thus, the paper should be published without any further revisions.
 
 Additional Questions:
 
@@ -184,79 +131,20 @@ Are the illustrations and tables clear and understandable?: Yes
 
 In number are they: Sufficient
 
-
 Reviewer: 2
 
-Recommendation: Accept with major revisions
+Recommendation: Accept with minor or no revisions
 
 Comments:
-This was an interesting manuscript to read, and I compliment whoever thought to review Human Microbiome Research (HMR) for the SB readership. Overall, there is a lot of very interesting work reported on here, though I found the level of detail to be a bit uneven: sometimes we are told perhaps too much, and often, what feels like too little, in order to make the connections between HMR and SB. There is also seems to be some elision between HMR research and metagenomics more generally. That isn't a bad thing, but one does sometimes forget that we are focussed on HMR.
+As noted in my first review, I like the idea of this manuscript,and much of the content.  The revised version is very close to the first version, so I assume the author is happy with it.  I certainly appreciated the diff.pdf.
 
-Numbers refer to the SB manuscript pagination, rather than to the original latex.
+I am still not clear how the author chooses what needs technical discussion and what does not, and more technical detail has been added to this version.  However other, perhaps more technically-inclined reviewers, did not really pick this up, so, in the interests of efficiency, I won't belabour the point. The author must have a clear view who the intended audience is.
 
-4-45 additional to
-5-8 delete and
-7-23 delete though
-
-The section "The Human Microbiome" is quite detailed (discussing mouse to human transplants wrt obesity, etc.). Given the intense media reporting of the work coming from this area, SB readers may not need to be primed of the importance of this field. If this were shortened, there could be room to expand some of the technical bits that SB readers will want that follow. The last part of the section  - about sticking to eubacteria and a non-molecular biology approach do seem germane.
-
-8-12. these data (I guess we will eventually decide that data is singular ñ up to the editors)
-
-8-37++ Whereas Woese ++ This is a bit wordy and unnecessary ñ we know that Woese didn't have PCRÖ
-10-30 Which "databases" ? ñ this has been written so far as if it were being applied to samples, not databases. I am not clear what the unit of observation is here.
-
-10-32 We quickly switch here from easy background (nonPCR random sequencing) to something brand new (at least to me). "At least some portion of the rest of the data can be taxonomically classified (methods reviewed by Mande et al. 2012); Treangen et al. (2013) report speedups and much higher accuracy when reads are assembled before they are classified."
-"Rest of data" refers to what ñ reads found in a database, or reads from a sample? "Accuracy" refers to what? "Speed-ups" refer to what?
-
-11-53. Here is the first real point of contact between phylogenetics and HMR. But what is an "F-measure of precision and recall" ñ there is no citation.
-
-12-28 and 12-32. What is the measure of performance that this refers to? How do we decide if a method performs well?
-
-12-29. Do readers of SB now what "k-mer composition" is? Is it k-means clustering?
-
-12-37++. Is the MEGAN approach compositional or phylogenetic? I believe it is meant to be a hybrid approach (BLAST being compositional, but the taxonomic labeling considered phylogenetic), but this could be clarified.
-
-13-29. It is not clear what heuristics are required for a cut-off method. The author says that he is going to describe the OTU inference industry, but the paragraph is really just a list of acronyms, and then refers obliquely to a "contingency table" of OTU observations. So, for example, what is a notion of goodness of clustering that the heuristics are trying to achieve? What are the sorts of species divisions found in taxonomies? This is an area where more would be helpful ñ and where a shorter introduction might offer space.
-
-14-40. Whereas just about every 16S survey investigation involves an OTU-based alpha diversity estimate, only a few involve PD: unweighted PD has been applied to some 16S survey data (Lozupone and Knight 2007; Costello et al. 2009) and to metagenomic reads in a set of marker genes (Kembel et al. 2011) - This is an odd pair of sentences: is the L&K the only study that used unweighted PD? If so, in what context? 
-
-14-46. Check this sentence ñ perhaps start with "While Öare commonly used, abundance weighted PD measures are not.
-
-15-30. Perhaps "In contrast to measures of alpha diversity, measures of beta diversity do make use of phylogeneticsÖ"  This is actually an interesting contrast. Is this just historical contingency, or is there a logical reason why the two areas disagree on the use of phylogenetic information?
-
-
-15-xx. This seems a strong point of contact between metazoan phylogenetics and the microbiome folks. UniFrac is clearly described on its own terms, except perhaps where I would have written "with the fraction of edges connecting samples that are common to two samples" rather than "edges that connect between samples" (which doesn't strictly make sense). I believe there is the same measure of beta-diversity in the community-phylogenetics literature? What is the closest analogue? 
-
-15-49Ö55. The description of Evans and Matsen seems a bit detailed in the context ñ 
-
-16-16. This requires another sentence of explanation. From this reading, the Unifrac method offers a single distance between a pair of samples (a ratio of two numbers of edges), rather than a matrix. 
-
-16-42..51. This is a short paragraph that would seem to explicitly link HMR and SB. Why is it so telegraphic?
-
-17-45. This seems an odd heading for this section, which seems to be about horizontal gene transfer. Given the amount of technical detail elsewhere, why are we not told how horizontal gene transfer is inferred in these HMR studies?
-
-Phylogenetic inference. I found this survey very useful. Is there a reason this is not an earlier section of the paper, given these are the trees upon which many of the comparisons referred to in previous sections are based? 
-
-19-24. "which has ported in theÖ" Is this the correct structure?
-
-20-50. "different parameter regimes" ñ this phrase is used several times in this review. What does it mean here? When would we prefer to add sequences to a fixed tree rather than re-infer the totality? Is there an analogous situation in SB ñ i.e. is there something SB can learn from HMR here?
-
-I found the challenges section to be rich and well-written, with questions that will resonate with the SB community ñ e.g. the discussion of the proxy problem (how edge lengths predict feature diversity). The fact that 16S distance does predict whole genome distance is highlighted here ñ it is presented in previous sections, but perhaps it could be given more prominence there, given its prominence here. This is a general problem.
-
-22-10. "Microbial ecologyÖ" Perhaps "and explicitly for human microbial ecologyÖ" to remind us that HMR is the focus here?
-
-23-23. "Whole organism approach"  Will this approach be known to SB readers? I cannot imagine what is being done here.
-
-25-31. "At least for the next several years we can expect more related work." What does this mean? Related to what has been reported above?
-
-25-32. The futureÖ
-
-I found the final sentence to leave us dangling. After having reviewed this manuscript, I could not say exactly where the intersection of SB and HMR will be most fruitful for HMR, nor what in HMR might be fruitful for SB. The conclusion seems to suggest that phylogenetics would not be used in diagnostics, for example. Will it be important in primary research then? In constructing the taxonomies the diagnostics may require? Finally, the abstract says the review ends by describing "the current challenges to phylogenetics coming from this type of work."  My reading of the relevant sections is that there is more discussion of challenges to phylogenetic HMR research (sampling biases, robustness of UniFrac to incorrect tree reconstruction) than to phylogenetics per se. The discussion of how to update known trees with new sequences is an exception.
-
+I will say that, while figure 2 does a fairly good job of illustrating the critical UniFrac method (though the common brown internal edges could be named explicitly in the caption), the definition in the text does not: "The name UniFrac is a contraction of ‚ÄúUnique Fraction,‚Äù which refers to the fact that the original UniFrac definition compares the fraction of edges that connect only tips from one sample via the shortest path rather than edges that connect between samples (Fig. 2; Lozupone and Knight 2005)" makes very little sense to me, particularly "edges between samples". Could this be reworded in a more intuitive way that refers explicitly to the tree(s) being inferred and the tips used to infer the trees?  So, for instance, does one infer one tree per sample and then one tree of all samples?
 
 Additional Questions:
 
-Do you wish to remain anonymous?: No
+Do you wish to remain anonymous?: Yes
 
 How significant is this work?: Moderately
 
@@ -268,34 +156,12 @@ Are the illustrations and tables clear and understandable?: Yes
 
 In number are they: Sufficient
 
-
 Reviewer: 3
 
 Recommendation: Accept with minor or no revisions
 
 Comments:
-General comments:
-This manuscript presents a review of how phylogenetic tree-thinking and methodology is currently used in the study of the human microbiome. The author not only reviews the different ways by which phylogenetics is currently percolated into microbial ecology, but also gives his personal views on the future phylogenetic challenges associated with microbiome studies, and insists on the crucial role that molecular phylogeneticists has to play in this quickly expanding field. Overall, I enjoyed reading this particularly timely manuscript, which I find well written. I only have minor comments/suggestions for potential improvement.
-
-Specific comments:
-1. I think that it should be made clear, from the very beginning of the introduction, the definition of the microbiome in order to avoid confusion. Indeed, in the current literature, ìmicrobiotaî (i.e. the collection of microbes living in association with a given organism) and ìmicrobiomeî (i.e. the collection of genomes of those microbes) are more and more often used interchangeably, even though they are not referring to the same organizational level. In that sense, the definition of the ìhuman microbiomeî given at the top of page 5 (ìThe human microbiome is the collection of microbial organisms that live inside of and on the surface of humans.î) does not seem to be accurate. Please clarify.
-2. In the section introducing the human microbiome, I think that a paragraph on the origin and the way in which the microbiome is transmitted vertically between the mother and infant is lacking. The recent review on maternal transmission by Funkhouser and Bordenstein 2013 is cited later, but it would be nice to mention it on page 5, especially in the context of the some examples on the impact of birth method (vaginal birth vs. cesarean delivery) on future health of newborns.
-3. On page 6, lines 26-27, it might be worth citing also the recent paper by Findley et al. (doi:10.1038/nature12171) on the topography of fungal and bacterial on human skin.
-4. On page 6, line 56, maybe also specify that ìsurveyî is the equivalent of barcoding, a term with which the Systematic Biologyís community is more familiar.
-5. On page 14, lines 14-19, maybe mention the widespread use of ìrarefaction curvesî to enable the comparison between samples of different sequencing depth or methods (e.g. 454 vs. Illumina).
-6. On page 17, lines 54-55, please add some recent references on the current debate around the rooting of the placental tree. I donít think that most readers of Syst. Biol. will be familiar with this discussion.
-7. On page 18, lines 26-27, RAxML is also implemented in QIIME.
-8. On page 20, I think that this might be the place to discuss the potential use of phylogenetic networks in microbiome research (see Parks and Beiko 2012 Mol Biol Evol).
-9. On page 24, when citing uBiome, it might also be fair to refer the similar crowd-funded American Gut Project.
-
-Typos:
-P3, L40: I would rather use ìspecies delimitationî instead of ìspecies definitionî.
-P4, L9: ìThese techniques and could be usedî
-P6, L32: ìwe will be primarily be describingî
-P9, L29, L30: Maybe replace ìdiversityî by ìvariabilityî
-P18, L32: ìa long history as a means to sequentially buildî
-P19, L16: ìGreenGenes 13_5 alignment has is almost 80% gapsî
-
+I went through both the revised manuscript and the author‚Äôs response letter. I think that the author has made significant efforts to address all editorial and referee comments, including my own concerns. I would therefore recommend the acceptation of the revised manuscript basically as is.
 
 Additional Questions:
 

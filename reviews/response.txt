@@ -1,628 +1,117 @@
-> Reviews from Prof. Frank (Andy) Anderson
-> ----------------------------------------
 
-> Thank you for your Systematic Biology submission. It has been reviewed
-> by Associate Editor Prof. Olivier Gascuel and three reviewers. Their
-> comments are listed at the end of this letter. The reviewers and the
-> AE provide some excellent constructive suggestions that I am sure you
-> will appreciate.
+> 1) Pg. 3: “It absolutely requires molecular methods because microbes are now primarily identified by their molecular sequences, which is much more straightforward to do in high throughput than morphological or phenotypic characterization” – This suggests that molecular sequences have traditionally been characterized via morphological or phenotypic means. I suppose that’s indirectly true, but I don’t think it is the best way to describe it.
 
-> I have little to add that wasn't covered by one or more reviewers or
-> Olivier in their fine reviews. As an instructor who has almost given
-> up on trying to convince microbiology graduate students that they can
-> do better analyses than neighbor joining, I was already sensitive to
-> some of these differences, but this review helped me appreciate the
-> interface between the two disciplines. I agree with Mooers that the
-> level of detail varies across the manuscript, but I mainly noticed
-> when a topic was summarized quickly and I didn't really understand it
-> (I note that Mooers and I both had a question about how tax2tree
-> works).
+> 2) Pg. 10: “Inference of this history is complicated by the fact that any tree-like signal in the overall evolution of bacteria is restricted to a small set of so-called “core” genes” – Would it be more accurate to write that tree-like signal regarding the deep relationships of bacteria is restricted to a small set of so-called “core” genes?  I suspect all genes carry some tree-like signal, even in microbes, though some have been subject to much more lateral gene transfer than others.
 
-> I have a few comments and questions that may help clarify some of the
-> writing. Altogether, I think the manuscript really requires only
-> several minor revisions.
+> 3) Pg. 14: “first with a Dirichlet multinomial mixtures on 3-mer profiles” – Should this just be “mixture”?
 
-> Like Olivier, I note that some of my comments may overlap those of the
-> reviewers.
+> 4) Pg. 15: “However, whereas just about every of the hundreds or thousands of 16S surveys applies an OTU-based alpha diversity estimate” – This requires some modification.  Maybe add “one” after “every”.
 
-> 1) Pg. 9: "As described above "metagenome" means that data is sheared
-> randomly across the genome rather than amplified from a specific
-> location," - I assume you mean DNA is sheared randomly?
+> 5) Pg. 16: “PD under random sub-sampling, which is often applied to enable comparison be- tween samples of different sequencing depths and called “rarefaction curves.”” – Would it be preferable to write that the random subsamples are described (or depicted) with rarefaction curves?
 
-Yes, thanks.
+> 6) Pg. 23: “The apparent success of 16S-tree-based comparisons begs the question of if a more complete representation of the evolutionary history…” – “Begging the question” means something else in philosophical circles. You should probably just use “raises the question” here.
 
-> 2) Remember, "data" still is a plural noun, at least under my watch!
-> Check for "this data", "data is", "data was", etc
+Your revision must comply with our instructions to authors (in this letter, with additional instructions at http://www.oxfordjournals.org/our_journals/sysbio/for_authors). This applies even if your original submission deviated from Systematic Biology style and corrections were not included in the notes from the editors or reviewers. Therefore, READ AND APPLY OUR INSTRUCTIONS BEFORE SUBMITTING A REVISION. Failure to do so will result in significantly delayed processing of your paper. If anything remains unclear after reading the instructions, use recent issues of the journal to find examples. If necessary, feel free to contact the Managing Editor at sysbio.editorialoffice@oup.com for help.
 
-Searched and replaced. Thanks!
+After you've uploaded your revision, carefully view the Manuscript Central version to verify that all figures and other files display correctly, and that you’ve followed all of our author instructions.
 
-> 3) Pg. 10: I don't really understand what "tax2tree" does, based on
-> the description here. Does that matter?
+The cost of printed color figures is $600 each. Authors are normally expected to cover this cost, but we do have limited funds available for authors who are SSB members, and cannot pay the full amount. If you feel your circumstances create an unusual financial need, please explain in your cover letter. The maximum allowance is one color figure per paper.
+All color costs can be avoided if you decide to have the figures printed in black and white, but be shown in color in the online version of the paper. If you do this, the captions must be worded such that they are appropriate for both situations (e.g., descriptions should not name colors), because the captions in print and online will be identical even if color is used online only. Do not submit two versions of any figure. Instead, make sure the color figure is also easily legible in grayscale, then submit only the color version. In your cover letter, please make your intentions regarding the use of color clear.
 
-I have improved the description, with an overview sentence for those who
-want to skip the details.
+Journal Covers: Please consider submitting a suggested cover image. They can be illustrations of theory, photos of organisms, a combination of the two, or alternatives. These can be uploaded with a revision of the manuscript or may be sent later. Only images for which you have copyright permission or that are not under copyright may be submitted. The color figure fee does not apply to images chosen by the Editor to be on the cover of the issue. If you have questions about possible cover designs, please email sysbio.editorialoffice@oup.com. We encourage and greatly appreciate cover image suggestions.
 
-> 4) Pg. 14-15: I also don't really understand what UniFrac is or how it
-> works, even after looking at Figure 2 (Olivier made a similar
-> comment). Could we get some help here?
+Make sure all section headings conform to Systematic Biology style for first, second and third levels. Use of incorrect styles is potentially confusing and, in any case, is likely to delay processing of the manuscript.
 
-I have much improved the caption for Figure 2. I think it should be
-clear now.
+Tables should have a single-sentence informative title above the table, with any other descriptive information located below the table in the form of notes and/or specific footnotes.
 
-> 5) The figures need a bit of work. There seems to be some sort of
-> equation at the bottom of Figure 1, but I can't decipher it. What do
-> the colors mean in Figure 2? I don't find this to be very clear.
+When references are grouped together in parentheses in the text, they should be listed in ascending chronological order. Multiple references in a single year should be alphabetized.
 
-I have made a connection between the figure and the caption via the
-mathematical notation used. For Figure 2, I have greatly expanded the
-caption to describe colors.
+All funding used for this work should be listed in a "Funding" section preceding the Acknowledgements. Please give the full official name of each funding body.
 
-> 6) Pg. 20: "How to formulate a useful notion of independent contrasts
-> (Felsenstein 1985) on such an object?" - Awkward wording.
+AE
+--
 
-I have changed this to "How might one formulate a useful notion of
-independent contrasts (Felsenstein 1985) on such an object?" I hope
-that's better.
+> Thanks for submitting the revised version of your review paper
+> “Phylogenetics and the human microbiome” to Systematic Biology
+> (special online issue, after MCEB2013). It has been read by the same
+> three referees as the original submission: Alexis Stamatakis, an
+> anonymous referee (2), and Frédéric Delsuc. All three recommend
+> acceptance with minor or no change. Actually, both of them (Alexis and
+> Fred) recommend to publish the paper as is, and referee 2 has only
+> minor comments on figure 2. I read the paper and reach the same
+> conclusion. My (minor) comments are provided below. I believe that you
+> have done a great job in putting all of these works and references
+> together, in a very comprehensive way, with highly motivating
+> perspectives for future research in phylogenetics. I’m thus happy to
+> recommend acceptance with quite minor changes (mostly in figures 2 and
+> 3).
 
-> 7) Pg. 23: I don't understand the distinction between "base
-> observations" and sample observations here. Can this be clarified?
+> 9 (Kuczynski et al. 2010). However
 
-I have rewritten this with a little notation, thanks.
+> P12 “Several groups are continually revising taxonomy...” and P13 “An
+> obvious application of phylogenetics is to perform taxonomic
+> classification...” We have here two long and technical paragraphs
+> (e.g. F-measure, precision and recall, but what is classified and
+> how?). You should check this again for clarity and to ensure
+> self-contentedness.
 
-> 8) Pg. 24: "Future will continue to bring deeper sequencing on more
-> samples" - I guess this should be "The future will continue"?
+> P16 connecting taxa in the set (Faith 1992).
 
-Thanks.
+> Fig 1 The "graphical formulae" [l(segments) A(segments)] at the bottom
+> of the figure do not help. This can be better described by
+> checking-improving the figure legend, notably "the abundance of the
+> taxa on either side of the branch" (how is it computed? give an
+> example if there are several options)
 
+> Fig 2 Your two cases are extreme. Having one (or a few) shared (brown)
+> edges in the right tree, and one unshared (blue or green branch) edge
+> in the left tree would help. See also comments of referee 2.
 
-AE, Olivier Gascuel
--------------------
+> Fig 3 and its legend, as well as the corresponding text P17-18 are
+> quite unclear to me.... It would be interesting to have more
+> explanations, both on the math side and on the application to sequence
+> reads.
 
-> My recommendation is acceptance pending minor to major changes.
-> Actually, no change asked by the reviewers and me (see below) requires
-> major efforts, but we all come from different origins, with different
-> points of view and expectations, and thus summing all these demands
-> will require a bit of time and attention. Basically, we all ask for
-> more details and comments here and there, to make the paper more
-> precise, comprehensive and self-contained. I am confident that you'll
-> find our suggestions useful. I don't believe that the paper should be
-> shortened in some places (or very locally), as suggested by Arne
-> Mooers. When submitting your revision, please prepare a cover letter
-> containing all the comments by the referees and me, with your
-> changes/responses.
 
-> Specific comments, possibly redundant with those from the reviewers,
-> using Systematic Biology page numbering:
+Reviewer: 1
+-----------
 
-> P4	these techniques AND could
+> The author has addressed all of my minor suggestions for revision and
+> has also fully addressed the suggestions made by the other reviewers.
 
-Thanks!
+Reviewer: 2
+-----------
 
-> P8	(Kuczynski et al. 2010). However, for more subtle information
-> P8	"for more subtle information deeper sequencing is required" :
-> what do you have in mind here?
+> As noted in my first review, I like the idea of this manuscript,and
+> much of the content.  The revised version is very close to the first
+> version, so I assume the author is happy with it.  I certainly
+> appreciated the diff.pdf.
 
-I made this more specific.
+> I am still not clear how the author chooses what needs technical
+> discussion and what does not, and more technical detail has been added
+> to this version.  However other, perhaps more technically-inclined
+> reviewers, did not really pick this up, so, in the interests of
+> efficiency, I won't belabour the point. The author must have a clear
+> view who the intended audience is.
 
-> Indeed "distinguish between two rather different samples" is a modest
-> goal
-
-Agreed, but it's not immediately obvious what level of sequencing depth
-is needed even in that situation.
-
-> Actually, it's not clear in this subsection what is meant by
-> "Microbial community estimation" (title of the subsection). What is
-> the goal here? Identify and classify microbes? Measure their
-> abundance? Etc.? A few lines and explanations should suffice.
-
-I have revised the heading as well as separated out a paragraph
-describing terminology and the goal.
-
-> P11	What is the level of uncertainty in current bacterial
-> phylogenies? For example, one commonly considers that only a few
-> unknowns remain in mammals phylogeny; what about bacteria? Are people
-> discussing the details or the broad lines? Provide a few illustrative
-> examples.
-
-A great suggestion. I have added material at the beginning of the
-"Tree-thinking in human microbiome research" section. I don't think that
-examples are too productive here because people haven't gotten to that
-level of detail yet.
-
-> P13 	"There are many OTU inference methods with various speeds and
-> strategies" and the two following paragraphs. Describe in a simple way
-> the basic principles of these methods, before discussing their
-> relative merits (this remark may apply in other places).
-
-Given the diversity of OTU methodologies, it's not easy to generalize
-about their operation. However, I have added a paragraph explaining what
-it is that OTU inference methods are trying to do. I hope that helps.
-
-> P14 	You describe PD and suggests that it should be used more often.
-> But what are the standard alpha diversity measures, and their
-> limitations?
-
-Thank you for this excellent suggestion.
-
-> P15 	Are "partially abundance weighted diversity measures" using some
-> phylogenetic approaches? Be a bit more specific when describing and
-> discussing methods. Here and in many other places (e.g. UniFrac,
-> weighted PD, weighted UniFrac, etc.).
-
-You are right. I hope my edits make this more clear.
-
-> P15 	"Evans and Matsen (2012) showed that weighted UniFrac" check
-> sentence.
-
-I've shortened and simplified this sentence.
-
-> P16 	explanations and Fig. 3 on earth-movers distance are unclear to
-> me.
-
-I have expanded the (previously insufficient) descriptions.
-
-> P17 	"By doing so they have recovered more novel protein families
-> than they would have using methods organized by taxonomy". I'm lost
-> here, as it is said just above that they have derived a
-> "phylogeny-driven genomic encyclopedia of Bacteria and Archaea".
-
-I've made that more specific now.
-
-> P23-24 Paragraph "In the same vein This would be a false positive." is
-> unclear to me.
-
-I've made the false positive part more specific.
-
-> P24 Check "The presently used approach is rarefaction, which means
-> uniform sub-sampling, typically without replacement to the number of
-> reads in the lowest abundance sample"
-
-Simplified, thanks.
-
-> P25 Check "Comparative studies will continue to investigate what
-> shapes and is shaped by the microbiome"
-
-I like this sentence.
-
-> P26 "during the 2013 LIRMM Mathematical and Computational Evolutionary
-> Biology workshop", change LIRMM into MCEB
-
-I have done so, so that the sentence reads "... 2013 MCEB Mathematical
-and Computational Evolutionary Biology workshop ..." is that right?
-
-> Fig 2. It took time to me to understand and check on the Web that the
-> tree must be rooted, to compute the unifrac distance. This is one
-> example, among others, that more details are required when describing
-> methods, criteria, measures, etc. Some more figures could help, or one
-> appendix with formal definitions of the main concepts and tools. At
-> least, details and explanations have to be added in the main text.
-
-> Your reference list is extremely long, mostly due to the fact that you
-> are citing papers with a lot of authors. Check Syst Biol
-> recommendation to authors (I assume that our editorial office will
-> answer and help).
-
-
-> Reviewer 1, Alexis Stamatakis
-> -----------------------------
-
-> Comments:
-> This is a well written and in depth review on the usage of
-> phylogenetics in human microbiome research, which I enjoyed reading.
-
-> I only have a few minor remarks:
-
-> It might be a consideration to cite our recent paper:
-
-> J. Zhang, P. Kapli, P. Pavlidis, A. Stamatakis: "A General Species
-> Delimitation Method with Applications to Phylogenetic Placements". In
-> Bioinformatics (2013), 29 (22): 2869-2876.
-> It would fit will into section "The role of OTUs".
-
-It's cited now.
-
-> Apart from that, I believe that a more critical and slightly extended
-> discussion of taxonomic classifiers in the very last part of the paper
-> should be included. From my point of view, this is still a mostly
-> unresolved problem and the currently best classifier, which you may
-> also want to cite,  still shows pretty horrible accuracy
-> (http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0049334)
-> at the genus and family level.
-
-Given that taxonomic classification is not always a phylogenetic
-problem, I don't think that it merits its own section. I have cited your
-suggestion and other recent progress in this field for readers who want
-to dig deeper.
-
-> I would also appreciate if you could explicitly mention the Gartner
-> hype curve in the discussion part and provide an estimate as to where
-> we are on this curve at present.
-
-I don't see how this would contribute to the scientific goals of the
-paper.
-
-> Some typos:
-
-> page 5 lines 7-8 "these techniques and could be used" there seems to
-> be a verb missing.
-
-Fixed, thanks.
-
-> page 14 lines 12 Here you may add our recent work on PTP, since it
-> strives to conduct OTU clustering and phylogenetic inference in one
-> single step/pipeline.
-
-Right, thanks.
-
-> page 15 l 50: in "distance, is special" seems that it should read
-> "distance, it is special"
-
-Thanks, I've rearranged here.
-
-> page 20: lines 51-56: In fact we are currently developing a tool for
-> automatic tree extension as described here. While not published yet,
-> it is already available as open-source code at:
-> http://sco.h-its.org/exelixis/web/software/put/index.html
-
-The paper has been published now and I now cite it. Thanks!
-
-
-> Reviewer 2, Arne Mooers
-> -----------------------
-
-> This was an interesting manuscript to read, and I compliment whoever
-> thought to review Human Microbiome Research (HMR) for the SB
-> readership. Overall, there is a lot of very interesting work reported
-> on here, though I found the level of detail to be a bit uneven:
-> sometimes we are told perhaps too much, and often, what feels like too
-> little, in order to make the connections between HMR and SB. There is
-> also seems to be some elision between HMR research and metagenomics
-> more generally. That isn't a bad thing, but one does sometimes forget
-> that we are focussed on HMR.
-
-> Numbers refer to the SB manuscript pagination, rather than to the
-> original latex.
-
-> 4-45 additional to
-
-I'm afraid I can't find to what you refer.
-
-> 5-8 delete and
-
-Fixed.
-
-> 7-23 delete though
-
-Nice catch!
-
-> The section "The Human Microbiome" is quite detailed (discussing mouse
-> to human transplants wrt obesity, etc.). Given the intense media
-> reporting of the work coming from this area, SB readers may not need
-> to be primed of the importance of this field. If this were shortened,
-> there could be room to expand some of the technical bits that SB
-> readers will want that follow. The last part of the section  - about
-> sticking to eubacteria and a non-molecular biology approach do seem
-> germane.
-
-The editors have stated that they are not concerned with this becoming
-too long, and I've been surprised that what seems like an absurdly big
-amount of media hype to me doesn't reach everyone. So I'm leaving it in
-unless the editors say otherwise.
-
-> 8-12. these data (I guess we will eventually decide that data is
-> singular - up to the editors)
-
-I have fixed all these.
-
-> 8-37++ Whereas Woese ++ This is a bit wordy and unnecessary - we know
-> that Woese didn't have PCR
-
-Er, perhaps this is a generational thing? I had no idea how they used to
-infer molecular sequences before Pace's phyloseminar.
-
-> 10-30 Which "databases" ? - this has been written so far as if it were
-> being applied to samples, not databases. I am not clear what the unit
-> of observation is here.
-
-I have clarified with a slightly expanded explanation, thanks.
-
-> 10-32 We quickly switch here from easy background (nonPCR random
-> sequencing) to something brand new (at least to me). "At least some
-> portion of the rest of the data can be taxonomically classified
-> (methods reviewed by Mande et al. 2012); Treangen et al. (2013) report
-> speedups and much higher accuracy when reads are assembled before they
-> are classified."
-> "Rest of data" refers to what - reads found in a database, or reads
-> from a sample? "Accuracy" refers to what? "Speed-ups" refer to what?
-
-Thanks for reporting this. I'm now more specific.
-
-> 11-53. Here is the first real point of contact between phylogenetics
-> and HMR. But what is an "F-measure of precision and recall" - there is
-> no citation.
-
-I've added a mini-definition.
-
-> 12-28 and 12-32. What is the measure of performance that this refers
-> to? How do we decide if a method performs well?
-
-Clarified, thanks.
-
-> 12-29. Do readers of SB now what "k-mer composition" is? Is it k-means
-> clustering?
-
-I've added in a definition.
-
-> 12-37++. Is the MEGAN approach compositional or phylogenetic? I
-> believe it is meant to be a hybrid approach (BLAST being
-> compositional, but the taxonomic labeling considered phylogenetic),
-> but this could be clarified.
-
-I've added in a clarification, thanks.
-
-> 13-29. It is not clear what heuristics are required for a cut-off
-> method. The author says that he is going to describe the OTU inference
-> industry, but the paragraph is really just a list of acronyms, and
-> then refers obliquely to a "contingency table" of OTU observations.
-> So, for example, what is a notion of goodness of clustering that the
-> heuristics are trying to achieve? What are the sorts of species
-> divisions found in taxonomies? This is an area where more would be
-> helpful - and where a shorter introduction might offer space.
-
-These are excellent questions, and the landscape is a little complex. I
-have expanded this section to explain what it is that these methods
-would like to achieve.
-
-> 14-40. Whereas just about every 16S survey investigation involves an
-> OTU-based alpha diversity estimate, only a few involve PD: unweighted
-> PD has been applied to some 16S survey data (Lozupone and Knight 2007;
-> Costello et al. 2009) and to metagenomic reads in a set of marker
-> genes (Kembel et al. 2011) - This is an odd pair of sentences: is the
-> L&K the only study that used unweighted PD? If so, in what context?
-
-I can't quite understand this suggestion. All three papers listed used
-unweighted PD.
-
-> 14-46. Check this sentence - perhaps start with "While are commonly
-> used, abundance weighted PD measures are not.
-
-I have updated this sentence based on your suggestion, thanks.
-
-> 15-30. Perhaps "In contrast to measures of alpha diversity, measures
-> of beta diversity do make use of phylogenetics"  This is actually an
-> interesting contrast. Is this just historical contingency, or is there
-> a logical reason why the two areas disagree on the use of phylogenetic
-> information?
-
-I think that this refers to 14-30, and I've simply removed the sentence.
-With regards to your question, I don't know. It seems surprising to me.
-
-> 15-xx. This seems a strong point of contact between metazoan
-> phylogenetics and the microbiome folks. UniFrac is clearly described
-> on its own terms, except perhaps where I would have written "with the
-> fraction of edges connecting samples that are common to two samples"
-> rather than "edges that connect between samples" (which doesn't
-> strictly make sense). I believe there is the same measure of
-> beta-diversity in the community-phylogenetics literature? What is the
-> closest analogue?
-
-I don't follow your "with the fraction of edges connecting samples that
-are common to two samples" correction. There is some overlap with the PD
-literature as now described and cited.
-
-> 15-4955. The description of Evans and Matsen seems a bit detailed in
-> the context -
-
-I've shortened and simplified, thanks.
-
-> 16-16. This requires another sentence of explanation. From this
-> reading, the Unifrac method offers a single distance between a pair of
-> samples (a ratio of two numbers of edges), rather than a matrix.
-
-I have rephrased so that it's clear that the matrix comes from applying
-the measure to all pairs of sequences in a sample.
-
-> 16-42..51. This is a short paragraph that would seem to explicitly
-> link HMR and SB. Why is it so telegraphic?
-
-I have added a clarifying phrase, but I'm not sure what more is needed.
-The two communities have both identified a given technique (although
-neither has really gotten much traction).
-
-> 17-45. This seems an odd heading for this section, which seems to be
-> about horizontal gene transfer. Given the amount of technical detail
-> elsewhere, why are we not told how horizontal gene transfer is
-> inferred in these HMR studies?
-
-Explained now, thanks.
-
-> Phylogenetic inference. I found this survey very useful. Is there a
-> reason this is not an earlier section of the paper, given these are
-> the trees upon which many of the comparisons referred to in previous
-> sections are based?
-
-I suppose I wanted to talk about all of the interesting things that
-microbiome researchers are doing with trees before
-borderline-criticizing the ways that they make them! The readers of SB
-know what it means to infer a tree, so I don't think that this section
-is a prerequisite for the previous ones.
-
-> 19-24. "which has ported in the" Is this the correct structure?
-
-That was what was intended, but I've updated it to use less
-programmer-speak.
-
-> 20-50. "different parameter regimes" - this phrase is used several
-> times in this review. What does it mean here? When would we prefer to
-> add sequences to a fixed tree rather than re-infer the totality? Is
-> there an analogous situation in SB - i.e. is there something SB can
-> learn from HMR here?
-
-I've simply removed the sentence. The idea of this paragraph is to
-motivate updating of phylogenetic trees with new sequences, and I've
-more fully explained that and added a reference.
-
-> I found the challenges section to be rich and well-written, with
-> questions that will resonate with the SB community - e.g. the
-> discussion of the proxy problem (how edge lengths predict feature
-> diversity). The fact that 16S distance does predict whole genome
-> distance is highlighted here - it is presented in previous sections,
-> but perhaps it could be given more prominence there, given its
-> prominence here. This is a general problem.
-
-I have added a sentence emphasizing that this assumption underlies the
-way researchers interpret UniFrac.
-
-> 22-10. "Microbial ecology" Perhaps "and explicitly for human microbial
-> ecology" to remind us that HMR is the focus here?
-
-Added, thanks.
-
-> 23-23. "Whole organism approach"  Will this approach be known to SB
-> readers? I cannot imagine what is being done here.
-
-You are right that this was not explained properly. I have simply
-removed the paragraph.
-
-> 25-31. "At least for the next several years we can expect more related
-> work." What does this mean? Related to what has been reported above?
-
-I have made this more specific.
-
-> 25-32. The future
-
-> I found the final sentence to leave us dangling. After having reviewed
-> this manuscript, I could not say exactly where the intersection of SB
-> and HMR will be most fruitful for HMR, nor what in HMR might be
-> fruitful for SB. The conclusion seems to suggest that phylogenetics
-> would not be used in diagnostics, for example.
-
-I have clarified this sentence now to clarify that some applications
-will go but many new ones will be needed.
-
-> Will it be important in primary research then? In constructing the
-> taxonomies the diagnostics may require?
-
-The rest of the paper is about how phylogenetics has impacted HMR, and
-these applications will continue into the future. I'm not sure how to
-make this more clear.
-
-> Finally, the abstract says the review ends by describing
-> "the current challenges to phylogenetics coming from this type of
-> work."  My reading of the relevant sections is that there is more
-> discussion of challenges to phylogenetic HMR research (sampling
-> biases, robustness of UniFrac to incorrect tree reconstruction) than
-> to phylogenetics per se. The discussion of how to update known trees
-> with new sequences is an exception.
-
-I suppose I don't differentiate between the two.
-
-
-> Reviewer 3, Frederic Delsuc
-> ---------------------------
-
-> This manuscript presents a review of how phylogenetic tree-thinking
-> and methodology is currently used in the study of the human
-> microbiome. The author not only reviews the different ways by which
-> phylogenetics is currently percolated into microbial ecology, but also
-> gives his personal views on the future phylogenetic challenges
-> associated with microbiome studies, and insists on the crucial role
-> that molecular phylogeneticists has to play in this quickly expanding
-> field. Overall, I enjoyed reading this particularly timely manuscript,
-> which I find well written. I only have minor comments/suggestions for
-> potential improvement.
-
-> Specific comments:
-> 1. I think that it should be made clear, from the very beginning of
-> the introduction, the definition of the microbiome in order to avoid
-> confusion. Indeed, in the current literature, "microbiota" (i.e. the
-> collection of microbes living in association with a given organism)
-> and "microbiome" (i.e. the collection of genomes of those microbes)
-> are more and more often used interchangeably, even though they are not
-> referring to the same organizational level. In that sense, the
-> definition of the "human microbiome" given at the top of page 5 ("The
-> human microbiome is the collection of microbial organisms that live
-> inside of and on the surface of humans.") does not seem to be
-> accurate. Please clarify.
-
-I have changed the definitions along the lines you suggest and have
-provided an introduction to the terminology.
-
-> 2. In the section introducing the human microbiome, I think that a
-> paragraph on the origin and the way in which the microbiome is
-> transmitted vertically between the mother and infant is lacking. The
-> recent review on maternal transmission by Funkhouser and Bordenstein
-> 2013 is cited later, but it would be nice to mention it on page 5,
-> especially in the context of the some examples on the impact of birth
-> method (vaginal birth vs. cesarean delivery) on future health of
-> newborns.
-
-Added.
-
-> 3. On page 6, lines 26-27, it might be worth citing also the recent
-> paper by Findley et al. (doi:10.1038/nature12171) on the topography of
-> fungal and bacterial on human skin.
-
-Thanks.
-
-> 4. On page 6, line 56, maybe also specify that "survey" is the
-> equivalent of barcoding, a term with which the Systematic Biology's
-> community is more familiar.
-
-Added, thanks.
-
-> 5. On page 14, lines 14-19, maybe mention the widespread use of
-> "rarefaction curves" to enable the comparison between samples of
-> different sequencing depth or methods (e.g. 454 vs. Illumina).
-
-I do describe strategies for read count normalization in the next
-paragraph, but have added the "rarefaction curve" terminology.
-
-> 6. On page 17, lines 54-55, please add some recent references on the
-> current debate around the rooting of the placental tree. I don't think
-> that most readers of Syst. Biol. will be familiar with this
-> discussion.
-
-Good point. I've put in the two 2013 MBE papers. If there is something
-else I should cite let me know.
-
-> 7. On page 18, lines 26-27, RAxML is also implemented in QIIME.
-
-Added.
-
-> 8. On page 20, I think that this might be the place to discuss the
-> potential use of phylogenetic networks in microbiome research (see
-> Parks and Beiko 2012 Mol Biol Evol).
-
-Thank you for pointing me to this reference.
-
-> 9. On page 24, when citing uBiome, it might also be fair to refer the
-> similar crowd-funded American Gut Project.
-
-Thanks.
-
-> Typos:
-> P3, L40: I would rather use "species delimitation" instead of "species
-> definition".
-
-Thanks.
-
-> P4, L9: "These techniques and could be used"
-
-Fixed.
-
-> P6, L32: "we will be primarily be describing"
-
-Whoops!
-
-> P9, L29, L30: Maybe replace "diversity" by "variability"
-
-Thanks.
-
-> P18, L32: "a long history as a means to sequentially build"
-
-Reworded, thanks.
-
-> P19, L16: "GreenGenes 13_5 alignment has is almost 80% gaps"
-
-Yikes, thanks.
+> I will say that, while figure 2 does a fairly good job of illustrating
+> the critical UniFrac method (though the common brown internal edges
+> could be named explicitly in the caption), the definition in the text
+> does not: "The name UniFrac is a contraction of “Unique Fraction,”
+> which refers to the fact that the original UniFrac definition compares
+> the fraction of edges that connect only tips from one sample via the
+> shortest path rather than edges that connect between samples (Fig. 2;
+> Lozupone and Knight 2005)" makes very little sense to me, particularly
+> "edges between samples". Could this be reworded in a more intuitive
+> way that refers explicitly to the tree(s) being inferred and the tips
+> used to infer the trees?  So, for instance, does one infer one tree
+> per sample and then one tree of all samples?
+
+Reviewer: 3
+-----------
+
+> I went through both the revised manuscript and the author’s response
+> letter. I think that the author has made significant efforts to
+> address all editorial and referee comments, including my own concerns.
+> I would therefore recommend the acceptation of the revised manuscript
+> basically as is.
