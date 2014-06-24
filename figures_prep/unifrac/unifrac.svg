@@ -149,9 +149,9 @@
      inkscape:window-height="899"
      id="namedview3308"
      showgrid="false"
-     inkscape:zoom="0.84183507"
-     inkscape:cx="428.75257"
-     inkscape:cy="355.32858"
+     inkscape:zoom="2.3810691"
+     inkscape:cx="94.879534"
+     inkscape:cy="484.43523"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -282,9 +282,9 @@
      y1="230.67732"
      x1="51.220806"
      class="clade_0"
-     style="fill:#99604d;fill-opacity:1;stroke:#99604d;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+     style="fill:#124668;fill-opacity:1;stroke:#124668;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
   <line
-     style="fill:#91df8d;fill-opacity:1;stroke:#91df8d;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     style="fill:#124668;fill-opacity:1;stroke:#124668;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
      class="clade_0"
      x1="237.8333"
      y1="250.67732"
@@ -551,7 +551,7 @@
      sodipodi:cy="37.821991"
      sodipodi:cx="332.77487"
      id="path4342"
-     style="fill:#91df8d;fill-opacity:1;stroke:#91df8d;stroke-opacity:1"
+     style="fill:#124668;fill-opacity:1;stroke:#124668;stroke-opacity:1"
      sodipodi:type="arc" />
   <path
      sodipodi:type="arc"
@@ -1193,7 +1193,7 @@
        y1="674.58008"
        x1="75.964188"
        class="clade_0"
-       style="fill:#91df8d;fill-opacity:1;stroke:#91df8d;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+       style="fill:#124668;fill-opacity:1;stroke:#124668;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     <line
        id="line5301"
        y2="660.96796"
@@ -1749,4 +1749,12 @@
        x="331.87451"
        y="685.8905"
        style="font-size:60px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans Bold">&lt;</tspan></text>
+  <line
+     style="fill:#124668;fill-opacity:1;stroke:#124668;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     class="clade_0"
+     x1="28.607"
+     y1="653.16412"
+     x2="92.346535"
+     y2="653.16412"
+     id="line5674-6" />
 </svg>
