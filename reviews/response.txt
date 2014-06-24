@@ -3,7 +3,11 @@ Editor
 
 > 1) Pg. 3: “It absolutely requires molecular methods because microbes are now primarily identified by their molecular sequences, which is much more straightforward to do in high throughput than morphological or phenotypic characterization” – This suggests that molecular sequences have traditionally been characterized via morphological or phenotypic means. I suppose that’s indirectly true, but I don’t think it is the best way to describe it.
 
+I've clarified this, thanks.
+
 > 2) Pg. 10: “Inference of this history is complicated by the fact that any tree-like signal in the overall evolution of bacteria is restricted to a small set of so-called “core” genes” – Would it be more accurate to write that tree-like signal regarding the deep relationships of bacteria is restricted to a small set of so-called “core” genes?  I suspect all genes carry some tree-like signal, even in microbes, though some have been subject to much more lateral gene transfer than others.
+
+Absolutely. I've changed the text accordingly.
 
 > 3) Pg. 14: “first with a Dirichlet multinomial mixtures on 3-mer profiles” – Should this just be “mixture”?
 
@@ -15,26 +19,19 @@ Done, thanks.
 
 > 5) Pg. 16: “PD under random sub-sampling, which is often applied to enable comparison be- tween samples of different sequencing depths and called “rarefaction curves.”” – Would it be preferable to write that the random subsamples are described (or depicted) with rarefaction curves?
 
+You caught a strange sentence there. I've just cut the strange bits and linked to a later discussion.
+
 > 6) Pg. 23: “The apparent success of 16S-tree-based comparisons begs the question of if a more complete representation of the evolutionary history…” – “Begging the question” means something else in philosophical circles. You should probably just use “raises the question” here.
 
 I didn't know that! Thank you.
 
-Your revision must comply with our instructions to authors (in this letter, with additional instructions at http://www.oxfordjournals.org/our_journals/sysbio/for_authors). This applies even if your original submission deviated from Systematic Biology style and corrections were not included in the notes from the editors or reviewers. Therefore, READ AND APPLY OUR INSTRUCTIONS BEFORE SUBMITTING A REVISION. Failure to do so will result in significantly delayed processing of your paper. If anything remains unclear after reading the instructions, use recent issues of the journal to find examples. If necessary, feel free to contact the Managing Editor at sysbio.editorialoffice@oup.com for help.
 
-After you've uploaded your revision, carefully view the Manuscript Central version to verify that all figures and other files display correctly, and that you’ve followed all of our author instructions.
-
-The cost of printed color figures is $600 each. Authors are normally expected to cover this cost, but we do have limited funds available for authors who are SSB members, and cannot pay the full amount. If you feel your circumstances create an unusual financial need, please explain in your cover letter. The maximum allowance is one color figure per paper.
 All color costs can be avoided if you decide to have the figures printed in black and white, but be shown in color in the online version of the paper. If you do this, the captions must be worded such that they are appropriate for both situations (e.g., descriptions should not name colors), because the captions in print and online will be identical even if color is used online only. Do not submit two versions of any figure. Instead, make sure the color figure is also easily legible in grayscale, then submit only the color version. In your cover letter, please make your intentions regarding the use of color clear.
-
-Journal Covers: Please consider submitting a suggested cover image. They can be illustrations of theory, photos of organisms, a combination of the two, or alternatives. These can be uploaded with a revision of the manuscript or may be sent later. Only images for which you have copyright permission or that are not under copyright may be submitted. The color figure fee does not apply to images chosen by the Editor to be on the cover of the issue. If you have questions about possible cover designs, please email sysbio.editorialoffice@oup.com. We encourage and greatly appreciate cover image suggestions.
 
 Make sure all section headings conform to Systematic Biology style for first, second and third levels. Use of incorrect styles is potentially confusing and, in any case, is likely to delay processing of the manuscript.
 
-Tables should have a single-sentence informative title above the table, with any other descriptive information located below the table in the form of notes and/or specific footnotes.
-
 When references are grouped together in parentheses in the text, they should be listed in ascending chronological order. Multiple references in a single year should be alphabetized.
 
-All funding used for this work should be listed in a "Funding" section preceding the Acknowledgements. Please give the full official name of each funding body.
 
 AE
 --
@@ -64,6 +61,8 @@ Thanks. I've added commas.
 > (e.g. F-measure, precision and recall, but what is classified and
 > how?). You should check this again for clarity and to ensure
 > self-contentedness.
+
+You are right. I've decided to just eliminate the technical sentences.
 
 > P16 connecting taxa in the set (Faith 1992).
 
