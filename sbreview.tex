@@ -298,7 +298,7 @@ Phylogenetic diversity metrics, which do take this overall diversity structure i
 However, whereas just about every one of the hundreds or thousands of 16S surveys applies an OTU-based alpha diversity estimate, only a few involve PD.
 
 \newcommand{\pdLegend}{
-    Unweighted phylogenetic diversity (PD, left) and an abundance-weighted PD measure (right), where taxa present in a sample are shown as blue circles and abundances are shown as the size of the circles.
+    Unweighted phylogenetic diversity (PD, left) and an abundance-weighted PD measure (right), where taxa present in a sample are shown as circles and abundances are shown as the size of the circles.
     Unweighted PD takes the sum of the branch lengths $\ell$ connecting samples.
     Abundance-weighted measures take a weighted sum of branch lengths where weight is determined in some way by the abundance of the taxa on either side of the branch: if we give edges width according to their weight, the abundance-weighted measure can be thought of as the sum of the areas $A$ of edges.
 }
@@ -339,9 +339,9 @@ They are generally variants of the ``UniFrac'' phylogenetic dissimilarity measur
 
 \newcommand{\unifracLegend}{
     The UniFrac divergence measure \citep[figure adapted from][]{LozuponeKnightUniFrac05}.
-    Assume that the sequence data to build the phylogenetic tree derives from two samples: the green sample and the blue sample.
+    Assume that the sequence data to build the phylogenetic tree derives from two samples: the light-shaded sample and the dark-shaded sample (green and blue in the online version).
     When the samples are interspersed across the tree (left tree), they have a smaller \textit{fraction} of branch length that sits ancestral to clades that are \textit{uniquely} composed of one sample or another, compared to when they are separate (right tree).
-    The bottom pictorial equation shows the ratios of interest for UniFrac: the branch length unique to one sample (green or blue, but not brown) divided by the total branch length.
+    The bottom pictorial equation shows the ratios of interest for UniFrac: the branch length unique to one sample divided by the total branch length.
     The ratio is smaller when the samples are interspersed (left) than they are when separate (right tree).
 }
 \forarxiv{
