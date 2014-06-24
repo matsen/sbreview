@@ -299,8 +299,9 @@ However, whereas just about every one of the hundreds or thousands of 16S survey
 
 \newcommand{\pdLegend}{
     Unweighted phylogenetic diversity (PD, left) and an abundance-weighted PD measure (right), where taxa present in a sample are shown as circles and abundances are shown as the size of the circles.
-    Unweighted PD takes the sum of the branch lengths $\ell$ connecting samples.
-    Abundance-weighted measures take a weighted sum of branch lengths where weight is determined in some way by the abundance of the taxa on either side of the branch: if we give edges width according to their weight, the abundance-weighted measure can be thought of as the sum of the areas $A$ of edges.
+    Unweighted PD takes the sum of the branch lengths connecting samples.
+    Abundance-weighted measures take a weighted sum of branch lengths where weight is determined in some way by the abundance of the taxa on either side of the branch: if we give edges width according to their weight, the abundance-weighted measure can be thought of as the sum of the total area of the edges.
+    One such abundance-weighted measure simply takes the absolute value of the difference of the total taxon abundance on one side compared to the other.
 }
 \forarxiv{
 \begin{wrapfigure}[25]{r}{2.2in}
@@ -357,11 +358,12 @@ They are generally variants of the ``UniFrac'' phylogenetic dissimilarity measur
 \end{wrapfigure}
 }
 
-The name UniFrac is a contraction of ``Unique Fraction,'' which refers to the fact that the original UniFrac definition compares the fraction of edges that connect only tips from one sample via the shortest path rather than edges that connect between samples \citep[Fig.~\ref{fig:unifrac};][]{LozuponeKnightUniFrac05}.
+To calculate the UniFrac divergence between two samples of reads, one builds a tree on both samples and then performs a calculation on the branch lengths according whether branches have descendants in both samples or one sample only.
+Specifically, the original UniFrac divergence is the fraction of the total branch length of the tree coming from branches with descendant leaves in exactly one of the two samples \citep[Fig.~\ref{fig:unifrac};][]{LozuponeKnightUniFrac05}.
 Weighted UniFrac is an abundance weighted version \citep{LozuponeEaWeightedUnifrac07}.
 These dissimilarity measures have hundreds of citations.
 \citet{evans2012phylogenetic} showed that weighted UniFrac is in fact a specific case of the earth-movers distance, and that the commonly-used randomization procedure for significance estimation has a central limit theorem approximation.
-The earth-movers distance between two probability distributions in this case can be defined using a physical analogy as the minimum amount of ``work'', defined as mass times distance, required to move probability mass in one distribution to another along the tree.
+The earth-movers distance \citep{monge1781memoire,Villani2003-wv} between two probability distributions in this case can be defined using a physical analogy as the minimum amount of ``work'', defined as mass times distance, required to move probability mass in one distribution to another along the tree.
 In this case the size of the dirt piles is proportional to the number of reads mapping to that location in the tree (Fig.~\ref{fig:dirtpiles}).
 \citet{chen2012associating} have shown that a partially abundance-weighted variant of UniFrac may have greater power to resolve community differences than either unweighted or weighted UniFrac.
 There are clear connections between UniFrac and phylogenetic diversity explored by \citet{faith2009cladistic}, who point out related measures in Faith's earlier work.
@@ -372,7 +374,7 @@ Indeed, the separation of two communities in a principal components plot is ofte
 
 \newcommand{\dirtpilesLegend}{
     Part of a minimal mass movement to calculate the earth-mover's distance between two probability distributions on a phylogenetic tree.
-    For this, each probability distribution is considered as a configuration of dirt piles on the tree, and the distance between two such dirt pile configurations is defined to be the minimum amount of physical ``work'' required to move the dirt in one configuration to the other.
+    For this, each probability distribution is considered as a configuration of dirt piles (round bumps in the figure) on the tree, and the distance between two such dirt pile configurations is defined to be the minimum amount of physical ``work'' required to move the dirt in one configuration to the other.
 }
 \forarxiv{
 \begin{wrapfigure}[24]{l}{1.5in}

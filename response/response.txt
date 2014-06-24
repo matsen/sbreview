@@ -59,20 +59,30 @@ You are right. I've decided to just eliminate the technical sentences.
 
 > P16 connecting taxa in the set (Faith 1992).
 
+I have changed this to:
+
+"The (unweighted and unrooted) PD of a set of taxa $S$ is simply the total of the lengths of the branches which connect taxa in $S$ (Faith 1992)."
+
 > Fig 1 The "graphical formulae" [l(segments) A(segments)] at the bottom
 > of the figure do not help. This can be better described by
 > checking-improving the figure legend, notably "the abundance of the
 > taxa on either side of the branch" (how is it computed? give an
 > example if there are several options)
 
+I have removed the graphical formulae, and given an example abundance-weighted measure.
+
 > Fig 2 Your two cases are extreme. Having one (or a few) shared (brown)
 > edges in the right tree, and one unshared (blue or green branch) edge
 > in the left tree would help. See also comments of referee 2.
+
+I have made it less extreme according to your suggestion, thanks.
 
 > Fig 3 and its legend, as well as the corresponding text P17-18 are
 > quite unclear to me.... It would be interesting to have more
 > explanations, both on the math side and on the application to sequence
 > reads.
+
+I feel that by expanding the explanation here I would contribute to the un-evenness of coverage described by the other reviewers. The earth-movers distance is a standard way to compare probability distributions on metric spaces and has a Wikipedia page. I have added a classical and a recent book reference.
 
 
 Reviewer: 1
@@ -96,6 +106,11 @@ Reviewer: 2
 > efficiency, I won't belabour the point. The author must have a clear
 > view who the intended audience is.
 
+Well, I chose to discuss things at depth those subjects I thought would
+interest the phylogenetics community. I have removed discussion of one
+outlier as described above, but am open to hearing about others that
+should be removed.
+
 > I will say that, while figure 2 does a fairly good job of illustrating
 > the critical UniFrac method (though the common brown internal edges
 > could be named explicitly in the caption), the definition in the text
@@ -108,6 +123,10 @@ Reviewer: 2
 > way that refers explicitly to the tree(s) being inferred and the tips
 > used to infer the trees?  So, for instance, does one infer one tree
 > per sample and then one tree of all samples?
+
+Thank you for your comments-- the text has been updated (I discussed
+these changes via email with Arne directly).
+
 
 Reviewer: 3
 -----------
