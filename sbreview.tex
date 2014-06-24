@@ -200,7 +200,7 @@ Correspondingly, chimera checking software has been developed \citep[including][
 Also, 16S can be present in up to 15 copies and there can be diversity within the copies \citep{klappenbach2001rrndb}.
 This can distort inferences concerning actual microbe abundances based on read copy number.
 Recent work by \citet{kembel2012incorporating} implements the independent contrasts method \citep{felsenstein1985phylogenies} to correct for copy number, which has been helpful despite a moderate evolutionary signal in copy number variation \citep{klappenbach2000rrna}.
-Some groups have reported advantages to using alternate single-copy genes as markers for characterization of microbial communities \citep[e.g.][]{case2007rpob,mcnabb2004hsp65}, however 16S remains the dominant locus used by a large margin.
+Some groups have reported advantages to using alternate single-copy genes as markers for characterization of microbial communities \citep[e.g.][]{mcnabb2004hsp65,case2007rpob}, however 16S remains the dominant locus used by a large margin.
 A final cause of noise is next-generation sequencing error: this is certainly a problem for both surveys and metagenomes, but is becoming less of a problem as technology improves.
 I will not address it specifically except in the inference of operational taxonomic units as described below.
 
@@ -214,14 +214,14 @@ This is proven to be a useful strategy, and several groups have built databases 
 However, because of the variability of gene repertoire in microbes, this core gene set may be relatively small: even the largest collection of genes in these databases only recruits around 1 percent of a metagenome.
 At least some portion of the rest of the other approximately 99 percent of the metagenome can be taxonomically classified using one of the methods described below.
 
-Metagenomic data sets are often used to infer information about metabolism rather than phylogenetic nature \citep{greenblum2012metagenomic,abubucker2012metabolic}.
+Metagenomic data sets are often used to infer information about metabolism rather than phylogenetic nature \citep{abubucker2012metabolic,greenblum2012metagenomic}.
 Discussing these methods is beyond the scope of this paper, as is the sequencing of mRNA in bulk which is called ``metatranscriptomics".
 
 \subsection{Whole genomes}
 In addition to conventional genome sequencing for microbial genomes, whole-genome sequencing from culture is currently being used for microbial outbreak tracking \citep{koser2012rapid,snitkin2012tracking}.
 The Food and Drug Administration maintains GenomeTrakr, an openly accessible database of whole genomes sampled from the environment and grown in culture\footnote{\url{http://www.fda.gov/Food/FoodScienceResearch/WholeGenomeSequencingProgramWGS/}}.
 This data may become more common for unculturable organisms as single-cell sequencing methods improve \citep[reviewed in][]{kalisky2011single}.
-The assembly of complete genomes from metagenomes, once limited to samples with a very small number of organisms \citep{baker2010enigmatic}, is now becoming feasible for more diverse populations with improved sequencing technology and computational approaches \citep{howe2012assembling,pell2012scaling,iverson2012untangling,emerson2012metagenomic,podell2013assembly}.
+The assembly of complete genomes from metagenomes, once limited to samples with a very small number of organisms \citep{baker2010enigmatic}, is now becoming feasible for more diverse populations with improved sequencing technology and computational approaches \citep{emerson2012metagenomic,howe2012assembling,iverson2012untangling,pell2012scaling,podell2013assembly}.
 
 
 \section{Tree-thinking in human microbiome research}
@@ -253,7 +253,7 @@ For those studies and others, the conventional metrics of classification perform
 % \citep{werner2011impact} Impact of training sets on classification of high-throughput bacterial 16s rRNA gene surveys
 Some authors report that a combination of composition-based and homology-based classifiers work best \citep{brady2009phymm,parks2011classifying}.
 The MEGAN program \citep{huson2007megan,huson2011integrative} BLASTs an unknown sequence onto a database of sequences with taxonomic labels and assigns the sequence the lowest (i.e.\ narrowest) taxonomic group shared by all of the high-quality hits; as such it is somewhat phylogenetic in that it uses the structure of the taxonomic tree.
-\citet{munch2008statistical,munch2008fast} infer taxonomic assignment by automatically retrieving sequences equipped with taxonomic information and building a tree on them along with an unknown sequence.
+\citet{munch2008fast,munch2008statistical} infer taxonomic assignment by automatically retrieving sequences equipped with taxonomic information and building a tree on them along with an unknown sequence.
 \citet{srinivasan2012bacterial} find that phylogenetic methods to do taxonomic classification can outperform composition-based techniques at least for certain taxonomic groups.
 \citet{segata2012metagenomic} propose a clever approach to inferring organisms present in a metagenomic sample by compiling a database of clade-specific genes, then classifying a given read as being from the only clade that has the corresponding gene.
 They show that this has good sensitivity and specificity, however, this method can only be used to identify the presence of organisms whose genome has been sequenced.
@@ -450,7 +450,7 @@ Although such insertion has long been used as a means to build a phylogenetic tr
 ARB is commonly used to reconstruct a full tree by direct insertion.
 
 There are also other methods with the less ambitious goal of mapping sequences of unknown origin into a so-called fixed reference tree, sometimes with uncertainty estimates.
-These programs \citep{wu2008simple,monierEaLargeViruses08,vonMeringEaQuantitative08,stark2010mltreemap,matsen2010pplacer,berger2011performance} have various speeds and features.
+These programs \citep{monierEaLargeViruses08,vonMeringEaQuantitative08,wu2008simple,matsen2010pplacer,stark2010mltreemap,berger2011performance} have various speeds and features.
 This work has also spurred development of specialized alignment tools for this mapping process.
 \citet{berger2011aligning} focus on the problem of inferring the optimal alignment and insertion of sequences into a tree.
 \citet{Mirarab2012-pk} use data set partitioning to improve alignments on subsets of taxa specifically for this application.
@@ -508,7 +508,7 @@ How might one formulate a useful notion of independent contrasts \citep{felsenst
 It is quite possible that inference using a more complete representation would not be able to overcome the inherent noise of the data, but further exploration seems warranted as simple methods give reasonable results.
 
 While developing community assembly models forms an important project for microbial ecology generally and human-associated microbial ecology in particular, phylogeny-aware methods could be further developed.
-One way to model microbial community assembly is to apply Hubbell's neutral theory \citep{fierer2012animalcules,costello2012application}.
+One way to model microbial community assembly is to apply Hubbell's neutral theory \citep{costello2012application,fierer2012animalcules}.
 \citet{o2012phylogenetic} model community assembly with an explicitly phylogenetic perspective, and include some comparison of models to data.
 Continued work in this direction seems warranted, given the way in which phylogenetic tree shape statistics have had a significant impact on macroevolutionary modeling \citep{mooers1997inferring,aldous2011five}.
 In this case various (alpha and beta) diversity statistics would play the role of tree shape statistics by reducing a distribution on the tips of a tree down to a real number.
@@ -543,7 +543,7 @@ In trying to remedy such false-positive identification of differences, it become
 
 For both alpha and beta diversity measurement, read count normalization has not received nearly the attention that it has in other applications of high throughput sequencing \citep[such as RNA-Seq, e.g.][]{anders2010differential,robinson2010edger}.
 One type of normalization handles differential depths of sequencing across samples.
-The presently used approach is \textit{rarefaction}, which means uniform sub-sampling to the number of reads in the lowest abundance sample \citep{caporaso2010qiime,schloss2009introducing}.
+The presently used approach is \textit{rarefaction}, which means uniform sub-sampling to the number of reads in the lowest abundance sample \citep{schloss2009introducing,caporaso2010qiime}.
 In addition to throwing away data, this normalization implicitly assumes a model whereby reads are sequenced independently of one another.
 This is not the case.
 An alternative is provided by \citet{o2012phylogenetic}, who provide a ``UniFrac score normalization curve'' based on a sampling model of community assembly.
