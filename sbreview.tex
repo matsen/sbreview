@@ -304,9 +304,9 @@ However, whereas just about every one of the hundreds or thousands of 16S survey
     One such abundance-weighted measure simply takes the absolute value of the difference of the total taxon abundance on one side compared to the other.
 }
 \forarxiv{
-\begin{wrapfigure}[25]{r}{2.2in}
+\begin{wrapfigure}[26]{r}{2.2in}
   % \capstart
-  \vspace{-14pt}
+  \vspace{-25pt}
   \begin{center}
     \includegraphics[width=2.2in]{figures/pd.pdf}
   \end{center}
@@ -346,9 +346,9 @@ They are generally variants of the ``UniFrac'' phylogenetic dissimilarity measur
     The ratio is smaller when the samples are interspersed (left) than they are when separate (right tree).
 }
 \forarxiv{
-\begin{wrapfigure}[32]{r}{2.2in}
+\begin{wrapfigure}[33]{r}{2.2in}
   % \capstart
-  \vspace{-26pt}
+  \vspace{-4pt}
   \begin{center}
     \includegraphics[width=2.2in]{figures/unifrac.pdf}
   \end{center}
@@ -372,27 +372,27 @@ The most common way to use a distance matrix obtained from applying UniFrac to a
 Indeed, the separation of two communities in a principal components plot is often used as \emph{prima facie} evidence of a difference between them
 \citep[e.g.][]{lozupone2007global,costello2009bacterial,yatsunenko2012human}, while the lack of such a difference is interpreted as showing that the communities are not different overall.
 
+There have been several efforts to augment these ordination visualizations with additional information giving more structure to the visualizations.
+Biplots display variables (in the microbial case summarized by taxonomic labels) as points along with the points representing samples \citep[e.g.][]{hewitt2013bacterial,lozupone2013meta}.
+\citet{PurdomAnalyzingDataGraphs08} describes how generalized principal component eigenvectors can be interpreted via weightings on the leaves of a phylogenetic tree.
+\citet{matsen2013edge} have developed a variant of principal components analysis that explicitly labels the axes with weightings on phylogenetic trees that indicate their influence.
+
 \newcommand{\dirtpilesLegend}{
     Part of a minimal mass movement to calculate the earth-mover's distance between two probability distributions on a phylogenetic tree.
     For this, each probability distribution is considered as a configuration of dirt piles (round bumps in the figure) on the tree, and the distance between two such dirt pile configurations is defined to be the minimum amount of physical ``work'' required to move the dirt in one configuration to the other.
 }
 \forarxiv{
-\begin{wrapfigure}[24]{l}{1.5in}
+\begin{wrapfigure}[25]{l}{2.in}
   % \capstart
   \vspace{-17pt}
   \begin{center}
-    \includegraphics[width=1.2in]{figures/tree_dirtpiles.pdf}
+    \includegraphics[width=1.85in]{figures/tree_dirtpiles.pdf}
   \end{center}
   \vspace{-5pt}
   \caption{\dirtpilesLegend}
   \label{fig:dirtpiles}
 \end{wrapfigure}
 }
-
-There have been several efforts to augment these ordination visualizations with additional information giving more structure to the visualizations.
-Biplots display variables (in the microbial case summarized by taxonomic labels) as points along with the points representing samples \citep[e.g.][]{hewitt2013bacterial,lozupone2013meta}.
-\citet{PurdomAnalyzingDataGraphs08} describes how generalized principal component eigenvectors can be interpreted via weightings on the leaves of a phylogenetic tree.
-\citet{matsen2013edge} have developed a variant of principal components analysis that explicitly labels the axes with weightings on phylogenetic trees that indicate their influence.
 
 In another vein, \citet{la2012statistical} consider the induced taxonomic tree of a sample as a statistical object and, using a framework where a sampling probability is defined in terms of a distance between such induced trees, define and investigate maximum likelihood estimation of and likelihood ratio tests for these trees.
 They focus on distances between trees induced by matrix metrics on the corresponding adjacency matrices.
