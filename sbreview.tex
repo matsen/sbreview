@@ -358,8 +358,7 @@ They are generally variants of the ``UniFrac'' phylogenetic dissimilarity measur
 \end{wrapfigure}
 }
 
-To calculate the UniFrac (``unique fraction'') divergence between two samples of reads, one builds a global tree based on both samples and then calculates the fraction of the total tree length found in only one (i.e. the fraction of the tree unique to one) of the two samples.
-Specifically, the original UniFrac divergence is the fraction of the total branch length of the tree coming from branches with descendant leaves in exactly one of the two samples \citep[Fig.~\ref{fig:unifrac};][]{LozuponeKnightUniFrac05}.
+To calculate the unweighted UniFrac (``unique fraction'') divergence between two samples of reads, one builds a global tree based on both samples and then calculates the fraction of the total tree length found in only one (i.e. the fraction of the tree unique to one) of the two samples \citep[Fig.~\ref{fig:unifrac};][]{LozuponeKnightUniFrac05}.
 Weighted UniFrac is an abundance weighted version \citep{LozuponeEaWeightedUnifrac07}.
 These dissimilarity measures have hundreds of citations.
 \citet{evans2012phylogenetic} showed that weighted UniFrac is in fact a specific case of the earth-movers distance, and that the commonly-used randomization procedure for significance estimation has a central limit theorem approximation.
